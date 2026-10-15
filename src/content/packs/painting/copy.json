@@ -1,0 +1,203 @@
+{
+  "ctaPrimaryLabel": "{{ctaPrimaryLabel}}",
+  "phoneCtaLabel": "{{phoneCtaLabel}}",
+  "serviceType": "{{serviceType}}",
+  "serviceNoun": "{{serviceNoun}}",
+  "ogImageAlt": "{{name}} — {{tradeLabel}} in {{city}}, {{state}}",
+  "heroImageAlt": "{{name}} project in {{city}}",
+  "formConsent": "and consent to be contacted about my {{serviceNoun}} estimate. Msg & data rates may apply.",
+  "sidebarTitle": "Request an estimate",
+  "sidebarBody": "Call for the next step and a written price after we walk the job.",
+  "serviceAreasIntro": "{{name}} is a local {{tradeLabel}} serving these {{region}} communities:",
+  "contactTitle": "{{ctaPrimaryLabel}} | {{name}}",
+  "contactDescription": "Request an estimate from {{name}} in {{city}}. Call {{phone}}.",
+  "contactHeading": "{{ctaPrimaryLabel}}",
+  "contactIntro": "Tell us the rooms or the building.",
+  "aboutDescription": "Meet {{ownerName}} and {{legalName}} — {{tradeLabel}} in {{city}} serving {{region}}.",
+  "policyDescription": "How {{name}} collects, uses, and protects your information when you request an estimate in {{city}} and {{region}}.",
+  "termsDescription": "Terms governing use of the {{name}} website and estimate requests in {{city}} and {{region}}.",
+  "areaEyebrow": "{{tradeLabel}} · Service area",
+  "areaPageTitle": "{{tradeLabel}} in {{areaName}} | {{name}}",
+  "areaHeadline": "{{tradeLabel}} in {{areaName}}",
+  "areaIntro": "When your {{areaName}} property needs {{serviceNoun}}, you get a walk-through and a written estimate.",
+  "areaBody": "{{legalName}} serves {{areaName}} and nearby {{region}} from {{city}}.",
+  "areaServicesNote": "{{serviceNoun}} for {{areaName}} homes and buildings.",
+  "areaServicesHeading": "Services in {{areaName}}",
+  "areaHighlights": ["Interior and exterior", "Cabinets", "Commercial spaces", "Written estimates"],
+  "areaFaqs": [
+    {
+      "q": "Do you work in {{areaName}}?",
+      "a": "Yes. Call {{phone}}."
+    },
+    {
+      "q": "How do I get an estimate in {{areaName}}?",
+      "a": "Call {{phone}} or send the form."
+    }
+  ],
+  "jobAreaLink": "{{tradeLabel}} in {{city}}",
+  "hero": {
+    "trustBadge": "{{city}} · {{region}}",
+    "headingLine1": "Rooms and buildings",
+    "headingLine2": "",
+    "headingAccent": "finished right",
+    "headline": "Rooms and buildings, finished right.",
+    "subheading": "You want prep and a clear estimate before color goes on. You get a walk-through first.",
+    "benefits": [
+      { "icon": "home", "label": "Interior &\nexterior" },
+      { "icon": "building", "label": "Homes &\noffices" },
+      { "icon": "clipboard-list", "label": "Written\nestimates" }
+    ],
+    "ctaCall": "Call {{phone}}",
+    "scheduleHref": "/contact",
+    "financingNote": "Walk the job. Clear next steps. No pressure.",
+    "locationNote": "Serving {{region}} from {{city}}",
+    "trustLine": "Residential and commercial",
+    "reviewCard": { "rating": 5, "count": "Google Reviews", "href": "/reviews" },
+    "ownerNote": "Call or send the form — {{ownerName}} will follow up.",
+    "ownerCta": "Talk to {{ownerName}}"
+  },
+  "trustBar": {
+    "heading": "{{serviceNoun}} for {{region}} homes and buildings",
+    "badges": [
+      { "type": "google", "rating": 5, "label": "Google reviews", "eyebrow": "Google", "title": "Google reviews", "icon": "star" },
+      { "type": "cert", "label": "Based in\n{{city}}, {{state}}", "eyebrow": "Based in", "title": "{{city}}, {{state}}", "icon": "map-marker-alt" },
+      { "type": "cert", "label": "Written\nestimates", "eyebrow": "Before we start", "title": "Written estimates", "icon": "clipboard-list" },
+      { "type": "cert", "label": "Homes &\nbuildings", "eyebrow": "Residential &", "title": "Commercial", "icon": "building" }
+    ]
+  },
+  "process": {
+    "label": "How it works",
+    "title": "From walk-through to finished rooms",
+    "subtitle": "You know the scope before work starts.",
+    "meetMessage": "Tell us the rooms or the building. We follow up with next steps.",
+    "steps": [
+      { "title": "Call or send the form", "meta": "Fast start", "description": "Interior, exterior, cabinets, or a commercial space — and the address." },
+      { "title": "Walk the job", "meta": "See the work", "description": "We look at prep, access, and finish." },
+      { "title": "Written estimate", "meta": "No guessing", "description": "You get the scope in writing." },
+      { "title": "Prep and finish", "meta": "The work", "description": "Prep first, then color." },
+      { "title": "Walk-through", "meta": "Done", "description": "We review the finish with you." }
+    ]
+  },
+  "offersSection": {
+    "label": "Getting started",
+    "title": "Get an estimate you can act on.",
+    "subtitle": "Home, cabinets, or a commercial space."
+  },
+  "offers": [
+    {
+      "slug": "home-estimate",
+      "title": "Home estimate",
+      "price": "Custom quote",
+      "hook": "Rooms, trim, or the outside of the building.",
+      "includes": ["Walk-through", "Prep discussion", "Written estimate", "Schedule"],
+      "ctaText": "Get a home estimate",
+      "ctaHref": "/contact",
+      "icon": "home",
+      "featured": true,
+      "financingAnchor": true
+    },
+    {
+      "slug": "cabinet-estimate",
+      "title": "Cabinets",
+      "price": "Custom quote",
+      "hook": "Cabinet finishes scoped to the doors you have.",
+      "includes": ["Cabinet finishes", "Sheen", "Hardware", "Careful masking"],
+      "ctaText": "Ask about cabinets",
+      "ctaHref": "/contact",
+      "icon": "rows"
+    },
+    {
+      "slug": "commercial-estimate",
+      "title": "Commercial",
+      "price": "Custom quote",
+      "hook": "Offices and suites scheduled around how you use the building.",
+      "includes": ["After-hours when needed", "Offices", "Common areas", "Written scope"],
+      "ctaText": "Get a commercial estimate",
+      "ctaHref": "/contact",
+      "icon": "building"
+    }
+  ],
+  "servicesHeading": "Work for your home and your building",
+  "servicesLabel": "Services",
+  "servicesIntro": "Here is the work we take on in {{region}}.",
+  "valueProps": [
+    { "icon": "clipboard-list", "title": "Walk the job first", "description": "Estimates come from the rooms, not a phone guess." },
+    { "icon": "home", "title": "Prep, then finish", "description": "Patches get handled so the finish is not a cover-up." },
+    { "icon": "building", "title": "Homes and commercial", "description": "The same conversation for a kitchen or an office." },
+    { "icon": "map-marker-alt", "title": "Local from {{city}}", "description": "You are calling {{region}}." }
+  ],
+  "whyChoose": {
+    "title": "Why choose {{name}}?",
+    "items": [
+      { "title": "You are calling {{city}}", "body": "{{ownerName}} serves {{region}} from nearby." },
+      { "title": "You hear the scope first", "body": "Prep and timing in writing." },
+      { "title": "The property is treated carefully", "body": "Masking, cleanup, and a punch list." },
+      { "title": "You can get an estimate", "body": "Call {{phone}} or send the form." }
+    ]
+  },
+  "reviewsSection": {
+    "label": "Google reviews",
+    "title": "What neighbors are saying",
+    "titleLine2": "",
+    "subtitle": "Work across {{city}} and {{region}}.",
+    "bullets": ["{{tradeLabel}}", "Based in {{city}}", "{{ownerName}}, owner", "Homes and buildings"],
+    "ctaText": "Read more reviews on Google",
+    "viewAllHref": "/reviews",
+    "viewAllText": "See all reviews"
+  },
+  "reviewsPage": {
+    "label": "Google Reviews",
+    "title": "What customers are saying",
+    "subtitle": "Feedback from people who hired {{name}}.",
+    "description": "Read reviews for {{legalName}}."
+  },
+  "shop": { "heading": "Contact Us", "hours": [{ "days": "Hours", "time": "Call for hours" }] },
+  "workGallery": {
+    "label": "Recent work",
+    "title": "Recent work in your area",
+    "intro": "Job photos show up here when they are on file."
+  },
+  "ownerStory": {
+    "label": "About Us",
+    "quote": "{{tagline}}",
+    "caption": "{{ownerName}} · {{ownerRole}}",
+    "ctaText": "{{ctaPrimaryLabel}}",
+    "ctaHref": "/contact",
+    "quoteAttribution": "{{ownerName}}",
+    "quoteRole": "{{ownerRole}}, {{legalName}}",
+    "homepageParagraphLimit": 2,
+    "paragraphs": [
+      "{{ownerName}} built {{name}} on walking the job and putting the scope in writing.",
+      "We serve {{region}} from {{city}}. Call {{phone}}."
+    ]
+  },
+  "teamSection": { "label": "The team", "title": "People who do the work", "intro": "Prep first. A finish you can live with." },
+  "teamMembers": [
+    {
+      "name": "{{ownerName}}",
+      "role": "{{ownerRole}}",
+      "headline": "Leads with a walk-through and a written estimate.",
+      "bio": ["{{ownerName}} runs {{name}} from {{city}}."]
+    }
+  ],
+  "serviceArea": { "heading": "Areas We Serve", "body": "Based in {{city}}, {{state}} — serving {{region}}.", "country": "US" },
+  "ctaBanner": {
+    "title": "Need the work scoped?",
+    "subtitle": "Call or send the form.",
+    "body": "Interior, exterior, cabinets, or commercial space across {{region}}.",
+    "scheduleHref": "/contact",
+    "scheduleLabel": "{{ctaPrimaryLabel}}",
+    "scheduleSub": "No obligation",
+    "callSub": "Call to schedule"
+  },
+  "beforeAfter": {
+    "enabled": false,
+    "title": "Before and after",
+    "intro": "Drag the slider to compare the job.",
+    "beforeImage": "/placeholders/hero.svg",
+    "afterImage": "/placeholders/hero.svg",
+    "beforeLabel": "Before",
+    "afterLabel": "After"
+  },
+  "footerBlurb": "{{tradeLabel}}. Serving {{region}} from {{city}}."
+}

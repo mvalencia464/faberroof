@@ -1,0 +1,410 @@
+---
+import { SITE, NAV_MENUS } from '../config/site';
+import TopBar from './TopBar.astro';
+import BrandLogo from './BrandLogo.astro';
+import NavDropdown from './NavDropdown.astro';
+
+const telDigits = (SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '');
+const telHref = `tel:${telDigits}`;
+const currentPath = Astro.url.pathname;
+const isServicesActive = currentPath.startsWith('/services');
+const isAreasActive = currentPath.startsWith('/areas');
+
+const servicesMenuItems = NAV_MENUS.services.items.filter(
+  (item) => item.href !== '/#services',
+);
+const areasMenuItems = NAV_MENUS.areas.items.filter(
+  (item) => item.href !== '/areas',
+);
+const isHome = currentPath === '/' || currentPath === '';
+const isAboutActive = currentPath.startsWith('/about');
+const isReviewsActive = currentPath.startsWith('/reviews');
+const isContactActive = currentPath.startsWith('/contact');
+---
+
+<header class:list={['header', isHome && 'header--overlay']}>
+  {!isHome && <TopBar />}
+  <div class="container header__inner">
+    <a href="/" class="header__logo" aria-label={SITE.name}>
+      <BrandLogo variant="light" loading="eager" class="header__logo-img" />
+    </a>
+
+    <nav class="header__nav" aria-label="Main navigation">
+      <NavDropdown
+        variant="desktop"
+        label={NAV_MENUS.services.label}
+        items={servicesMenuItems}
+        parentHref={NAV_MENUS.services.parentHref}
+        isActive={isServicesActive}
+        menuId="nav-menu-services"
+      />
+      <a href="/about" class:list={['header__link', isAboutActive && 'header__link--active']}>{SITE.nav.aboutLabel}</a>
+      <NavDropdown
+        variant="desktop"
+        label={NAV_MENUS.areas.label}
+        items={areasMenuItems}
+        parentHref={NAV_MENUS.areas.parentHref}
+        isActive={isAreasActive}
+        menuId="nav-menu-areas"
+      />
+      <a href="/#reviews" class:list={['header__link', isReviewsActive && 'header__link--active']}>{SITE.nav.reviewsLabel}</a>
+      <a href="/contact" class:list={['header__link', isContactActive && 'header__link--active']}>{SITE.nav.contactLabel}</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href={telHref} class="header__phone-cta">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span class="header__phone-text">
+          <span class="header__phone-number">{SITE.phone}</span>
+          <span class="header__phone-label">{SITE.phoneCtaLabel}</span>
+        </span>
+      </a>
+      <a href="/contact" class="header__quote-cta">{SITE.ctaPrimaryLabel}</a>
+    </div>
+
+    <button class="header__burger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="header__burger-lines" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <NavDropdown
+      variant="mobile"
+      label={NAV_MENUS.services.label}
+      items={servicesMenuItems}
+      parentHref={NAV_MENUS.services.parentHref}
+      menuId="mobile-menu-services"
+    />
+    <a href="/about" class="mobile-nav__link">{SITE.nav.aboutLabel}</a>
+    <NavDropdown
+      variant="mobile"
+      label={NAV_MENUS.areas.label}
+      items={areasMenuItems}
+      parentHref={NAV_MENUS.areas.parentHref}
+      menuId="mobile-menu-areas"
+    />
+    <a href="/#reviews" class="mobile-nav__link">{SITE.nav.reviewsLabel}</a>
+    <a href="/contact" class="mobile-nav__link">{SITE.nav.contactLabel}</a>
+
+    <div class="mobile-nav__actions">
+      <a href={telHref} class="btn btn--primary mobile-nav__action">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        Call {SITE.phone}
+      </a>
+      <a href="/contact" class="btn btn--outline mobile-nav__action">
+        {SITE.ctaPrimaryLabel}
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    --header-fg: rgba(255, 255, 255, 0.78);
+    --header-fg-strong: #fff;
+    --header-line: rgba(255, 255, 255, 0.14);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background:
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--deep) 94%, #000) 0%,
+        var(--deep) 100%
+      );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  .header--overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: 5.2rem;
+    background: linear-gradient(
+      180deg,
+      rgba(2, 12, 27, 0.72) 0%,
+      rgba(2, 12, 27, 0.28) 55%,
+      transparent 100%
+    );
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .header--overlay .mobile-nav {
+    background: color-mix(in srgb, var(--deep) 96%, #000);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    min-height: 4.1rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .header__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    margin-right: auto;
+  }
+
+  .header__logo :global(.brand-logo),
+  .header__logo-img {
+    height: clamp(3rem, 8.5vw, 4.1rem);
+    max-width: min(200px, 55vw);
+  }
+
+  .header__nav {
+    display: none;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  .header__nav a,
+  .header__nav :global(.nav-dropdown__trigger) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    appearance: none;
+    -webkit-appearance: none;
+    color: var(--header-fg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 0.55rem 0.7rem;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .header__nav a::after,
+  .header__nav :global(.nav-dropdown__trigger)::after {
+    content: '';
+    position: absolute;
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.2rem;
+    height: 1.5px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  .header__nav a:hover,
+  .header__nav :global(.nav-dropdown:hover .nav-dropdown__trigger),
+  .header__nav :global(.nav-dropdown:focus-within .nav-dropdown__trigger) {
+    color: var(--header-fg-strong);
+  }
+
+  .header__nav a:hover::after,
+  .header__nav :global(.nav-dropdown:hover .nav-dropdown__trigger)::after,
+  .header__nav :global(.nav-dropdown:focus-within .nav-dropdown__trigger)::after,
+  .header__link--active::after,
+  .header__nav :global(.nav-dropdown--active .nav-dropdown__trigger)::after {
+    transform: scaleX(1);
+  }
+
+  .header__actions {
+    display: none;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .header__phone-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.45rem 0.9rem 0.45rem 0.75rem;
+    border-radius: 3px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .header__phone-cta:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .header__quote-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.1rem;
+    border-radius: 3px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .header__quote-cta:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .header__actions {
+    gap: 0.65rem;
+  }
+
+  .header__phone-cta > i {
+    font-size: 0.78rem;
+  }
+
+  .header__phone-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .header__phone-number {
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+  }
+
+  .header__phone-label {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+
+  .header__burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: 1px solid var(--header-line);
+    border-radius: 3px;
+    color: var(--header-fg-strong);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .header__burger-lines,
+  .header__burger-lines::before,
+  .header__burger-lines::after {
+    display: block;
+    width: 1.1rem;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 1px;
+    position: relative;
+  }
+
+  .header__burger-lines::before,
+  .header__burger-lines::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .header__burger-lines::before { top: -5px; }
+  .header__burger-lines::after { top: 5px; }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 0.35rem 1rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: color-mix(in srgb, var(--deep) 94%, #000);
+  }
+
+  .mobile-nav.is-open {
+    display: flex;
+  }
+
+  .mobile-nav__link {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+
+  .mobile-nav__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .mobile-nav__action {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .mobile-nav :global(.btn--outline) {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .mobile-nav :global(.mobile-nav__summary),
+  .mobile-nav :global(.mobile-nav__sublink) {
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .mobile-nav :global(.mobile-nav__group) {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (min-width: 1100px) {
+    .header__nav,
+    .header__actions {
+      display: flex;
+    }
+
+    .header__burger {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  burger?.addEventListener('click', () => {
+    const open = mobileNav?.classList.toggle('is-open');
+    if (mobileNav) {
+      mobileNav.hidden = !open;
+    }
+    burger?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mobileNav?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      mobileNav?.classList.remove('is-open');
+      mobileNav.hidden = true;
+      burger?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

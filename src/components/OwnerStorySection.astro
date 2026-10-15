@@ -1,0 +1,209 @@
+---
+import { SITE } from '../config/site';
+import { r2img } from '../lib/r2';
+
+const story = SITE.ownerStory;
+const paragraphLimit = story.homepageParagraphLimit ?? story.paragraphs.length;
+const paragraphs = story.paragraphs.slice(0, paragraphLimit);
+const caption = story.caption ?? `${SITE.hero.ownerCard.name} · Owner`;
+const ctaText = story.ctaText ?? 'Get your free quote';
+const ctaHref = story.ctaHref ?? '/contact';
+const quoteName = story.quoteAttribution ?? SITE.hero.ownerCard.name;
+const quoteRole = story.quoteRole ?? 'Owner';
+
+type Highlight = 'gold' | 'accent' | 'sky' | 'mint';
+type StoryPart = { text: string; highlight?: Highlight };
+---
+
+<section id="about" class="section owner-story">
+  <div class="container owner-story__layout">
+    <figure class="owner-story__media">
+      <img
+        src={r2img(story.familyImage)}
+        alt={story.familyAlt}
+        loading="lazy"
+        decoding="async"
+        width="736"
+        height="921"
+      />
+      <figcaption class="owner-story__caption">{caption}</figcaption>
+    </figure>
+
+    <div class="owner-story__content">
+      <p class="section-label owner-story__label">{story.label}</p>
+      <blockquote class="owner-story__quote">
+        <p>
+          {story.quoteParts.map((part: StoryPart) =>
+            part.highlight ? (
+              <mark class={`owner-story__mark owner-story__mark--${part.highlight}`}>{part.text}</mark>
+            ) : (
+              part.text
+            ),
+          )}
+        </p>
+        <footer>
+          <span>{quoteName}</span>
+          <span class="owner-story__quote-role">{quoteRole}</span>
+        </footer>
+      </blockquote>
+      {paragraphs.map((paragraph) => (
+        <p class="owner-story__body">
+          {paragraph.parts.map((part: StoryPart) =>
+            part.highlight ? (
+              <mark class={`owner-story__mark owner-story__mark--${part.highlight}`}>{part.text}</mark>
+            ) : (
+              part.text
+            ),
+          )}
+        </p>
+      ))}
+      <a href={ctaHref} class="btn btn--primary owner-story__cta">{ctaText}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .owner-story {
+    background: var(--surface);
+  }
+
+  .owner-story__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(2.75rem, 5vw, 4.75rem);
+    align-items: center;
+  }
+
+  .owner-story__media {
+    margin: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--panel);
+    box-shadow: 0 24px 48px rgba(28, 31, 36, 0.12);
+  }
+
+  .owner-story__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .owner-story__caption {
+    padding: 0.85rem 1.1rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+  }
+
+  .owner-story__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  .owner-story__label {
+    color: var(--muted);
+  }
+
+  .owner-story__quote {
+    margin: 0 0 0.5rem;
+    padding: 0 0 0 1.25rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  .owner-story__quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3.4vw, 2.45rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--deep);
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+
+  .owner-story__cta {
+    margin-top: 0.5rem;
+    width: fit-content;
+  }
+
+  .owner-story__quote footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  .owner-story__quote-role {
+    opacity: 0.75;
+    font-weight: 500;
+  }
+
+  .owner-story__quote-role::before {
+    content: '·';
+    margin-right: 0.35rem;
+    opacity: 0.45;
+  }
+
+  .owner-story__body {
+    color: var(--text);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: none;
+  }
+
+  .owner-story__mark {
+    color: inherit;
+    font-weight: 500;
+    padding: 0 0.12em;
+    margin: 0 -0.04em;
+    border-radius: 0.15em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .owner-story__mark--gold,
+  .owner-story__mark--accent,
+  .owner-story__mark--sky,
+  .owner-story__mark--mint {
+    background: linear-gradient(
+      transparent 18%,
+      color-mix(in srgb, var(--accent) 28%, transparent) 18%,
+      color-mix(in srgb, var(--accent) 28%, transparent) 88%,
+      transparent 88%
+    );
+  }
+
+  .owner-story__quote .owner-story__mark {
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .owner-story__layout {
+      grid-template-columns: 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    .owner-story__media {
+      max-width: 32rem;
+      margin-inline: auto;
+    }
+
+    .owner-story__caption {
+      text-align: center;
+    }
+  }
+</style>

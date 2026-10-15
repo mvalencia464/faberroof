@@ -1,0 +1,78 @@
+---
+// src/pages/thanks.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout title={`Thank You | ${SITE.name}`} description="We received your estimate request and will be in touch soon.">
+  <Header />
+  <main class="thanks">
+    <div class="container thanks__content">
+      <span class="thanks__icon" aria-hidden="true">
+        <i class="fas fa-check"></i>
+      </span>
+      <h1>Request Received!</h1>
+      <p>Thanks for contacting <strong>{SITE.name}</strong>. Chris or the team will reach out shortly about a walk-through and estimate.</p>
+      <p>Prefer to talk now?</p>
+      <a href={`tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g,'')}`} class="btn btn--primary">
+        Call {SITE.phone}
+      </a>
+      <a href="/" class="back-link">Back to homepage</a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .thanks {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: var(--panel);
+  }
+
+  .thanks__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 0;
+  }
+
+  .thanks__icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--accent);
+    font-size: 1.5rem;
+  }
+
+  .thanks__content h1 {
+    color: var(--deep);
+  }
+
+  .thanks__content p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 36rem;
+  }
+
+  .back-link {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+</style>

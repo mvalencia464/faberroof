@@ -1,0 +1,18 @@
+{
+  "defaultSlug": "faberroof",
+  "clients": [
+    {
+      "slug": "faberroof",
+      "name": "Faber Roof",
+      "cid": "",
+      "location_code": 2840,
+      "language_code": "en",
+      "depth": 20,
+      "sort_by": "newest",
+      "profileUrl": "",
+      "outputJson": "src/data/google-reviews.json",
+      "outputAvatarsDir": "src/assets/avatars",
+      "outputReviewImagesDir": "src/assets/review-images"
+    }
+  ]
+}

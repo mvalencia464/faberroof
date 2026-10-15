@@ -1,0 +1,626 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { SITE, AREA_PAGES, formatSiteAddress } from '../../config/site';
+import { siteHref, siteOrigin } from '../../lib/origin';
+import { r2img } from '../../lib/r2';
+
+export function getStaticPaths() {
+  return SITE.services.map((service) => ({
+    params: { slug: service.slug },
+  }));
+}
+
+const service = SITE.services.find((item) => item.slug === Astro.params.slug);
+if (!service) {
+  throw new Error(`Unknown service: ${Astro.params.slug}`);
+}
+const businessAddress = formatSiteAddress();
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const related = SITE.services.filter((s) => s.slug !== service.slug).slice(0, 3);
+const pageTitle =
+  'seoTitle' in service && service.seoTitle
+    ? service.seoTitle
+    : `${service.title} | ${SITE.tradeLabel} in ${SITE.city}, ${SITE.state}`;
+const pageDescription =
+  'seoDescription' in service && service.seoDescription
+    ? service.seoDescription
+    : service.shortDesc;
+const bodySections =
+  'bodySections' in service && Array.isArray(service.bodySections) ? service.bodySections : [];
+const serviceFaqs =
+  'faqs' in service && Array.isArray(service.faqs) && service.faqs.length > 0
+    ? service.faqs
+    : SITE.serviceFaqs;
+const origin = siteOrigin(Astro.site);
+const canonical = new URL(`/services/${service.slug}`, origin).href;
+
+/** Drop CDN resize/crop siblings (-1, -2, _3) and the hero image already shown above. */
+function galleryStem(url: string): string {
+  return url
+    .split('/')
+    .pop()!
+    .replace(/\.(avif|jpe?g|png|webp)$/i, '')
+    .replace(/([-_]\d+)$/, '');
+}
+
+const rawGallery =
+  'galleryImages' in service && Array.isArray(service.galleryImages)
+    ? service.galleryImages
+    : [];
+
+const seenStems = new Set<string>();
+const heroStem = galleryStem(service.image);
+const galleryImages = rawGallery.filter((item) => {
+  const stem = galleryStem(item.image);
+  if (stem === heroStem) return false;
+  if (seenStems.has(stem)) return false;
+  seenStems.add(stem);
+  return true;
+});
+
+const heroImage = r2img(service.image);
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${origin}/` },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: siteHref('/#services', Astro.site) },
+        { '@type': 'ListItem', position: 3, name: service.title, item: canonical },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: service.title,
+      description: pageDescription,
+      url: canonical,
+      areaServed: [
+        ...AREA_PAGES.map((area) => ({ '@type': 'City', name: `${area.name}, ${SITE.state}` })),
+      ],
+      provider: {
+        '@type': SITE.schemaType,
+        name: SITE.name,
+        telephone: SITE.phone,
+        url: `${origin}/`,
+      },
+      serviceType: SITE.serviceType,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: serviceFaqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: { '@type': 'Answer', text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} image={heroImage}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+  <Header />
+
+  <main>
+    <section class="service-hero">
+      <div class="service-hero__bg">
+        <img
+          src={heroImage}
+          alt=""
+          class="service-hero__bg-img"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="service-hero__overlay" aria-hidden="true"></div>
+      <div class="container service-hero__content">
+        <a href="/#services" class="breadcrumb">All Services</a>
+        <h1>{service.title}</h1>
+        <p>{service.shortDesc}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container service-detail">
+        <div class="service-detail__main">
+          <h2>About This Service</h2>
+          <p class="service-detail__body">{service.fullDesc}</p>
+
+          <h3>What's Included</h3>
+          <ul class="highlights">
+            {service.highlights.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+
+          {bodySections.map((section) => (
+            <div class="service-section">
+              <h3>{section.heading}</h3>
+              <p>{section.body}</p>
+            </div>
+          ))}
+
+          {galleryImages.length > 0 && (
+            <>
+              <h3>Service Gallery</h3>
+              <div class="service-gallery">
+                {galleryImages.map((item) => (
+                  <div class="service-gallery__item">
+                    <img
+                      src={r2img(item.image)}
+                      alt={item.alt}
+                      loading="lazy"
+                      width="640"
+                      height="480"
+                    />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          <h3>Areas We Serve</h3>
+          <p class="service-areas-intro">
+            {SITE.serviceAreasIntro}
+          </p>
+          <ul class="service-areas-list">
+            {AREA_PAGES.map((area) => (
+              <li>
+                <a href={`/areas/${area.slug}`}>{area.name}, {SITE.state}</a>
+              </li>
+            ))}
+          </ul>
+
+          <h3>Frequently Asked Questions</h3>
+          <div class="faq-list">
+            {serviceFaqs.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.q}</summary>
+                <p>{faq.a}</p>
+              </details>
+            ))}
+          </div>
+
+          <div class="service-detail__cta">
+            <a href="/contact" class="btn btn--primary">{SITE.ctaPrimaryLabel}</a>
+            <a href={telHref} class="btn btn--outline">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+              {SITE.phone}
+            </a>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          <div class="sidebar-card panel-card">
+            <h4>{SITE.sidebarTitle}</h4>
+            <p>{SITE.sidebarBody}</p>
+            <a href={telHref} class="btn btn--primary sidebar-call">
+              Call {SITE.phone}
+            </a>
+            <a href={`mailto:${SITE.email}`} class="sidebar-email">{SITE.email}</a>
+          </div>
+
+          <div class="sidebar-card panel-card">
+            <h4>Business Hours</h4>
+            <dl class="sidebar-hours">
+              {SITE.shop.hours.map((row) => (
+                <>
+                  <dt>{row.days}</dt>
+                  <dd>{row.time}</dd>
+                </>
+              ))}
+            </dl>
+            <p class="sidebar-address">
+              {businessAddress}
+            </p>
+          </div>
+
+          <div class="sidebar-card panel-card">
+            <h4>Service Areas</h4>
+            <ul class="sidebar-areas">
+              {AREA_PAGES.map((area) => (
+                <li><a href={`/areas/${area.slug}`}>{area.name}</a></li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {related.length > 0 && (
+      <section class="section section--alt">
+        <div class="container">
+          <h2 class="related-heading">Other Services</h2>
+          <div class="related-grid">
+            {related.map((s) => (
+              <a href={`/services/${s.slug}`} class="related-card panel-card">
+                <div class="related-card__body">
+                  <strong>{s.title}</strong>
+                  <p>{s.shortDesc}</p>
+                  <span class="related-card__link">See this service →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <CTABanner />
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .service-hero {
+    position: relative;
+    min-height: 42vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: var(--deep);
+  }
+
+  .service-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .service-hero__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .service-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(28, 31, 36, 0.35) 0%,
+        rgba(28, 31, 36, 0.55) 50%,
+        rgba(28, 31, 36, 0.88) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(28, 31, 36, 0.82) 0%,
+        rgba(28, 31, 36, 0.4) 50%,
+        rgba(28, 31, 36, 0.18) 100%
+      );
+  }
+
+  .service-hero__content {
+    padding-block: 2rem 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .breadcrumb {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  .breadcrumb:hover {
+    color: var(--accent-hover);
+  }
+
+  .service-hero__content h1 {
+    font-size: clamp(2.75rem, 7vw, 4.5rem);
+    line-height: 0.95;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-hero__content p {
+    color: #e2e8f0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.65;
+    max-width: 32.5rem;
+  }
+
+  .service-detail {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .service-detail {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-detail__main h2 {
+    color: var(--deep);
+    margin-bottom: 1rem;
+  }
+
+  .service-detail__main h3 {
+    color: var(--deep);
+    margin: 2rem 0 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .service-detail__body {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: none;
+  }
+
+  .service-section {
+    margin: 1.75rem 0;
+  }
+
+  .service-section h3 {
+    margin-bottom: 0.65rem;
+  }
+
+  .service-section p {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: none;
+  }
+
+  .service-areas-intro {
+    color: var(--muted);
+    margin: 0.35rem 0 0.85rem;
+    max-width: none;
+  }
+
+  .service-areas-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0 0 1.75rem;
+    padding: 0;
+  }
+
+  .service-areas-list a {
+    font-weight: 600;
+  }
+
+  .sidebar-areas {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .sidebar-areas a {
+    font-weight: 600;
+  }
+
+  .highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .highlights li {
+    color: var(--text);
+    font-size: 1rem;
+    padding: 0.6rem 0 0.6rem 1.15rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .highlights li::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    top: 1rem;
+  }
+
+  .service-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .service-gallery__item {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .service-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 640px) {
+    .service-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .faq-list {
+    margin-top: 0.5rem;
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 0.95rem;
+    background: #fff;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    color: var(--deep);
+    font-size: 0.93rem;
+    font-weight: 700;
+  }
+
+  .faq-item p {
+    margin-top: 0.55rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .service-detail__cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .service-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: sticky;
+    top: 80px;
+  }
+
+  .sidebar-card {
+    padding: 1.5rem;
+  }
+
+  .sidebar-card h4 {
+    font-size: 1.15rem;
+    color: var(--deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .sidebar-call {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .sidebar-directions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.75rem;
+  }
+
+  .sidebar-email {
+    display: block;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    word-break: break-all;
+  }
+
+  .sidebar-hours {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-hours dt {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .sidebar-hours dd {
+    margin: 0;
+    color: var(--text);
+    text-align: right;
+  }
+
+  .sidebar-address {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    max-width: none;
+  }
+
+  .related-heading {
+    color: var(--deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .related-card__body {
+    padding: 1.25rem;
+  }
+
+  .related-card strong {
+    display: block;
+    color: var(--deep);
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .related-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.5;
+    max-width: none;
+    margin-bottom: 0.75rem;
+  }
+
+  .related-card__link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+</style>

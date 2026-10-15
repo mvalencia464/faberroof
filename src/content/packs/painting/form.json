@@ -1,0 +1,16 @@
+{
+  "title": "{{ctaPrimaryLabel}}",
+  "subtitle": "Share a few details — {{ownerName}} will follow up.",
+  "submitText": "Send my request",
+  "finalNote": "No obligation. We walk the job before anyone starts.",
+  "trustBullets": ["Local to {{city}}", "Homes and commercial", "Written estimates"],
+  "projectTypes": [
+    { "value": "interior", "label": "Interior", "phIcon": "home" },
+    { "value": "exterior", "label": "Exterior", "phIcon": "building" },
+    { "value": "cabinets", "label": "Cabinets", "phIcon": "rows" },
+    { "value": "commercial", "label": "Commercial", "phIcon": "buildings" },
+    { "value": "other", "label": "Something else", "phIcon": "question" }
+  ],
+  "roofTypes": [],
+  "timelines": []
+}

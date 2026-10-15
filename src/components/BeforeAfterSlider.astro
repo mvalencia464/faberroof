@@ -1,0 +1,205 @@
+---
+import { r2img } from '../lib/r2';
+
+interface Props {
+  beforeImage: string;
+  afterImage: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+}
+
+const { 
+  beforeImage, 
+  afterImage, 
+  beforeLabel = "Before", 
+  afterLabel = "After" 
+} = Astro.props;
+---
+
+<div class="ba-slider panel-card">
+  <div class="ba-slider__container">
+    <div class="ba-slider__image ba-slider__after">
+      <img src={r2img(afterImage)} alt="After" loading="lazy" />
+      <span class="ba-label ba-label--after">{afterLabel}</span>
+    </div>
+    <div class="ba-slider__image ba-slider__before" id="before-pane">
+      <img src={r2img(beforeImage)} alt="Before" loading="lazy" />
+      <span class="ba-label ba-label--before">{beforeLabel}</span>
+    </div>
+    <div class="ba-slider__handle" id="slider-handle">
+      <div class="ba-slider__arrow ba-slider__arrow--left"></div>
+      <div class="ba-slider__arrow ba-slider__arrow--right"></div>
+    </div>
+    <input 
+      type="range" 
+      min="0" 
+      max="100" 
+      value="50" 
+      class="ba-slider__range" 
+      id="slider-range" 
+      aria-label="Before/After Slider"
+    />
+  </div>
+</div>
+
+<script>
+  function initSliders() {
+    const sliders = document.querySelectorAll('.ba-slider');
+    
+    sliders.forEach(slider => {
+      const range = slider.querySelector('#slider-range') as HTMLInputElement;
+      const beforePane = slider.querySelector('#before-pane') as HTMLElement;
+      const handle = slider.querySelector('#slider-handle') as HTMLElement;
+
+      if (!range || !beforePane || !handle) return;
+
+      const updateSlider = () => {
+        const value = range.value;
+        beforePane.style.width = `${value}%`;
+        handle.style.left = `${value}%`;
+      };
+
+      range.addEventListener('input', updateSlider);
+      // Initialize
+      updateSlider();
+    });
+  }
+
+  // Run on initial load and after view transitions
+  initSliders();
+  document.addEventListener('astro:after-swap', initSliders);
+</script>
+
+<style>
+  .ba-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    background: var(--panel2);
+  }
+
+  .ba-slider__container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    user-select: none;
+    /* Create a container context for the image width */
+    container-type: inline-size;
+  }
+
+  .ba-slider__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ba-slider__image img {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ba-slider__after img {
+    width: 100%;
+  }
+
+  .ba-slider__before {
+    width: 50%;
+    z-index: 2;
+    overflow: hidden;
+    border-right: 2px solid var(--accent2);
+  }
+
+  /* Keep the before image fixed at 100% of the container width */
+  .ba-slider__before img {
+    width: 100cqw;
+    max-width: none;
+  }
+
+  .ba-slider__after {
+    z-index: 1;
+  }
+
+  .ba-label {
+    position: absolute;
+    bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(7, 17, 31, 0.82);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    z-index: 3;
+    backdrop-filter: blur(4px);
+  }
+
+  .ba-label--before {
+    left: 1rem;
+  }
+
+  .ba-label--after {
+    right: 1rem;
+  }
+
+  .ba-slider__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: var(--accent2);
+    z-index: 4;
+    transform: translateX(-50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ba-slider__handle::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    border: 3px solid var(--accent2);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+
+  .ba-slider__arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    z-index: 5;
+  }
+
+  .ba-slider__arrow--left {
+    border-right: 8px solid white;
+    transform: translateX(-10px);
+  }
+
+  .ba-slider__arrow--right {
+    border-left: 8px solid white;
+    transform: translateX(10px);
+  }
+
+  .ba-slider__range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 10;
+  }
+</style>

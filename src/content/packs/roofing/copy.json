@@ -1,0 +1,301 @@
+{
+  "ctaPrimaryLabel": "{{ctaPrimaryLabel}}",
+  "phoneCtaLabel": "{{phoneCtaLabel}}",
+  "serviceType": "{{serviceType}}",
+  "serviceNoun": "{{serviceNoun}}",
+  "ogImageAlt": "{{name}} — {{tradeLabel}} in {{city}}, {{state}}",
+  "heroImageAlt": "{{name}} project in {{city}}",
+  "formConsent": "and consent to be contacted about my {{serviceNoun}} estimate. Msg & data rates may apply.",
+  "sidebarTitle": "Request an estimate",
+  "sidebarBody": "Call for the next step and a written price after we see the job.",
+  "serviceAreasIntro": "{{name}} is a local {{tradeLabel}} serving these {{region}} communities:",
+  "contactTitle": "{{ctaPrimaryLabel}} | {{name}}",
+  "contactDescription": "Request an estimate from {{name}} in {{city}}. Call {{phone}}.",
+  "contactHeading": "{{ctaPrimaryLabel}}",
+  "contactIntro": "Tell us the property and what you need.",
+  "aboutDescription": "Meet {{ownerName}} and {{legalName}} — {{tradeLabel}} in {{city}} serving {{region}}.",
+  "policyDescription": "How {{name}} collects, uses, and protects your information when you request an estimate in {{city}} and {{region}}.",
+  "termsDescription": "Terms governing use of the {{name}} website and estimate requests in {{city}} and {{region}}.",
+  "areaEyebrow": "{{tradeLabel}} · Service area",
+  "areaPageTitle": "{{tradeLabel}} in {{areaName}} | {{name}}",
+  "areaHeadline": "{{tradeLabel}} in {{areaName}}",
+  "areaIntro": "When your {{areaName}} property needs {{serviceNoun}} work, you get a clear estimate and a crew that treats the place like it is yours.",
+  "areaBody": "{{legalName}} serves {{areaName}} and nearby {{region}} from {{city}}. Tell us the address and we look at the job before work starts.",
+  "areaServicesNote": "{{serviceNoun}} for {{areaName}} homes and buildings.",
+  "areaServicesHeading": "Services in {{areaName}}",
+  "areaHighlights": [
+    "Written estimates",
+    "Local scheduling from {{city}}",
+    "Homes and light commercial",
+    "Photos and a clear scope"
+  ],
+  "areaFaqs": [
+    {
+      "q": "Do you work in {{areaName}}?",
+      "a": "Yes. {{areaName}} is in our {{region}} service area. Call {{phone}}."
+    },
+    {
+      "q": "How do I get an estimate in {{areaName}}?",
+      "a": "Call {{phone}} or send the form. We look at the job and give you a next step."
+    }
+  ],
+  "jobAreaLink": "{{tradeLabel}} in {{city}}",
+  "hero": {
+    "trustBadge": "{{city}} · {{region}}",
+    "headingLine1": "A roof that keeps",
+    "headingLine2": "",
+    "headingAccent": "water out",
+    "headline": "A roof that keeps water out.",
+    "subheading": "You want a straight answer on repair versus replacement — not a guess from the curb. You get an inspection and a written estimate before work starts.",
+    "benefits": [
+      { "icon": "home", "label": "Repair &\nreplacement" },
+      { "icon": "building", "label": "Homes &\nbuildings" },
+      { "icon": "clipboard-list", "label": "Written\nestimates" }
+    ],
+    "ctaCall": "Call {{phone}}",
+    "scheduleHref": "/contact",
+    "financingNote": "See the roof. Clear next steps. No pressure.",
+    "locationNote": "Serving {{region}} from {{city}}",
+    "trustLine": "Roof repair, replacement, and storm work",
+    "reviewCard": {
+      "rating": 5,
+      "count": "Google Reviews",
+      "href": "/reviews"
+    },
+    "ownerNote": "Call or send the form — {{ownerName}} will follow up.",
+    "ownerCta": "Talk to {{ownerName}}"
+  },
+  "trustBar": {
+    "heading": "{{serviceNoun}} for {{region}} homes and buildings",
+    "badges": [
+      {
+        "type": "google",
+        "rating": 5,
+        "label": "Google reviews",
+        "eyebrow": "Google",
+        "title": "Google reviews",
+        "icon": "star"
+      },
+      {
+        "type": "cert",
+        "label": "Based in\n{{city}}, {{state}}",
+        "eyebrow": "Based in",
+        "title": "{{city}}, {{state}}",
+        "icon": "map-marker-alt"
+      },
+      {
+        "type": "cert",
+        "label": "Written\nestimates",
+        "eyebrow": "Before we start",
+        "title": "Written estimates",
+        "icon": "clipboard-list"
+      },
+      {
+        "type": "cert",
+        "label": "Homes &\nbuildings",
+        "eyebrow": "Residential &",
+        "title": "Commercial",
+        "icon": "building"
+      }
+    ]
+  },
+  "process": {
+    "label": "How it works",
+    "title": "From inspection to a finished roof",
+    "subtitle": "You know the scope before anyone starts.",
+    "meetMessage": "Tell us the address. We follow up with next steps for an inspection and estimate.",
+    "steps": [
+      {
+        "title": "Call or send the form",
+        "meta": "Fast start",
+        "description": "Tell us repair, replacement, storm damage, or an inspection — and the address."
+      },
+      {
+        "title": "Inspect the roof",
+        "meta": "See the work",
+        "description": "We look at the deck, flashing, and age so the estimate matches the roof you have."
+      },
+      {
+        "title": "Written estimate",
+        "meta": "No guessing",
+        "description": "You get the scope in writing before work starts."
+      },
+      {
+        "title": "Do the work",
+        "meta": "The job",
+        "description": "The crew follows the scope and keeps the property tidy."
+      },
+      {
+        "title": "Walk-through",
+        "meta": "Done",
+        "description": "We review the finished work with you."
+      }
+    ]
+  },
+  "offersSection": {
+    "label": "Getting started",
+    "title": "Get an estimate you can act on.",
+    "subtitle": "Repair, replacement, or storm damage — pick the path that matches the roof."
+  },
+  "offers": [
+    {
+      "slug": "replacement-estimate",
+      "title": "Replacement estimate",
+      "price": "Custom quote",
+      "hook": "A full roof replacement scoped after we see the deck.",
+      "includes": ["On-roof inspection", "Material options", "Written estimate", "Schedule"],
+      "ctaText": "Get a replacement estimate",
+      "ctaHref": "/contact",
+      "icon": "home",
+      "featured": true,
+      "financingAnchor": true
+    },
+    {
+      "slug": "repair-estimate",
+      "title": "Repair estimate",
+      "price": "Custom quote",
+      "hook": "Leaks and flashing when the rest of the roof still has life.",
+      "includes": ["Leak check", "Flashing", "Shingle repair", "Honest replacement advice"],
+      "ctaText": "Ask about a repair",
+      "ctaHref": "/contact",
+      "icon": "tools"
+    },
+    {
+      "slug": "storm-estimate",
+      "title": "Storm inspection",
+      "price": "Custom quote",
+      "hook": "Wind and hail documented before you decide on repair or replacement.",
+      "includes": ["Photo notes", "Repair vs replacement", "Meet on site", "Clear next step"],
+      "ctaText": "Schedule a storm look",
+      "ctaHref": "/contact",
+      "icon": "cloud-lightning"
+    }
+  ],
+  "servicesHeading": "{{serviceNoun}} for your home and your building",
+  "servicesLabel": "Services",
+  "servicesIntro": "Here is the roof work we take on in {{region}}.",
+  "valueProps": [
+    {
+      "icon": "clipboard-list",
+      "title": "Inspect first",
+      "description": "Estimates come from the roof, not a phone guess."
+    },
+    {
+      "icon": "home",
+      "title": "Repair or replace",
+      "description": "We tell you which one the roof actually needs."
+    },
+    {
+      "icon": "building",
+      "title": "Homes and buildings",
+      "description": "The same straight conversation for a house or a small commercial roof."
+    },
+    {
+      "icon": "map-marker-alt",
+      "title": "Local from {{city}}",
+      "description": "You are calling {{region}}, not a national dispatch line."
+    }
+  ],
+  "whyChoose": {
+    "title": "Why choose {{name}}?",
+    "items": [
+      {
+        "title": "You are calling {{city}}",
+        "body": "{{ownerName}} and the crew serve {{region}} from nearby."
+      },
+      {
+        "title": "You hear the scope first",
+        "body": "Repair versus replacement in writing — not a guess from the street."
+      },
+      {
+        "title": "The property is treated carefully",
+        "body": "Protection, cleanup, and a walk-through when the job is done."
+      },
+      {
+        "title": "You can get an estimate",
+        "body": "Call {{phone}} or send the form."
+      }
+    ]
+  },
+  "reviewsSection": {
+    "label": "Google reviews",
+    "title": "What neighbors are saying",
+    "titleLine2": "",
+    "subtitle": "{{serviceNoun}} across {{city}} and {{region}}.",
+    "bullets": [
+      "{{tradeLabel}}",
+      "Based in {{city}}, {{state}}",
+      "{{ownerName}}, owner",
+      "Homes and buildings"
+    ],
+    "ctaText": "Read more reviews on Google",
+    "viewAllHref": "/reviews",
+    "viewAllText": "See all reviews"
+  },
+  "reviewsPage": {
+    "label": "Google Reviews",
+    "title": "What customers are saying",
+    "subtitle": "Feedback from people who hired {{name}}.",
+    "description": "Read reviews for {{legalName}} — {{tradeLabel}} in {{city}} and {{region}}."
+  },
+  "shop": {
+    "heading": "Contact Us",
+    "hours": [{ "days": "Hours", "time": "Call for hours" }]
+  },
+  "workGallery": {
+    "label": "Recent work",
+    "title": "Recent work in your area",
+    "intro": "Job photos show up here when they are on file."
+  },
+  "ownerStory": {
+    "label": "About Us",
+    "quote": "{{tagline}}",
+    "caption": "{{ownerName}} · {{ownerRole}}",
+    "ctaText": "{{ctaPrimaryLabel}}",
+    "ctaHref": "/contact",
+    "quoteAttribution": "{{ownerName}}",
+    "quoteRole": "{{ownerRole}}, {{legalName}}",
+    "homepageParagraphLimit": 2,
+    "paragraphs": [
+      "{{ownerName}} built {{name}} on showing up, looking at the job, and putting the scope in writing.",
+      "We serve {{region}} from {{city}}. Call {{phone}} or send the form."
+    ]
+  },
+  "teamSection": {
+    "label": "The team",
+    "title": "People who do the work",
+    "intro": "A clear estimate, then the job."
+  },
+  "teamMembers": [
+    {
+      "name": "{{ownerName}}",
+      "role": "{{ownerRole}}",
+      "headline": "Leads with an inspection and a written estimate.",
+      "bio": ["{{ownerName}} runs {{name}} from {{city}}."]
+    }
+  ],
+  "serviceArea": {
+    "heading": "Areas We Serve",
+    "body": "Based in {{city}}, {{state}} — serving {{region}}.",
+    "country": "US"
+  },
+  "ctaBanner": {
+    "title": "Need the roof looked at?",
+    "subtitle": "Call or send the form. You get an inspection and a written estimate.",
+    "body": "Repair, replacement, or storm damage across {{region}}.",
+    "scheduleHref": "/contact",
+    "scheduleLabel": "{{ctaPrimaryLabel}}",
+    "scheduleSub": "No obligation",
+    "callSub": "Call to schedule"
+  },
+  "beforeAfter": {
+    "enabled": false,
+    "title": "Before and after",
+    "intro": "Drag the slider to compare the job.",
+    "beforeImage": "/placeholders/hero.svg",
+    "afterImage": "/placeholders/hero.svg",
+    "beforeLabel": "Before",
+    "afterLabel": "After"
+  },
+  "footerBlurb": "{{tradeLabel}}. Serving {{region}} from {{city}}."
+}

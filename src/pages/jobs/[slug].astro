@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import BeforeAfterSlider from '../../components/BeforeAfterSlider.astro';
+import ReviewCard from '../../components/ReviewCard.astro';
+import { SITE } from '../../config/site';
+import { JOBS, getJob } from '../../data/jobs';
+import { allGoogleReviews } from '../../data/all-reviews';
+import { r2img } from '../../lib/r2';
+
+export function getStaticPaths() {
+  return JOBS.map((job) => ({
+    params: { slug: job.slug },
+  }));
+}
+
+const job = getJob(Astro.params.slug ?? '');
+if (!job) {
+  throw new Error(`Unknown job: ${Astro.params.slug}`);
+}
+
+const jobReview = job.reviewAuthor
+  ? allGoogleReviews.find((review) => review.author === job.reviewAuthor)
+  : undefined;
+
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const pageTitle = `${job.serviceLabel} in ${job.city}, ${SITE.state} | ${SITE.name}`;
+const pageDescription = job.caption;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+  <main>
+    <section class="job-hero">
+      <div class="container">
+        <p class="section-label">{job.city}, {SITE.state} · {job.serviceLabel}</p>
+        <h1>{job.title}</h1>
+        <p class="job-hero__intro">{job.caption}</p>
+        <div class="job-hero__actions">
+          <a href={telHref} class="btn btn--primary">Call {SITE.phone}</a>
+          <a href="/contact" class="btn btn--outline">{SITE.ctaPrimaryLabel}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container job-detail">
+        <div>
+          {job.beforeImage && job.afterImage ? (
+            <BeforeAfterSlider
+              beforeImage={job.beforeImage}
+              afterImage={job.afterImage}
+              beforeLabel="Before"
+              afterLabel="After"
+            />
+          ) : (
+            <img
+              class="job-detail__cover"
+              src={r2img(job.cover)}
+              alt={`${job.serviceLabel} in ${job.city}`}
+              width="1200"
+              height="800"
+            />
+          )}
+
+          <div class="job-detail__gallery">
+            {job.images.filter((src) => src !== job.cover).map((src) => (
+              <img src={r2img(src)} alt="" loading="lazy" width="640" height="480" />
+            ))}
+          </div>
+        </div>
+
+        <aside>
+          <p class="job-detail__kicker">Job summary</p>
+          <p>{job.summary}</p>
+
+          <div class="job-analysis">
+            <h2>What this job involved</h2>
+            <p><strong>Equipment.</strong> {job.analysis.equipment}</p>
+            <p><strong>Work performed.</strong> {job.analysis.workPerformed}</p>
+            <p><strong>Outcome.</strong> {job.analysis.outcome}</p>
+          </div>
+
+          <div class="work-ba__table" role="table" aria-label="Problem and solution">
+            <div class="work-ba__table-head" role="row">
+              <span role="columnheader">The problem</span>
+              <span role="columnheader">Our fix</span>
+            </div>
+            {job.rows.map((row) => (
+              <div class="work-ba__table-row" role="row">
+                <span class="work-ba__pain" role="cell">{row.pain}</span>
+                <span class="work-ba__fix" role="cell">{row.fix}</span>
+              </div>
+            ))}
+          </div>
+
+          {jobReview && (
+            <div class="job-detail__review">
+              <p class="job-detail__kicker">Google review</p>
+              <ReviewCard review={jobReview} showGoogleLink />
+            </div>
+          )}
+
+          <p>
+            <a href={`/areas/${job.areaSlug}`}>{SITE.jobAreaLink}</a>
+            {' · '}
+            <a href={`/services/${job.serviceSlug}`}>{job.serviceLabel}</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .job-hero {
+    background: var(--deep);
+    color: #fff;
+    padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  }
+
+  .job-hero h1 {
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  .job-hero__intro {
+    max-width: 48ch;
+    color: rgba(226, 232, 240, 0.88);
+    margin-bottom: 1.5rem;
+  }
+
+  .job-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .job-hero .btn--outline {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .job-detail {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 960px) {
+    .job-detail {
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
+    }
+  }
+
+  .job-detail__cover,
+  .job-detail__gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .job-detail__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    margin-top: 0.75rem;
+  }
+
+  .job-detail__kicker {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .job-detail__review {
+    margin: 1.75rem 0 1.5rem;
+  }
+
+  .job-detail__review :global(.review-card) {
+    height: auto;
+  }
+
+  .job-analysis {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background: var(--panel);
+    border-radius: 8px;
+  }
+
+  .job-analysis h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .job-analysis p {
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+    max-width: none;
+  }
+
+  .work-ba__table {
+    display: grid;
+    gap: 0;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .work-ba__table-head,
+  .work-ba__table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .work-ba__table-head {
+    background: var(--deep);
+    color: #fff;
+  }
+
+  .work-ba__table-head span {
+    padding: 0.65rem 0.85rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .work-ba__table-head span:last-child {
+    background: color-mix(in srgb, var(--accent) 22%, var(--deep));
+  }
+
+  .work-ba__table-row + .work-ba__table-row {
+    border-top: 1px solid var(--border);
+  }
+
+  .work-ba__pain,
+  .work-ba__fix {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .work-ba__pain {
+    color: var(--text);
+    background: color-mix(in srgb, var(--gold) 8%, #fff);
+    border-right: 1px solid var(--border);
+  }
+
+  .work-ba__fix {
+    color: var(--text);
+    background: color-mix(in srgb, var(--accent) 7%, #fff);
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import WhyChooseReviews from '../components/WhyChooseReviews.astro';
+import RecentJobs from '../components/RecentJobs.astro';
+import BeforeAfterSection from '../components/BeforeAfterSection.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout preloadLcpImage={SITE.hero.image} preloadLcpImageMobile={SITE.hero.imageSm}>
+  <Header />
+  <main class="home-main">
+    <Hero />
+    <ServicesGrid />
+    <WhyChooseReviews />
+    <RecentJobs />
+    <BeforeAfterSection />
+    <CTABanner />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .home-main :global(h1),
+  .home-main :global(h2) {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+</style>

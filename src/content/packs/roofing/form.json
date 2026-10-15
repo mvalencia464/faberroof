@@ -1,0 +1,16 @@
+{
+  "title": "{{ctaPrimaryLabel}}",
+  "subtitle": "Share a few details — {{ownerName}} will follow up.",
+  "submitText": "Send my request",
+  "finalNote": "No obligation. We look at the roof before anyone starts.",
+  "trustBullets": ["Local to {{city}}", "Written estimates", "Storm and replacement work"],
+  "projectTypes": [
+    { "value": "replacement", "label": "Roof replacement", "phIcon": "home" },
+    { "value": "repair", "label": "Roof repair", "phIcon": "tools" },
+    { "value": "storm", "label": "Storm damage", "phIcon": "cloud-lightning" },
+    { "value": "inspection", "label": "Inspection", "phIcon": "clipboard-list" },
+    { "value": "other", "label": "Something else", "phIcon": "question" }
+  ],
+  "roofTypes": [],
+  "timelines": []
+}

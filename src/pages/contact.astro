@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroLeadForm from '../components/HeroLeadForm.astro';
+import { SITE } from '../config/site';
+
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+---
+
+<BaseLayout
+  title={SITE.contactTitle}
+  description={SITE.contactDescription}
+>
+  <Header />
+  <main>
+    <section id="quote" class="section contact-page">
+      <div class="container contact-page__inner">
+        <div>
+          <p class="section-label">Contact</p>
+          <h1>{SITE.contactHeading}</h1>
+          <p>
+            {SITE.contactIntro}
+            {SITE.hero.leadForm.subtitle} Prefer to talk now?
+          </p>
+          <p>
+            <a class="btn btn--primary" href={telHref}>Call {SITE.phone}</a>
+          </p>
+          <ul class="contact-page__facts">
+            <li>Free estimates</li>
+            <li>{SITE.city}, {SITE.state}</li>
+            <li>Residential and commercial</li>
+            <li>{SITE.email}</li>
+          </ul>
+        </div>
+        <HeroLeadForm />
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-page {
+    background: var(--surface);
+    padding-top: 6rem;
+  }
+
+  .contact-page__inner {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 900px) {
+    .contact-page__inner {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+    }
+  }
+
+  .contact-page h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-page__facts {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--muted);
+  }
+</style>

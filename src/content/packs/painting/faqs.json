@@ -1,0 +1,18 @@
+[
+  {
+    "q": "What work do you offer?",
+    "a": "Interior, exterior, cabinets, and commercial spaces in {{city}} and {{region}}. Call {{phone}}."
+  },
+  {
+    "q": "Do you offer emergency 24/7 service?",
+    "a": "No. This is scheduled work. Call {{phone}} for an estimate."
+  },
+  {
+    "q": "Where do you work?",
+    "a": "{{city}} and {{region}}."
+  },
+  {
+    "q": "How do I get an estimate?",
+    "a": "Call {{phone}} or send the form. We walk the job first."
+  }
+]

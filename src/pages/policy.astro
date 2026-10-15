@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, formatSiteAddress } from '../config/site';
+
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const address = formatSiteAddress();
+---
+
+<BaseLayout
+  title={`Privacy Policy | ${SITE.name}`}
+  description={SITE.policyDescription}
+>
+  <Header />
+  <main class="section legal-page">
+    <div class="container legal-content panel-card">
+      <p class="section-label">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: July 22, 2026</p>
+      <p>
+        This Privacy Policy explains how <strong>{SITE.name}</strong> (“we,” “us,” or “our”) collects,
+        uses, and shares information when you visit our website, request service, schedule
+        an appointment, or otherwise contact us. The practices described here reflect how a
+        {SITE.city} / {SITE.region} {SITE.serviceNoun} company typically handles customer data.
+      </p>
+
+      <h2>1. Information We Collect</h2>
+      <p>We may collect information you provide directly, including:</p>
+      <ul>
+        <li>Name, phone number, email address, and property address</li>
+        <li>Service details and project notes</li>
+        <li>Preferred appointment windows and messages you send through forms or chat</li>
+        <li>Photos or documents you voluntarily upload related to a job</li>
+      </ul>
+      <p>We may also collect limited technical information automatically, such as:</p>
+      <ul>
+        <li>Browser type, device type, approximate location derived from IP address</li>
+        <li>Pages visited, referral source, and general site-usage metrics</li>
+        <li>Cookies or similar technologies used for basic analytics and site performance</li>
+      </ul>
+
+      <h2>2. How We Use Information</h2>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Respond to service, estimate, and appointment requests</li>
+        <li>Schedule appointments, coordinate crews, and communicate project updates</li>
+        <li>Provide quotes, warranties, and post-project follow-up</li>
+        <li>Improve our website, services, and local service coverage</li>
+        <li>Send marketing messages only when you have opted in</li>
+        <li>Comply with legal obligations and protect against fraud or misuse</li>
+      </ul>
+
+      <h2>3. SMS &amp; Phone Communications</h2>
+      <p>
+        If you provide a phone number and consent to be contacted, we may call or text you about your
+        estimate, consultation, or project status. Message frequency varies.
+        Message and data rates may apply. Reply <strong>STOP</strong> to opt out of SMS at any time;
+        reply <strong>HELP</strong> for help. SMS consent is not a condition of purchase and is not
+        sold or shared with third parties for their own marketing.
+      </p>
+
+      <h2>4. How We Share Information</h2>
+      <p>We do not sell your personal information. We may share information with:</p>
+      <ul>
+        <li>Service providers who help us operate forms, hosting, analytics, or communications</li>
+        <li>Financing partners, only when you request financing options</li>
+        <li>Insurance carriers or adjusters, only when you ask us to support a claim</li>
+        <li>Professional advisors or authorities when required by law or to protect our rights</li>
+      </ul>
+      <p>
+        Any vendors we use are expected to process information only as needed to perform services for
+        us and to protect it with reasonable safeguards.
+      </p>
+
+      <h2>5. Cookies &amp; Analytics</h2>
+      <p>
+        Our site may use cookies or similar tools to remember preferences, measure traffic, and
+        understand how visitors find our services. You can control cookies through your browser
+        settings. Disabling cookies may affect some site features.
+      </p>
+
+      <h2>6. Data Retention</h2>
+      <p>
+        We keep estimate and project-related information for as long as needed to provide services,
+        maintain warranty records, resolve disputes, and meet legal or accounting requirements. When
+        information is no longer needed, we delete or de-identify it when reasonably practical.
+      </p>
+
+      <h2>7. Your Choices &amp; Rights</h2>
+      <p>Depending on where you live, you may have rights to:</p>
+      <ul>
+        <li>Request access to personal information we hold about you</li>
+        <li>Ask us to correct inaccurate information</li>
+        <li>Request deletion of information, subject to legal or warranty retention needs</li>
+        <li>Opt out of marketing emails or texts</li>
+      </ul>
+      <p>
+        To make a request, contact us using the details below. We may need to verify your identity
+        before fulfilling certain requests.
+      </p>
+
+      <h2>8. Children’s Privacy</h2>
+      <p>
+        Our services are intended for adults seeking residential and commercial {SITE.serviceNoun} work. We do
+        not knowingly collect personal information from children under 13. If you believe a child
+        has submitted information, contact us and we will delete it.
+      </p>
+
+      <h2>9. Data Security</h2>
+      <p>
+        We use reasonable administrative, technical, and physical safeguards to protect information
+        submitted through our site. No method of transmission or storage is 100% secure, so we cannot
+        guarantee absolute security.
+      </p>
+
+      <h2>10. Third-Party Links</h2>
+      <p>
+        Our website may link to Google Maps, financing partners, or other third-party sites. Their
+        privacy practices are governed by their own policies, not this one.
+      </p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. The “Last updated” date at the top will
+        change when we do. Continued use of the site after updates means you acknowledge the revised
+        policy.
+      </p>
+
+      <h2>12. Contact Us</h2>
+      <p>
+        Questions about this Privacy Policy or your information:
+      </p>
+      <p>
+        <strong>{SITE.name}</strong><br />
+        {address}<br />
+        Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+        Phone: <a href={telHref}>{SITE.phone}</a><br />
+        License: {SITE.license}
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-top: 5.5rem;
+    padding-bottom: 4rem;
+    background: var(--panel);
+  }
+
+  .legal-content {
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    max-width: 860px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .legal-content h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    line-height: 0.95;
+    margin-bottom: 0.6rem;
+    color: var(--deep);
+  }
+
+  .legal-updated {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .legal-content h2 {
+    margin: 1.75rem 0 0.55rem;
+    color: var(--deep);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .legal-content ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .legal-content a {
+    font-weight: 600;
+  }
+</style>

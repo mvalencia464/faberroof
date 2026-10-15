@@ -1,0 +1,79 @@
+---
+import { SITE } from '../config/site';
+
+const top = SITE.topBar;
+---
+
+<div class="top-bar">
+  <div class="container top-bar__inner">
+    <p class="top-bar__line">
+      <span>{top.location}</span>
+      <span class="top-bar__sep" aria-hidden="true">·</span>
+      <span>{top.emergency}</span>
+      <span class="top-bar__sep" aria-hidden="true">·</span>
+      <span>{top.financing}</span>
+    </p>
+    <p class="top-bar__rating" aria-label={`${top.rating} out of 5 stars from ${top.reviewCount} reviews`}>
+      <strong>{top.rating}</strong>
+      <span class="top-bar__stars" aria-hidden="true">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </span>
+      <span>{top.reviewCount} reviews</span>
+    </p>
+  </div>
+</div>
+
+<style>
+  .top-bar {
+    background: color-mix(in srgb, var(--deep) 88%, #000);
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.72rem;
+    padding: 0.4rem 0;
+    display: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .top-bar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .top-bar__line,
+  .top-bar__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    max-width: none;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .top-bar__sep {
+    opacity: 0.45;
+  }
+
+  .top-bar__rating strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .top-bar__stars {
+    color: var(--gold);
+    font-size: 0.52rem;
+    display: inline-flex;
+    gap: 1px;
+  }
+
+  @media (min-width: 900px) {
+    .top-bar {
+      display: block;
+    }
+  }
+</style>

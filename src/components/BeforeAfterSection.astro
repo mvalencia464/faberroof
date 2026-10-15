@@ -1,0 +1,39 @@
+---
+import { SITE } from '../config/site';
+import BeforeAfterSlider from './BeforeAfterSlider.astro';
+
+const block = SITE.beforeAfter;
+---
+
+{
+  block.enabled && block.beforeImage && block.afterImage && (
+    <section id="before-after" class="section before-after">
+      <div class="container">
+        <p class="section-label">Compare</p>
+        <h2>{block.title}</h2>
+        {block.intro && <p class="subtext">{block.intro}</p>}
+        <BeforeAfterSlider
+          beforeImage={block.beforeImage}
+          afterImage={block.afterImage}
+          beforeLabel={block.beforeLabel}
+          afterLabel={block.afterLabel}
+        />
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .before-after {
+    background: var(--surface);
+  }
+
+  .before-after h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .before-after .subtext {
+    margin-bottom: 1.5rem;
+    max-width: 40rem;
+  }
+</style>

@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, formatSiteAddress } from '../config/site';
+
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const address = formatSiteAddress();
+---
+
+<BaseLayout
+  title={`Terms of Service | ${SITE.name}`}
+  description={SITE.termsDescription}
+>
+  <Header />
+  <main class="section legal-page">
+    <div class="container legal-content panel-card">
+      <p class="section-label">Legal</p>
+      <h1>Terms of Service</h1>
+      <p class="legal-updated">Last updated: July 22, 2026</p>
+      <p>
+        Welcome to <strong>{SITE.name}</strong>. By accessing this website or submitting a service
+        or contact form, you agree to these Terms of Service. If you do not agree,
+        please do not use the site. These terms mirror typical home-service website terms for a
+        {SITE.serviceNoun} business.
+      </p>
+
+      <h2>1. Who We Are</h2>
+      <p>
+        {SITE.name} ({SITE.legalName}) provides residential and commercial {SITE.serviceNoun} work in and around {SITE.city} and {SITE.region}.
+        We are a locally owned business.
+      </p>
+
+      <h2>2. Use of This Website</h2>
+      <p>You agree to use this website only for lawful purposes and to:</p>
+      <ul>
+        <li>Provide accurate information when submitting forms</li>
+        <li>Not attempt to disrupt, scrape, or misuse the site or its systems</li>
+        <li>Not submit harmful code, spam, or misleading project requests</li>
+      </ul>
+      <p>
+        We may suspend or limit access to the site if we believe these terms are being violated.
+      </p>
+
+      <h2>3. Estimate &amp; Appointment Requests</h2>
+      <p>
+        Submitting a form or booking a service visit does
+        <strong>not</strong> create a binding service contract. Estimates, pricing,
+        timelines, and scope are informational
+        until confirmed in writing after an on-site diagnosis.
+      </p>
+      <ul>
+        <li>Final pricing may change based on material selections, structural findings, permit requirements, and scope adjustments</li>
+        <li>Scheduling depends on crew availability, material lead times, and weather</li>
+        <li>Financing is subject to third-party lender approval and separate terms</li>
+      </ul>
+
+      <h2>4. Services &amp; Workmanship</h2>
+      <p>
+        Actual work is governed by the written proposal, work authorization, invoices, and
+        any warranty documents you receive. Unless otherwise stated in writing:
+      </p>
+      <ul>
+        <li>We perform work in a professional manner consistent with industry standards</li>
+        <li>Manufacturer warranties apply according to product terms; workmanship warranty details are provided at contract</li>
+        <li>Weather, material lead times, and HOA or permit requirements may affect scheduling</li>
+      </ul>
+
+      <h2>5. Payments</h2>
+      <p>
+        Payment terms are specified in your written agreement. Deposits, progress payments, or final
+        balances may be required. Unpaid balances may result in delayed scheduling, collection
+        activity, or lien rights as allowed by applicable {SITE.state} law.
+      </p>
+
+      <h2>6. SMS &amp; Marketing Communications</h2>
+      <p>
+        If you opt in, {SITE.name} may send project updates and, where consented, marketing texts or
+        emails. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong>
+        to cancel SMS; reply <strong>HELP</strong> for help. Consent is not required to receive an
+        estimate.
+      </p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>
+        Site content — including text, branding, logos, photographs, and layout — is owned by or
+        licensed to {SITE.name}. You may not copy, republish, or commercially reuse site materials
+        without our prior written permission, except for personal, non-commercial viewing.
+      </p>
+
+      <h2>8. Third-Party Services</h2>
+      <p>
+        The site may integrate maps, analytics, financing tools, or other third-party services. We
+        are not responsible for third-party content, availability, or policies. Your use of those
+        services may be subject to additional terms.
+      </p>
+
+      <h2>9. Disclaimers</h2>
+      <p>
+        The website and demo content are provided “as is.” To the fullest extent permitted by law, we
+        disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement
+        regarding website content. Online examples of pricing, reviews, team bios, and project photos
+        may be illustrative for this demo environment.
+      </p>
+
+      <h2>10. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by law, {SITE.name} and its owners, employees, and agents are
+        not liable for indirect, incidental, special, consequential, or punitive damages arising from
+        your use of the website. Our total liability related to website use shall not exceed one
+        hundred dollars ($100), except where liability cannot be limited under {SITE.state} law. This
+        section does not limit liability arising from a signed service agreement, which is
+        governed by that agreement.
+      </p>
+
+      <h2>11. Indemnification</h2>
+      <p>
+        You agree to indemnify and hold harmless {SITE.name} from claims arising out of your misuse
+        of the site, inaccurate form submissions, or violation of these terms, except to the extent
+        caused by our willful misconduct.
+      </p>
+
+      <h2>12. Governing Law</h2>
+      <p>
+        These terms are governed by the laws of the State of {SITE.state}, without regard to conflict
+        of law rules. Disputes related to website use shall be resolved in state or federal courts
+        located in {SITE.city}, {SITE.state}, unless another venue is required by a signed service
+        contract.
+      </p>
+
+      <h2>13. Changes</h2>
+      <p>
+        We may update these Terms of Service at any time. The “Last updated” date will reflect the
+        latest revision. Continued use of the site after changes means you accept the updated terms.
+      </p>
+
+      <h2>14. Contact</h2>
+      <p>Questions about these Terms of Service:</p>
+      <p>
+        <strong>{SITE.name}</strong><br />
+        {address}<br />
+        Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
+        Phone: <a href={telHref}>{SITE.phone}</a><br />
+        License: {SITE.license}
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-top: 5.5rem;
+    padding-bottom: 4rem;
+    background: var(--panel);
+  }
+
+  .legal-content {
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    max-width: 860px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .legal-content h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    line-height: 0.95;
+    margin-bottom: 0.6rem;
+    color: var(--deep);
+  }
+
+  .legal-updated {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .legal-content h2 {
+    margin: 1.75rem 0 0.55rem;
+    color: var(--deep);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .legal-content p,
+  .legal-content li {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .legal-content ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  .legal-content a {
+    font-weight: 600;
+  }
+</style>

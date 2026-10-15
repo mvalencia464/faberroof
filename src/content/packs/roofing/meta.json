@@ -1,0 +1,27 @@
+{
+  "trade": "roofing",
+  "tradeLabel": "Roofing contractor",
+  "schemaType": "RoofingContractor",
+  "serviceNoun": "roofing",
+  "serviceType": "Roofing services",
+  "ctaPrimaryLabel": "Get a roofing estimate",
+  "phoneCtaLabel": "Call for a roofing estimate",
+  "primaryServiceSlugs": ["roof-replacement", "roof-repair", "storm-damage", "inspections"],
+  "palette": {
+    "deep": "#1c1917",
+    "surface": "#f7f4f1",
+    "panel": "#efe8e1",
+    "panel2": "#e4d9ce",
+    "border": "rgba(28, 25, 23, 0.12)",
+    "accent": "#c45c26",
+    "accent2": "#1c1917",
+    "accentHover": "#9a4518",
+    "gold": "#e0a100",
+    "text": "#1c1917",
+    "muted": "#5c534c"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "body": "Open Sans"
+  }
+}

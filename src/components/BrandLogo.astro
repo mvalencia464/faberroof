@@ -1,0 +1,85 @@
+---
+import { SITE } from '../config/site';
+import { r2img } from '../lib/r2';
+
+interface Props {
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  /** light = for dark backgrounds (header); dark = for light backgrounds (footer) */
+  variant?: 'light' | 'dark';
+}
+
+const { class: className = '', loading = 'lazy', variant = 'dark' } = Astro.props;
+
+const logoUrl =
+  variant === 'light'
+    ? SITE.brandLogoLightUrl || SITE.brandLogoUrl
+    : SITE.brandLogoDarkUrl || SITE.brandLogoUrl;
+
+const hasLogo = Boolean(logoUrl?.trim());
+
+/** Local /public assets stay site-relative; remote/CDN paths go through r2img. */
+const logoSrc =
+  !logoUrl
+    ? ''
+    : /^https?:\/\//i.test(logoUrl) || logoUrl.startsWith('/')
+      ? logoUrl
+      : r2img(logoUrl);
+
+const displayWidth = 220;
+const displayHeight = Math.round(
+  (SITE.brandLogoHeight / SITE.brandLogoWidth) * displayWidth
+);
+---
+
+{hasLogo ? (
+  <img
+    src={logoSrc}
+    alt={SITE.name}
+    class:list={['brand-logo', className]}
+    width={displayWidth}
+    height={displayHeight}
+    loading={loading}
+    decoding="async"
+    fetchpriority={loading === 'eager' ? 'low' : undefined}
+  />
+) : (
+  <span
+    class:list={[
+      'brand-wordmark',
+      variant === 'light' ? 'brand-wordmark--light' : 'brand-wordmark--dark',
+      className,
+    ]}
+  >
+    {SITE.shortName}
+  </span>
+)}
+
+<style>
+  .brand-logo {
+    display: block;
+    width: auto;
+    height: clamp(3rem, 8.5vw, 4.1rem);
+    max-width: min(220px, 58vw);
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  .brand-wordmark {
+    display: block;
+    font-family: var(--font-display, inherit);
+    font-weight: 700;
+    font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .brand-wordmark--light {
+    color: #fff;
+  }
+
+  .brand-wordmark--dark {
+    color: var(--deep, #1c1f24);
+  }
+</style>

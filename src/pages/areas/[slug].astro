@@ -1,0 +1,413 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { SITE, AREA_PAGES, type AreaPage } from '../../config/site';
+import { jobsForArea } from '../../data/jobs';
+import { r2img } from '../../lib/r2';
+import { siteHref, siteOrigin } from '../../lib/origin';
+
+export function getStaticPaths() {
+  return AREA_PAGES.map((area) => ({
+    params: { slug: area.slug },
+    props: { area },
+  }));
+}
+
+interface Props {
+  area: AreaPage;
+}
+
+const { area } = Astro.props;
+const telDigits = (SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '');
+const telHref = `tel:${telDigits}`;
+/** Same-county towns first (local SEO internal links), capped so the aside stays usable. */
+const otherAreas = [
+  ...AREA_PAGES.filter((a) => a.slug !== area.slug && a.county === area.county),
+  ...AREA_PAGES.filter((a) => a.slug !== area.slug && a.county !== area.county),
+]
+  .filter((a, i, arr) => arr.findIndex((x) => x.slug === a.slug) === i)
+  .slice(0, 8);
+const pageTitle = area.pageTitle;
+const pageDescription = `${area.headline}. ${area.intro.slice(0, 140)} Call ${SITE.phone}.`;
+const origin = siteOrigin(Astro.site);
+const canonical = new URL(`/areas/${area.slug}`, origin).href;
+const areaFaqs = 'faqs' in area && Array.isArray(area.faqs) ? area.faqs : [];
+const areaBody = 'body' in area ? area.body : '';
+const servicesNote =
+  area.servicesNote;
+const areaJobs = jobsForArea(area.slug);
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: `${origin}/`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Service Areas',
+          item: siteHref('/areas', Astro.site),
+        },
+        { '@type': 'ListItem', position: 3, name: area.name, item: canonical },
+      ],
+    },
+    {
+      '@type': SITE.schemaType,
+      name: SITE.name,
+      description: pageDescription,
+      url: canonical,
+      telephone: SITE.phone,
+      areaServed: {
+        '@type': 'City',
+        name: `${area.name}, ${SITE.state}`,
+        containedInPlace: {
+          '@type': 'AdministrativeArea',
+          name: `${area.county} County, ${SITE.state}`,
+        },
+      },
+      additionalType: 'https://schema.org/HomeAndConstructionBusiness',
+    },
+    ...(areaFaqs.length > 0
+      ? [
+          {
+            '@type': 'FAQPage',
+            mainEntity: areaFaqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: { '@type': 'Answer', text: faq.a },
+            })),
+          },
+        ]
+      : []),
+  ],
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+  <Header />
+  <main>
+    <section class="area-hero">
+      <div class="container area-hero__inner">
+        <p class="section-label">{area.eyebrow}</p>
+        <h1>{area.headline}</h1>
+        <p class="area-hero__intro">{area.intro}</p>
+        <div class="area-hero__actions">
+          <a href={telHref} class="btn btn--primary">Call {SITE.phone}</a>
+          <a href="/contact" class="btn btn--navy">{SITE.ctaPrimaryLabel}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container area-detail">
+        <div>
+          <h2>What {area.name} homeowners get with {SITE.name}</h2>
+          {areaBody && <p class="area-detail__body">{areaBody}</p>}
+          <ul class="area-detail__list">
+            {area.highlights.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <p class="area-detail__note">{servicesNote}</p>
+
+          {areaJobs.length > 0 && (
+            <>
+              <h2 class="area-services-heading">Recent work in {area.name}</h2>
+              <div class="area-jobs">
+                {areaJobs.map((job) => (
+                  <a href={`/jobs/${job.slug}`} class="area-job-card">
+                    <img src={r2img(job.cover)} alt={job.title} width="400" height="280" loading="lazy" />
+                    <strong>{job.serviceLabel}</strong>
+                    <span>{job.title}</span>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+
+          <h2 class="area-services-heading">{area.servicesHeading}</h2>
+          <div class="area-services-grid">
+            {SITE.services.map((service) => (
+              <a href={`/services/${service.slug}`} class="area-service-card panel-card">
+                <strong>{service.title}</strong>
+                <p>{service.shortDesc}</p>
+                <span>See {service.title.toLowerCase()} →</span>
+              </a>
+            ))}
+          </div>
+
+          {areaFaqs.length > 0 && (
+            <>
+              <h2 class="area-faq-heading">Frequently asked questions</h2>
+              <div class="area-faq-list">
+                {areaFaqs.map((faq) => (
+                  <details class="area-faq-item">
+                    <summary>{faq.q}</summary>
+                    <p>{faq.a}</p>
+                  </details>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+        <aside class="area-detail__aside">
+          <h3>Nearby areas</h3>
+          <p class="area-detail__aside-note">{area.county} County & nearby</p>
+          <ul>
+            {otherAreas.map((a) => (
+              <li><a href={`/areas/${a.slug}`}>{a.name}</a></li>
+            ))}
+            <li><a href="/areas">Full service map</a></li>
+          </ul>
+          <a class="btn btn--primary" href={telHref}>Call {SITE.phone}</a>
+        </aside>
+      </div>
+    </section>
+
+    <CTABanner />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .area-hero {
+    background:
+      linear-gradient(135deg, var(--deep) 0%, color-mix(in srgb, var(--deep) 80%, #000) 100%);
+    color: #fff;
+    padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  }
+
+  .area-hero :global(.section-label) {
+    color: var(--accent);
+  }
+
+  .area-hero h1 {
+    color: #fff;
+    max-width: 18ch;
+    margin-bottom: 1rem;
+  }
+
+  .area-hero__intro {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.1rem;
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .area-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .area-detail {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .area-detail h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .area-detail__body {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0 0 1.35rem;
+    max-width: 48rem;
+  }
+
+  .area-detail__list {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+  }
+
+  .area-detail__list li {
+    position: relative;
+    padding-left: 1.35rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .area-detail__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    background: var(--accent);
+  }
+
+  .area-detail__note {
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+
+  .area-services-heading,
+  .area-faq-heading {
+    margin-top: 0.5rem;
+  }
+
+  .area-jobs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin: 0 0 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .area-jobs {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .area-job-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .area-job-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .area-job-card strong,
+  .area-job-card span {
+    display: block;
+    padding: 0 0.85rem;
+  }
+
+  .area-job-card strong {
+    padding-top: 0.7rem;
+    color: var(--deep);
+  }
+
+  .area-job-card span {
+    padding-bottom: 0.85rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .area-services-grid {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0 0 2rem;
+  }
+
+  .area-service-card {
+    display: block;
+    padding: 1.15rem 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .area-service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .area-service-card strong {
+    display: block;
+    color: var(--deep);
+    margin-bottom: 0.35rem;
+  }
+
+  .area-service-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0 0 0.55rem;
+    max-width: none;
+  }
+
+  .area-service-card span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .area-faq-list {
+    display: grid;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .area-faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 0.95rem;
+    background: #fff;
+  }
+
+  .area-faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--deep);
+  }
+
+  .area-faq-item p {
+    margin-top: 0.55rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: none;
+  }
+
+  .area-detail__aside {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+  }
+
+  .area-detail__aside h3 {
+    margin-bottom: 0.35rem;
+  }
+
+  .area-detail__aside-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+  }
+
+  .area-detail__aside ul {
+    list-style: none;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .area-detail__aside a {
+    font-weight: 600;
+  }
+
+  @media (min-width: 860px) {
+    .area-detail {
+      grid-template-columns: 1.4fr 0.85fr;
+      align-items: start;
+    }
+  }
+</style>

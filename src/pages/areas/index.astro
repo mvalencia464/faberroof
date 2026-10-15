@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ServiceAreaSection from '../../components/ServiceAreaSection.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { SITE } from '../../config/site';
+---
+
+<BaseLayout
+  title={`Service Areas | ${SITE.name}`}
+  description={`${SITE.name} serves ${SITE.city} and ${SITE.region}. Call ${SITE.phone}.`}
+>
+  <Header />
+  <main>
+    <ServiceAreaSection />
+    <CTABanner />
+  </main>
+  <Footer />
+</BaseLayout>

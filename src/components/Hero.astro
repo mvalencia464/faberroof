@@ -1,0 +1,384 @@
+---
+/**
+ * Homepage hero
+ */
+import { SITE } from '../config/site';
+import { syncedReviewMeta } from '../data/all-reviews';
+import GoogleMark from './GoogleMark.astro';
+
+const hero = SITE.hero;
+const heroSrc = hero.image;
+const heroSrcSm = hero.imageSm ?? hero.image;
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const rating = syncedReviewMeta.rating || SITE.googleReviews.rating;
+const count = syncedReviewMeta.count || SITE.googleReviews.count;
+
+const outlineIcons: Record<string, string> = {
+  'shield-alt':
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2 5.2 6v5.4c0 4.4 3 7.7 6.8 9 3.8-1.3 6.8-4.6 6.8-9V6L12 3.2Z"/><path d="m8.6 12 2.2 2.2 4.6-4.6"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.4 2.3 4.7 5.2.8-3.8 3.6.9 5.1L12 15.4 7.4 17.6l.9-5.1L4.5 8.9l5.2-.8L12 3.4Z"/></svg>',
+  clock:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M12 7.6V12l3 1.8"/></svg>',
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>',
+  building:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V6l8-3 8 3v14"/><path d="M9 20v-4h6v4M8 10h1M12 10h1M16 10h1M8 14h1M12 14h1M16 14h1"/></svg>',
+  tools:
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a3 3 0 0 0-4.2 4.2L4 17l3 3 6.3-6.3a3 3 0 0 0 4.2-4.2l-2.2 2.2-2-2 2.2-2.2Z"/></svg>',
+  'cloud-lightning':
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .4-8 6 6 0 0 0-11.5-1.5A4 4 0 0 0 7 18Z"/><path d="m13 11-3 5h3l-1 4 4-6h-3l1-3Z"/></svg>',
+  'clipboard-list':
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4h6v3H9zM9 11h6M9 15h4"/></svg>',
+};
+---
+
+<section class="hero-js">
+  <div class="hero-js__bg" aria-hidden="true">
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset={heroSrcSm}
+        type="image/avif"
+        width="960"
+        height="540"
+      />
+      <img
+        src={heroSrc}
+        alt={SITE.heroImageAlt}
+        class="hero-js__bg-img"
+        width="1920"
+        height="1080"
+        sizes="100vw"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </picture>
+    <div class="hero-js__overlay"></div>
+  </div>
+
+  <div class="container hero-js__content">
+    <div class="hero-js__copy">
+      <a class="hero-js__chip" href="/#reviews">
+        <span class="hero-js__chip-stars" aria-hidden="true">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </span>
+        <span class="hero-js__chip-mark" aria-hidden="true">
+          <GoogleMark size="0.7rem" />
+        </span>
+        <span>
+          {count > 0
+            ? `${rating.toFixed(1)} Rating · ${count} Google Reviews`
+            : 'Google Reviews'}
+        </span>
+      </a>
+
+      <h1 class="hero-js__headline">
+        <span class="hero-js__line1">{hero.headingLine1}</span>
+        <br />
+        <span class="hero-js__accent">
+          {hero.headingAccent}<span class="hero-js__dot">.</span>
+        </span>
+      </h1>
+
+      <p class="hero-js__sub">{hero.subheading}</p>
+
+      <div class="hero-js__benefits">
+        {
+          hero.benefits.map((b) => (
+            <div class="hero-js__benefit">
+              <span class="hero-js__benefit-icon" set:html={outlineIcons[b.icon] ?? ''} />
+              <span
+                class="hero-js__benefit-label"
+                set:html={
+                  b.icon === 'star'
+                    ? `${rating.toFixed(1)} Rating<br />${count} Reviews`
+                    : b.label.replace('\n', '<br />')
+                }
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="hero-js__actions">
+        <a href={hero.scheduleHref} class="hero-js__schedule">
+          {hero.ctaSchedule}
+        </a>
+        <a href={telHref} class="hero-js__call">
+          <i class="fas fa-phone-alt" aria-hidden="true"></i>
+          Call {SITE.phone}
+        </a>
+      </div>
+      <p class="hero-js__note">{hero.financingNote}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-js {
+    position: relative;
+    min-height: min(100vh, 50rem);
+    display: flex;
+    align-items: center;
+    padding: 8.25rem 0 5rem;
+    overflow: hidden;
+    color: #fff;
+    background: #020c1b;
+  }
+
+  .hero-js__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-js__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .hero-js__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(10, 25, 47, 0.97) 0%,
+      rgba(10, 25, 47, 0.84) 38%,
+      rgba(10, 25, 47, 0.28) 100%
+    );
+  }
+
+  .hero-js__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .hero-js__copy {
+    max-width: 38rem;
+    text-align: left;
+  }
+
+  .hero-js__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 1.05rem;
+    padding: 0.28rem 0.7rem 0.28rem 0.55rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(10, 25, 47, 0.35);
+    color: rgba(241, 245, 249, 0.95);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+
+  .hero-js__chip-stars {
+    color: var(--gold);
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-js__chip-mark {
+    width: 0.7rem;
+    height: 0.7rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-js__chip-mark :global(svg) {
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+  }
+
+  .hero-js__headline {
+    margin: 0 0 0.9rem;
+    font-family: var(--font-display);
+    font-size: clamp(2.15rem, 5.4vw, 3.65rem);
+    font-weight: 600;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-js__line1 {
+    white-space: nowrap;
+  }
+
+  .hero-js__accent {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .hero-js__dot {
+    color: var(--accent);
+  }
+
+  .hero-js__sub {
+    margin: 0 0 1.65rem;
+    max-width: 32rem;
+    font-size: clamp(0.98rem, 1.7vw, 1.12rem);
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    color: rgba(226, 232, 240, 0.9);
+  }
+
+  .hero-js__benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 1.1rem;
+    max-width: 30rem;
+    margin-bottom: 1.85rem;
+  }
+
+  .hero-js__benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    text-align: left;
+  }
+
+  .hero-js__benefit-icon {
+    flex-shrink: 0;
+    width: 2.7rem;
+    height: 2.7rem;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  .hero-js__benefit-icon :global(svg) {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  .hero-js__benefit-label {
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.35;
+    color: rgba(241, 245, 249, 0.95);
+    padding-top: 0.15rem;
+  }
+
+  .hero-js__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  @media (min-width: 480px) {
+    .hero-js__actions {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  .hero-js__call {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.05rem 1.75rem;
+    border-radius: 0.35rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.42);
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+    filter: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .hero-js__call i {
+    text-shadow: none;
+    filter: none;
+  }
+
+  .hero-js__call:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.62);
+  }
+
+  .hero-js__schedule {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.05rem 1.75rem;
+    border-radius: 0.35rem;
+    border: 1.5px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .hero-js__schedule:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+  }
+
+  .hero-js__note {
+    margin: 1rem 0 0;
+    font-size: 0.85rem;
+    color: rgba(226, 232, 240, 0.78);
+    max-width: none;
+  }
+
+  @media (max-width: 640px) {
+    .hero-js {
+      min-height: auto;
+      padding: 6.5rem 0 3.5rem;
+    }
+
+    .hero-js__bg-img {
+      object-position: right 30%;
+    }
+
+    .hero-js__overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 25, 47, 0.96) 0%,
+        rgba(10, 25, 47, 0.84) 55%,
+        rgba(10, 25, 47, 0.66) 100%
+      );
+    }
+
+    .hero-js__line1 {
+      white-space: normal;
+    }
+
+    .hero-js__benefits {
+      gap: 0.85rem 0.65rem;
+    }
+
+    .hero-js__benefit {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+  }
+</style>

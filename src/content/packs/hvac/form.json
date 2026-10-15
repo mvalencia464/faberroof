@@ -1,0 +1,16 @@
+{
+  "title": "{{ctaPrimaryLabel}}",
+  "subtitle": "Share a few details — {{ownerName}} will follow up.",
+  "submitText": "Send my request",
+  "finalNote": "No obligation. We diagnose before we quote a replacement.",
+  "trustBullets": ["Local to {{city}}", "Repair and replacement", "Written options"],
+  "projectTypes": [
+    { "value": "repair", "label": "Repair", "phIcon": "tools" },
+    { "value": "maintenance", "label": "Maintenance", "phIcon": "clipboard-list" },
+    { "value": "installation", "label": "Installation", "phIcon": "home" },
+    { "value": "air", "label": "Indoor air", "phIcon": "wind" },
+    { "value": "other", "label": "Something else", "phIcon": "question" }
+  ],
+  "roofTypes": [],
+  "timelines": []
+}

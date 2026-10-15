@@ -1,0 +1,18 @@
+[
+  {
+    "q": "What HVAC work do you offer?",
+    "a": "Repair, maintenance, and installation for heating and cooling in {{city}} and {{region}}. Call {{phone}}."
+  },
+  {
+    "q": "Do you offer emergency service?",
+    "a": "Call {{phone}}. We will tell you the next opening and whether a no-cool or no-heat call can be moved up."
+  },
+  {
+    "q": "Where do you work?",
+    "a": "{{city}} and {{region}}."
+  },
+  {
+    "q": "How do I get an estimate?",
+    "a": "Call {{phone}} or send the form. We diagnose the system before quoting a replacement."
+  }
+]

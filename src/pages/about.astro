@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import OwnerStorySection from '../components/OwnerStorySection.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout
+  title={`About Us | ${SITE.name}`}
+  description={SITE.aboutDescription}
+>
+  <Header />
+  <main>
+    <OwnerStorySection />
+    <CTABanner />
+  </main>
+  <Footer />
+</BaseLayout>

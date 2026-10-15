@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "residential-roofing",
+    "title": "Residential roofing",
+    "shortDesc": "Roofing for homes. Faber Roof states this on faberroof.com.",
+    "fullDesc": "{{name}} says it provides roofing for homes as well as businesses. Call {{phone}} to ask about a house in {{city}}.",
+    "highlights": ["Homes", "Commercial work is separate", "Call for the next step"],
+    "heading": "Residential roofing",
+    "body": "The current Faber Roof site describes the company as commercial and residential roofing. It does not publish a detailed residential scope, so call before assuming a specific material or repair.",
+    "faq": {
+      "q": "Do you roof houses?",
+      "a": "Faber Roof's site says it roofs homes and businesses. Call {{phone}} about a specific house."
+    },
+    "icon": "home",
+    "iconStyle": "navy",
+    "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
+    "gallery": ["faber-roof-standing-seam-metal-roof-aerial.avif"]
+  },
+  {
+    "slug": "commercial-roofing",
+    "title": "Commercial roofing",
+    "shortDesc": "Roofing for businesses, as stated on faberroof.com.",
+    "fullDesc": "{{name}} says it provides roofing that protects businesses and homes. Call {{phone}} about a commercial property.",
+    "highlights": ["Businesses", "Residential work is separate", "Call for the next step"],
+    "heading": "Commercial roofing",
+    "body": "Faber Roof's homepage says the company protects businesses and homes. It does not list flat-roof systems, so ask what the building needs.",
+    "faq": {
+      "q": "Do you take commercial jobs?",
+      "a": "The site says Faber Roof does commercial and residential roofing. Call {{phone}} with the address."
+    },
+    "icon": "building",
+    "iconStyle": "navy",
+    "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
+    "gallery": ["faber-roof-shingle-roof-ridge-vents-closeup.avif"]
+  },
+  {
+    "slug": "shingle-roofing",
+    "title": "Shingle roofing",
+    "shortDesc": "Asphalt shingle work shown in Faber Roof project photos, with CertainTeed Landmark Pro marks on the current site.",
+    "fullDesc": "{{name}} shows shingle roofs in its project photos and displays CertainTeed and Landmark Pro marks on faberroof.com. Call {{phone}} to confirm the product for your roof.",
+    "highlights": ["Project photos show asphalt shingles", "CertainTeed mark on the current site", "Landmark Pro mark on the current site"],
+    "heading": "Shingles, including CertainTeed marks on their site",
+    "body": "faberroof.com shows CertainTeed and Landmark Pro logos and photos of shingle roofs. The site does not say those are the only products installed.",
+    "faq": {
+      "q": "Which shingles do you install?",
+      "a": "The current site shows CertainTeed and Landmark Pro marks. Call {{phone}} to confirm what goes on a specific roof."
+    },
+    "icon": "home",
+    "iconStyle": "navy",
+    "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif"
+  },
+  {
+    "slug": "metal-roofing",
+    "title": "Metal roofing",
+    "shortDesc": "A standing-seam metal roof appears in Faber Roof's own project photos.",
+    "fullDesc": "{{name}} publishes a photo of a standing-seam metal roof on faberroof.com. Call {{phone}} to ask whether metal is an option for your building.",
+    "highlights": ["Standing-seam photo on the current site", "Shown alongside residential photos", "Confirm the system on your estimate"],
+    "heading": "Metal roofing shown on their site",
+    "body": "One homepage photo is an aerial of a standing-seam metal roof with skylights. The written copy does not name metal systems, so confirm before you plan on that material.",
+    "faq": {
+      "q": "Do you install metal roofs?",
+      "a": "A standing-seam metal roof is pictured on faberroof.com. Call {{phone}} to ask about your building."
+    },
+    "icon": "building",
+    "iconStyle": "navy",
+    "image": "faber-roof-standing-seam-metal-roof-aerial.avif"
+  }
+]

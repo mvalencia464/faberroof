@@ -1,0 +1,191 @@
+---
+import type { NavMenuItem } from '../config/site';
+
+interface Props {
+  variant: 'desktop' | 'mobile';
+  label: string;
+  items: NavMenuItem[];
+  parentHref?: string;
+  isActive?: boolean;
+  menuId: string;
+}
+
+const { variant, label, items, parentHref, isActive = false, menuId } = Astro.props;
+---
+
+{variant === 'desktop' ? (
+  <div class:list={['nav-dropdown', isActive && 'nav-dropdown--active']}>
+    <button
+      type="button"
+      class="nav-dropdown__trigger"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls={menuId}
+      id={`${menuId}-trigger`}
+    >
+      {label}
+      <i class="fas fa-chevron-down nav-dropdown__chevron" aria-hidden="true"></i>
+    </button>
+    <ul class="nav-dropdown__panel" id={menuId} role="menu" aria-labelledby={`${menuId}-trigger`}>
+      {parentHref ? (
+        <li role="none">
+          <a href={parentHref} class="nav-dropdown__link nav-dropdown__link--parent" role="menuitem">
+            All {label}
+          </a>
+        </li>
+      ) : null}
+      {items.map((item) => (
+        <li role="none">
+          <a href={item.href} class="nav-dropdown__link" role="menuitem">
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+) : (
+  <details class="mobile-nav__group">
+    <summary class="mobile-nav__summary">{label}</summary>
+    <div class="mobile-nav__sub">
+      {parentHref ? (
+        <a href={parentHref} class="mobile-nav__sublink">All {label}</a>
+      ) : null}
+      {items.map((item) => (
+        <a href={item.href} class="mobile-nav__sublink">{item.label}</a>
+      ))}
+    </div>
+  </details>
+)}
+
+<style>
+  .nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+  }
+
+  .nav-dropdown__chevron {
+    font-size: 0.55rem;
+    opacity: 0.75;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-dropdown:hover .nav-dropdown__chevron,
+  .nav-dropdown:focus-within .nav-dropdown__chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown__panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.35rem 0 0.4rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 12px 28px rgba(12, 28, 52, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    z-index: 200;
+  }
+
+  .nav-dropdown__panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -6px;
+    height: 6px;
+  }
+
+  .nav-dropdown:hover .nav-dropdown__panel,
+  .nav-dropdown:focus-within .nav-dropdown__panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-dropdown__link {
+    display: block;
+    padding: 0.55rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s, background-color 0.15s;
+  }
+
+  .nav-dropdown__link:hover,
+  .nav-dropdown__link:focus-visible {
+    color: var(--deep);
+    background: var(--panel);
+  }
+
+  .nav-dropdown__link--parent {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.2rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .mobile-nav__group {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-nav__summary {
+    color: var(--deep);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-transform: none;
+    padding: 0.9rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-nav__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav__summary::after {
+    content: "+";
+    font-size: 1.1rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .mobile-nav__group[open] .mobile-nav__summary::after {
+    content: "−";
+  }
+
+  .mobile-nav__sub {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+  }
+
+  .mobile-nav__sublink {
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 0.55rem 0 0.55rem 1rem;
+    text-decoration: none;
+    border-left: 2px solid var(--accent);
+    margin-left: 0.25rem;
+  }
+
+  .mobile-nav__sublink:hover {
+    color: var(--accent);
+  }
+</style>

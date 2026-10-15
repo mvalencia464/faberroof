@@ -1,0 +1,191 @@
+---
+import { SITE } from '../config/site';
+import ReviewCard from './ReviewCard.astro';
+import GoogleMark from './GoogleMark.astro';
+import { allGoogleReviews, syncedReviewMeta } from '../data/all-reviews';
+
+const heading = SITE.reviewsSection.title;
+const headingLine2 = SITE.reviewsSection.titleLine2;
+const eyebrow = SITE.reviewsSection.label;
+const reviews = allGoogleReviews.filter((review) => review.text?.trim());
+const rating = syncedReviewMeta.rating || SITE.googleReviews.rating;
+const count = syncedReviewMeta.count || SITE.googleReviews.count;
+const googleUrl = SITE.googleReviews.profileUrl;
+---
+
+<section id="reviews" class="why-reviews">
+  <div class="container">
+    <div class="why-reviews__intro">
+      <div class="why-reviews__heading">
+        <p class="section-label">{eyebrow}</p>
+        <h2>
+          {heading}
+          {headingLine2 ? (
+            <>
+              <br />
+              {headingLine2}
+            </>
+          ) : null}
+        </h2>
+      </div>
+      <div class="why-reviews__summary">
+        <div class="why-reviews__rating">
+          <GoogleMark size="0.95rem" />
+          <strong>{rating.toFixed(1)}</strong>
+          <span class="why-reviews__stars" aria-hidden="true">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </span>
+          <span class="why-reviews__count">{count} Google Reviews</span>
+        </div>
+        <a
+          href={googleUrl}
+          class="btn btn--primary why-reviews__maps"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Google
+        </a>
+      </div>
+    </div>
+
+    <div class="why-reviews__grid">
+      {reviews.map((review) => (
+        <div class="why-reviews__cell">
+          <ReviewCard review={review} showGoogleLink />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-reviews {
+    scroll-margin-top: 6.5rem;
+    background:
+      radial-gradient(ellipse 80% 50% at 10% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 55%),
+      linear-gradient(180deg, #f7f1e6 0%, #efe8d8 100%);
+    color: var(--deep);
+    padding: 5rem 0;
+  }
+
+  .why-reviews__intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem 1.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .why-reviews__heading {
+    flex: 1 1 16rem;
+    min-width: 0;
+  }
+
+  .why-reviews__heading .section-label {
+    margin-bottom: 0.55rem;
+    color: var(--accent);
+  }
+
+  .why-reviews h2 {
+    color: var(--deep);
+    margin: 0;
+    max-width: none;
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    line-height: 0.95;
+  }
+
+  .why-reviews__summary {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.65rem 0.75rem;
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 100%;
+    padding: 0.35rem 0.4rem 0.35rem 0.7rem;
+    background: #fff;
+    border: 1px solid rgba(19, 40, 75, 0.08);
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(19, 40, 75, 0.05);
+  }
+
+  .why-reviews__rating {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.35rem 0.45rem;
+    min-width: 0;
+  }
+
+  .why-reviews__rating strong {
+    font-size: 1.05rem;
+    line-height: 1;
+    color: var(--deep);
+  }
+
+  .why-reviews__stars {
+    color: var(--gold);
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .why-reviews__count {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .why-reviews__maps {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.75rem;
+    border-radius: 999px;
+  }
+
+  .why-reviews__grid {
+    column-count: 1;
+    column-gap: 1.25rem;
+  }
+
+  .why-reviews__cell {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 1.25rem;
+  }
+
+  .why-reviews__grid :global(.review-card) {
+    background: #fff;
+    color: var(--text);
+  }
+
+  @media (min-width: 640px) {
+    .why-reviews__grid {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .why-reviews__grid {
+      column-count: 3;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .why-reviews__summary {
+      flex-wrap: wrap;
+      width: 100%;
+      border-radius: 12px;
+      padding: 0.65rem 0.75rem;
+    }
+
+    .why-reviews__maps {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

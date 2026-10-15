@@ -1,0 +1,506 @@
+{
+  "identity": {
+    "name": "Faber Roof",
+    "shortName": "Faber",
+    "legalName": "Faber Roof, LLC",
+    "tagline": "Commercial / residential roofing.",
+    "catchphrase": "FABER ROOF \u2014 COMMERCIAL / RESIDENTIAL ROOFING",
+    "phone": "(810) 360-7385",
+    "email": "TODO: email not published on faberroof.com",
+    "address": "22710 Haggerty Rd. Suite 100B",
+    "city": "Farmington Hills",
+    "state": "MI",
+    "zip": "48335",
+    "license": "TODO: license number not published on faberroof.com",
+    "ownerName": "TODO",
+    "ownerRole": "TODO: owner not named on faberroof.com",
+    "region": "Farmington Hills",
+    "trade": "roofing",
+    "tradeLabel": "Roofing contractor",
+    "schemaType": "RoofingContractor",
+    "slug": "faberroof"
+  },
+  "urls": {
+    "siteUrl": "https://faberroof.com"
+  },
+  "branding": {
+    "palette": {
+      "deep": "#2a2829",
+      "surface": "#e0e0db",
+      "panel": "#f4f4f1",
+      "panel2": "#e0e0db",
+      "border": "rgba(42, 40, 41, 0.12)",
+      "accent": "#253551",
+      "accent2": "#2a2829",
+      "accentHover": "#1b2840",
+      "gold": "#e0a100",
+      "text": "#000000",
+      "muted": "#3e3e3e"
+    },
+    "fonts": {
+      "display": "Poppins",
+      "body": "Esteban"
+    },
+    "images": {
+      "logo": "/logo.png",
+      "favicon": "/favicon.avif",
+      "hero": "faber-roof-standing-seam-metal-roof-aerial.avif",
+      "heroSm": "faber-roof-standing-seam-metal-roof-aerial.avif",
+      "owner": "/logo.png"
+    }
+  },
+  "map": {
+    "lat": 42.4564467,
+    "lng": -83.4345146,
+    "zoom": 14,
+    "radiusMiles": 0,
+    "listingUrl": "",
+    "query": "Faber Roof, 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335"
+  },
+  "googleReviews": {
+    "businessName": "Faber Roof",
+    "rating": 0,
+    "count": 0,
+    "category": "Roofing contractor in Farmington Hills, MI",
+    "profileUrl": "",
+    "maxDisplay": 8,
+    "cid": "",
+    "placeId": ""
+  },
+  "seo": {
+    "title": "Faber Roof | Commercial and residential roofing in Farmington Hills, MI",
+    "description": "Commercial and residential roofing in Farmington Hills, MI. Call (810) 360-7385.",
+    "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
+  },
+  "copy": {
+    "ctaPrimaryLabel": "Get a roofing estimate",
+    "phoneCtaLabel": "Call for a roofing estimate",
+    "serviceType": "Roofing services",
+    "serviceNoun": "roofing",
+    "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
+    "heroImageAlt": "Standing-seam metal roof from Faber Roof project photos",
+    "formConsent": "and consent to be contacted about my roofing estimate. Msg & data rates may apply.",
+    "sidebarTitle": "Request an estimate",
+    "sidebarBody": "Call for the next step and a written price after we see the job.",
+    "serviceAreasIntro": "TODO: faberroof.com does not publish a city list. The office address is in Farmington Hills.",
+    "contactTitle": "Get a roofing estimate | Faber Roof",
+    "contactDescription": "Request an estimate from Faber Roof in Farmington Hills. Call (810) 360-7385.",
+    "contactHeading": "Get a roofing estimate",
+    "contactIntro": "Tell us the property and what you need.",
+    "aboutDescription": "Faber Roof, LLC \u2014 commercial and residential roofing at 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
+    "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Farmington Hills.",
+    "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Farmington Hills.",
+    "areaEyebrow": "Roofing contractor \u00b7 Service area",
+    "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
+    "areaHeadline": "Roofing contractor in {{areaName}}",
+    "areaIntro": "When your {{areaName}} property needs roofing work, you get a clear estimate and a crew that treats the place like it is yours.",
+    "areaBody": "Faber Roof serves {{areaName}} and nearby Farmington Hills from Farmington Hills. Tell us the address and we look at the job before work starts.",
+    "areaServicesNote": "roofing for {{areaName}} homes and buildings.",
+    "areaServicesHeading": "Services in {{areaName}}",
+    "areaHighlights": [
+      "Written estimates",
+      "Local scheduling from Farmington Hills",
+      "Homes and light commercial",
+      "Photos and a clear scope"
+    ],
+    "areaFaqs": [
+      {
+        "q": "Do you work in {{areaName}}?",
+        "a": "Yes. {{areaName}} is in our Farmington Hills service area. Call (810) 360-7385."
+      },
+      {
+        "q": "How do I get an estimate in {{areaName}}?",
+        "a": "Call (810) 360-7385 or send the form. We look at the job and give you a next step."
+      }
+    ],
+    "jobAreaLink": "Roofing contractor in Farmington Hills",
+    "hero": {
+      "trustBadge": "Farmington Hills, MI",
+      "headingLine1": "Commercial /",
+      "headingLine2": "residential",
+      "headingAccent": "roofing",
+      "headline": "Commercial / residential roofing.",
+      "subheading": "Faber Roof says it provides dependable roofing for businesses and homes, with craftsmanship and quality products.",
+      "benefits": [
+        {
+          "icon": "home",
+          "label": "Residential\nroofing"
+        },
+        {
+          "icon": "building",
+          "label": "Commercial\nroofing"
+        },
+        {
+          "icon": "clipboard-list",
+          "label": "0% financing\noptions"
+        }
+      ],
+      "ctaCall": "Call (810) 360-7385",
+      "scheduleHref": "/contact",
+      "financingNote": "0% financing options. 12\u201324 month terms are available. Financing is subject to credit approval.",
+      "locationNote": "22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335",
+      "trustLine": "Commercial and residential roofing",
+      "reviewCard": {
+        "rating": 0,
+        "count": "Google reviews",
+        "href": "/reviews"
+      },
+      "ownerNote": "TODO: owner is not named on faberroof.com.",
+      "ownerCta": "Call (810) 360-7385"
+    },
+    "trustBar": {
+      "heading": "roofing for Farmington Hills homes and buildings",
+      "badges": [
+        {
+          "type": "google",
+          "rating": 0,
+          "label": "Google reviews",
+          "eyebrow": "Google",
+          "title": "Google reviews",
+          "icon": "star"
+        },
+        {
+          "type": "cert",
+          "label": "Based in\nFarmington Hills, MI",
+          "eyebrow": "Based in",
+          "title": "Farmington Hills, MI",
+          "icon": "map-marker-alt"
+        },
+        {
+          "type": "cert",
+          "label": "Written\nestimates",
+          "eyebrow": "Before we start",
+          "title": "Written estimates",
+          "icon": "clipboard-list"
+        },
+        {
+          "type": "cert",
+          "label": "Homes &\nbuildings",
+          "eyebrow": "Residential &",
+          "title": "Commercial",
+          "icon": "building"
+        }
+      ]
+    },
+    "process": {
+      "label": "How it works",
+      "title": "From inspection to a finished roof",
+      "subtitle": "You know the scope before anyone starts.",
+      "meetMessage": "Tell us the address. We follow up with next steps for an inspection and estimate.",
+      "steps": [
+        {
+          "title": "Call or send the form",
+          "meta": "Fast start",
+          "description": "Call (810) 360-7385 or send the form with the property address."
+        },
+        {
+          "title": "Inspect the roof",
+          "meta": "See the work",
+          "description": "We look at the deck, flashing, and age so the estimate matches the roof you have."
+        },
+        {
+          "title": "Written estimate",
+          "meta": "No guessing",
+          "description": "You get the scope in writing before work starts."
+        },
+        {
+          "title": "Do the work",
+          "meta": "The job",
+          "description": "The crew follows the scope and keeps the property tidy."
+        },
+        {
+          "title": "Walk-through",
+          "meta": "Done",
+          "description": "We review the finished work with you."
+        }
+      ]
+    },
+    "offersSection": {
+      "label": "Getting started",
+      "title": "Get an estimate you can act on.",
+      "subtitle": "Repair, replacement, or storm damage \u2014 pick the path that matches the roof."
+    },
+    "offers": [
+      {
+        "slug": "replacement-estimate",
+        "title": "Replacement estimate",
+        "price": "Custom quote",
+        "hook": "A full roof replacement scoped after we see the deck.",
+        "includes": [
+          "On-roof inspection",
+          "Material options",
+          "Written estimate",
+          "Schedule"
+        ],
+        "ctaText": "Get a replacement estimate",
+        "ctaHref": "/contact",
+        "icon": "home",
+        "featured": true,
+        "financingAnchor": true
+      },
+      {
+        "slug": "repair-estimate",
+        "title": "Repair estimate",
+        "price": "Custom quote",
+        "hook": "Leaks and flashing when the rest of the roof still has life.",
+        "includes": [
+          "Leak check",
+          "Flashing",
+          "Shingle repair",
+          "Honest replacement advice"
+        ],
+        "ctaText": "Ask about a repair",
+        "ctaHref": "/contact",
+        "icon": "tools"
+      },
+      {
+        "slug": "storm-estimate",
+        "title": "Storm inspection",
+        "price": "Custom quote",
+        "hook": "Wind and hail documented before you decide on repair or replacement.",
+        "includes": [
+          "Photo notes",
+          "Repair vs replacement",
+          "Meet on site",
+          "Clear next step"
+        ],
+        "ctaText": "Schedule a storm look",
+        "ctaHref": "/contact",
+        "icon": "cloud-lightning"
+      }
+    ],
+    "servicesHeading": "roofing for your home and your building",
+    "servicesLabel": "Services",
+    "servicesIntro": "Here is the roof work we take on in Farmington Hills.",
+    "valueProps": [
+      {
+        "icon": "clipboard-list",
+        "title": "Inspect first",
+        "description": "Estimates come from the roof, not a phone guess."
+      },
+      {
+        "icon": "home",
+        "title": "Repair or replace",
+        "description": "We tell you which one the roof actually needs."
+      },
+      {
+        "icon": "building",
+        "title": "Homes and buildings",
+        "description": "The same straight conversation for a house or a small commercial roof."
+      },
+      {
+        "icon": "map-marker-alt",
+        "title": "Local from Farmington Hills",
+        "description": "You are calling Farmington Hills, not a national dispatch line."
+      }
+    ],
+    "whyChoose": {
+      "title": "Why choose Faber Roof?",
+      "items": [
+        {
+          "title": "You are calling Farmington Hills",
+          "body": "TODO and the crew serve Farmington Hills from nearby."
+        },
+        {
+          "title": "You hear the scope first",
+          "body": "Repair versus replacement in writing \u2014 not a guess from the street."
+        },
+        {
+          "title": "The property is treated carefully",
+          "body": "Protection, cleanup, and a walk-through when the job is done."
+        },
+        {
+          "title": "You can get an estimate",
+          "body": "Call (810) 360-7385 or send the form."
+        }
+      ]
+    },
+    "reviewsSection": {
+      "label": "Google reviews",
+      "title": "What neighbors are saying",
+      "titleLine2": "",
+      "subtitle": "roofing across Farmington Hills and Farmington Hills.",
+      "bullets": [
+        "Roofing contractor",
+        "Based in Farmington Hills, MI",
+        "TODO, owner",
+        "Homes and buildings"
+      ],
+      "ctaText": "Read more reviews on Google",
+      "viewAllHref": "/reviews",
+      "viewAllText": "See all reviews"
+    },
+    "reviewsPage": {
+      "label": "Google Reviews",
+      "title": "What customers are saying",
+      "subtitle": "Feedback from people who hired Faber Roof.",
+      "description": "Read reviews for Faber Roof \u2014 Roofing contractor in Farmington Hills and Farmington Hills."
+    },
+    "shop": {
+      "heading": "Contact Us",
+      "hours": [
+        {
+          "days": "Hours",
+          "time": "Call for hours"
+        }
+      ]
+    },
+    "workGallery": {
+      "label": "Recent work",
+      "title": "Recent work in your area",
+      "intro": "Job photos show up here when they are on file."
+    },
+    "ownerStory": {
+      "label": "About Us",
+      "quote": "Commercial / residential roofing.",
+      "caption": "TODO \u00b7 Owner",
+      "ctaText": "Get a roofing estimate",
+      "ctaHref": "/contact",
+      "quoteAttribution": "TODO",
+      "quoteRole": "Owner, Faber Roof",
+      "homepageParagraphLimit": 2,
+      "paragraphs": [
+        "TODO: faberroof.com does not name an owner.",
+        "Faber Roof, LLC lists 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335 and (810) 360-7385."
+      ]
+    },
+    "teamSection": {
+      "label": "The team",
+      "title": "People who do the work",
+      "intro": "A clear estimate, then the job."
+    },
+    "teamMembers": [
+      {
+        "name": "TODO",
+        "role": "Owner",
+        "headline": "Leads with an inspection and a written estimate.",
+        "bio": [
+          "TODO runs Faber Roof from Farmington Hills."
+        ]
+      }
+    ],
+    "serviceArea": {
+      "heading": "Areas We Serve",
+      "body": "Office: 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. TODO: a service-area list is not published on faberroof.com.",
+      "country": "US"
+    },
+    "ctaBanner": {
+      "title": "Need the roof looked at?",
+      "subtitle": "Call (810) 360-7385 or send the form.",
+      "body": "Commercial and residential roofing. 0% financing options with 12\u201324 month terms, subject to credit approval.",
+      "scheduleHref": "/contact",
+      "scheduleLabel": "Get a roofing estimate",
+      "scheduleSub": "No obligation",
+      "callSub": "Call to schedule"
+    },
+    "beforeAfter": {
+      "enabled": false,
+      "title": "Before and after",
+      "intro": "Drag the slider to compare the job.",
+      "beforeImage": "/placeholders/hero.svg",
+      "afterImage": "/placeholders/hero.svg",
+      "beforeLabel": "Before",
+      "afterLabel": "After"
+    },
+    "footerBlurb": "Roofing contractor. Serving Farmington Hills from Farmington Hills.",
+    "schemaKnowsAbout": [
+      "Roof replacement",
+      "Roof repair",
+      "Storm damage",
+      "Roof inspections",
+      "Gutters"
+    ],
+    "faqs": [
+      {
+        "q": "What roofing work do you take on?",
+        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills and Farmington Hills. Call (810) 360-7385."
+      },
+      {
+        "q": "Do you offer emergency 24/7 service?",
+        "a": "Storm leaks get priority when we can reach them. Call (810) 360-7385 and we will tell you the next opening."
+      },
+      {
+        "q": "Where do you work?",
+        "a": "Farmington Hills and Farmington Hills. Call (810) 360-7385 to confirm your address."
+      },
+      {
+        "q": "How do I get an estimate?",
+        "a": "Call (810) 360-7385 or send the form. We inspect the roof before a written estimate."
+      }
+    ]
+  },
+  "form": {
+    "title": "Get a roofing estimate",
+    "subtitle": "Share a few details and Faber Roof can follow up.",
+    "submitText": "Send my request",
+    "finalNote": "No obligation. We look at the roof before anyone starts.",
+    "trustBullets": [
+      "Commercial and residential",
+      "Farmington Hills office",
+      "0% financing options, subject to credit approval"
+    ],
+    "projectTypes": [
+      {
+        "value": "residential",
+        "label": "Residential roofing",
+        "phIcon": "home"
+      },
+      {
+        "value": "commercial",
+        "label": "Commercial roofing",
+        "phIcon": "building"
+      },
+      {
+        "value": "shingle",
+        "label": "Shingle roofing",
+        "phIcon": "home"
+      },
+      {
+        "value": "metal",
+        "label": "Metal roofing",
+        "phIcon": "building"
+      },
+      {
+        "value": "other",
+        "label": "Something else",
+        "phIcon": "question"
+      }
+    ],
+    "roofTypes": [],
+    "timelines": []
+  },
+  "nav": {
+    "servicesLabel": "Services",
+    "areasLabel": "Service Areas",
+    "aboutLabel": "About Us",
+    "reviewsLabel": "Reviews",
+    "contactLabel": "Contact",
+    "links": [
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Reviews",
+        "href": "/#reviews"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "serviceAreas": [
+    {
+      "slug": "farmington-hills",
+      "name": "Farmington Hills",
+      "county": "Oakland County"
+    }
+  ],
+  "primaryServiceSlugs": [
+    "residential-roofing",
+    "commercial-roofing",
+    "shingle-roofing",
+    "metal-roofing"
+  ]
+}

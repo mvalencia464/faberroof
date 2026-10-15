@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "repair",
+    "title": "Repair",
+    "shortDesc": "Heating and cooling repairs after a real diagnosis.",
+    "fullDesc": "{{name}} repairs heating and cooling systems in {{city}} and {{region}}. You hear what failed before anyone sells a new system.",
+    "highlights": ["Diagnosis first", "Heating and cooling", "Written options", "Parts explained"],
+    "heading": "Fix what failed",
+    "body": "A system that is old is not automatically a system that must be replaced. We separate the failed part from the sales pitch.",
+    "faq": {
+      "q": "Do you repair all brands?",
+      "a": "Most residential brands. Call {{phone}} with the model sticker if you have it."
+    },
+    "icon": "tools",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "maintenance",
+    "title": "Maintenance",
+    "shortDesc": "Seasonal checkups so small problems stay small.",
+    "fullDesc": "{{name}} maintains heating and cooling equipment in {{region}} before peak season.",
+    "highlights": ["Cooling checkup", "Heating checkup", "Filter and drain check", "Plain-language notes"],
+    "heading": "See the system before it quits",
+    "body": "Maintenance is a checklist and a conversation about what is wearing out, not a surprise replacement quote.",
+    "faq": {
+      "q": "How often should the system be checked?",
+      "a": "Once before cooling season and once before heating season is the usual plan."
+    },
+    "icon": "clipboard-list",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "installation",
+    "title": "Installation",
+    "shortDesc": "New equipment sized to the house, not a rule of thumb.",
+    "fullDesc": "{{name}} installs heating and cooling systems in {{city}} after we look at the house, the ducts, and the old equipment.",
+    "highlights": ["Load conversation", "Equipment options", "Removal of the old system", "Startup"],
+    "heading": "Size it to the house",
+    "body": "Oversized equipment short-cycles. We talk through capacity before you pick a model.",
+    "faq": {
+      "q": "Do you remove the old equipment?",
+      "a": "Yes. Haul-away is part of the install scope unless we agree otherwise in writing."
+    },
+    "icon": "home",
+    "iconStyle": "red",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "indoor-air",
+    "title": "Indoor air",
+    "shortDesc": "Filters, ventilation, and humidity when the house needs them.",
+    "fullDesc": "{{name}} looks at filtration and ventilation in {{region}} homes as part of the comfort system, not a separate mystery.",
+    "highlights": ["Filter fit", "Humidity notes", "Ventilation options", "No add-on pile-on"],
+    "heading": "Air is part of the system",
+    "body": "We recommend a change when the house needs it, and we skip the catalog when it does not.",
+    "faq": {
+      "q": "Will a new filter fix a weak system?",
+      "a": "A clogged filter can. A failed compressor will not. We test before we sell."
+    },
+    "icon": "wind",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  }
+]

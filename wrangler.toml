@@ -1,0 +1,17 @@
+name = "contractor-starter"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "./dist"
+
+# Public build vars only. GHL_WEBHOOK_URL, GHL_PRIVATE_TOKEN, and GHL_LOCATION_ID
+# stay in the Cloudflare dashboard (or .dev.vars), never in this file.
+
+[vars]
+PUBLIC_R2_PUBLIC_BASE_URL = "https://media.stokeleads.com"
+PUBLIC_R2_SITE_SLUG = "faberroof"
+SITE_URL = "https://faberroof.com"
+
+[env.preview.vars]
+PUBLIC_R2_PUBLIC_BASE_URL = "https://media.stokeleads.com"
+PUBLIC_R2_SITE_SLUG = "faberroof"
+SITE_URL = "https://faberroof.com"
+SKIP_SYNC_REVIEWS = "1"

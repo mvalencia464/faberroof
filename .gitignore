@@ -1,0 +1,18 @@
+.DS_Store
+.env
+.env.local
+.dev.vars
+scripts/.debug-last-sync.json
+dist/
+node_modules/
+.astro/
+
+# Build output (do not commit; may embed env secrets)
+/dist/
+/.next/
+/out/
+/build/
+/.nuxt/
+/.output/
+# Local screenshots (too large for git)
+gallery_screenshot_1.png

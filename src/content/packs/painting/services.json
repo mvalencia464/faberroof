@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "interior",
+    "title": "Interior",
+    "shortDesc": "Rooms, trim, and ceilings with prep before color.",
+    "fullDesc": "{{name}} paints interiors in {{city}} and {{region}}. You get a walk-through and a written estimate before work starts.",
+    "highlights": ["Surface prep", "Trim and ceilings", "Color conversation", "Cleanup"],
+    "heading": "Prep, then color",
+    "body": "Paint over bad patches shows every shortcut. We scope repairs during the estimate.",
+    "faq": {
+      "q": "Do you move furniture?",
+      "a": "We talk through what needs to move before the start date so the rooms stay usable."
+    },
+    "icon": "home",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "exterior",
+    "title": "Exterior",
+    "shortDesc": "Siding, trim, and the outside of the building.",
+    "fullDesc": "{{name}} paints exteriors in {{region}} after scrape, caulk, and prime where the job needs it.",
+    "highlights": ["Scrape and prime", "Caulk at joints", "Body and trim", "Weather-aware schedule"],
+    "heading": "Edges fail first",
+    "body": "Peeling starts at trim and open caulk. We look there before quoting a full coat.",
+    "faq": {
+      "q": "When can you paint outside?",
+      "a": "We schedule around temperature and rain. Call {{phone}} for the next opening."
+    },
+    "icon": "building",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "cabinets",
+    "title": "Cabinets",
+    "shortDesc": "Kitchen and bath cabinets finished so they look planned.",
+    "fullDesc": "{{name}} finishes cabinets in {{city}} with the prep and sheen the doors actually need.",
+    "highlights": ["Degloss and prime", "Sheen choice", "Hardware handling", "Written estimate"],
+    "heading": "Doors fail when they are rushed",
+    "body": "If the boxes are failing, a finish will not make them new. We say that on the walk-through.",
+    "faq": {
+      "q": "Do you spray or brush?",
+      "a": "We pick the method for the room and the sheen, and we tell you which one before we start."
+    },
+    "icon": "rows",
+    "iconStyle": "red",
+    "image": "/placeholders/hero.svg"
+  },
+  {
+    "slug": "commercial",
+    "title": "Commercial",
+    "shortDesc": "Offices and suites scheduled around how you use the building.",
+    "fullDesc": "{{name}} paints commercial spaces in {{region}} with a schedule that respects open hours.",
+    "highlights": ["After-hours when needed", "Offices and suites", "Common areas", "Written scope"],
+    "heading": "The building still has to work",
+    "body": "We scope access, odor, and which rooms can close before anyone opens a can.",
+    "faq": {
+      "q": "Can you work while we are open?",
+      "a": "Often in phases. Tell us the hours on the form or call {{phone}}."
+    },
+    "icon": "buildings",
+    "iconStyle": "navy",
+    "image": "/placeholders/hero.svg"
+  }
+]

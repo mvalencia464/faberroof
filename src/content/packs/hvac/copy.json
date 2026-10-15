@@ -1,0 +1,197 @@
+{
+  "ctaPrimaryLabel": "{{ctaPrimaryLabel}}",
+  "phoneCtaLabel": "{{phoneCtaLabel}}",
+  "serviceType": "{{serviceType}}",
+  "serviceNoun": "{{serviceNoun}}",
+  "ogImageAlt": "{{name}} — {{tradeLabel}} in {{city}}, {{state}}",
+  "heroImageAlt": "{{name}} project in {{city}}",
+  "formConsent": "and consent to be contacted about my {{serviceNoun}} request. Msg & data rates may apply.",
+  "sidebarTitle": "Request service",
+  "sidebarBody": "Call for the next step. We diagnose before we quote a replacement.",
+  "serviceAreasIntro": "{{name}} is a local {{tradeLabel}} serving these {{region}} communities:",
+  "contactTitle": "{{ctaPrimaryLabel}} | {{name}}",
+  "contactDescription": "Request service from {{name}} in {{city}}. Call {{phone}}.",
+  "contactHeading": "{{ctaPrimaryLabel}}",
+  "contactIntro": "Tell us what the system is doing.",
+  "aboutDescription": "Meet {{ownerName}} and {{legalName}} — {{tradeLabel}} in {{city}} serving {{region}}.",
+  "policyDescription": "How {{name}} collects, uses, and protects your information when you request service in {{city}} and {{region}}.",
+  "termsDescription": "Terms governing use of the {{name}} website and service requests in {{city}} and {{region}}.",
+  "areaEyebrow": "{{tradeLabel}} · Service area",
+  "areaPageTitle": "{{tradeLabel}} in {{areaName}} | {{name}}",
+  "areaHeadline": "{{tradeLabel}} in {{areaName}}",
+  "areaIntro": "When your {{areaName}} system needs repair or replacement, you get a diagnosis and a written option.",
+  "areaBody": "{{legalName}} serves {{areaName}} and nearby {{region}} from {{city}}.",
+  "areaServicesNote": "Heating and cooling for {{areaName}}.",
+  "areaServicesHeading": "Services in {{areaName}}",
+  "areaHighlights": ["Repair", "Maintenance", "Installation", "Written options"],
+  "areaFaqs": [
+    { "q": "Do you work in {{areaName}}?", "a": "Yes. Call {{phone}}." },
+    { "q": "How do I get an estimate in {{areaName}}?", "a": "Call {{phone}} or send the form." }
+  ],
+  "jobAreaLink": "{{tradeLabel}} in {{city}}",
+  "hero": {
+    "trustBadge": "{{city}} · {{region}}",
+    "headingLine1": "Heating and cooling",
+    "headingLine2": "",
+    "headingAccent": "diagnosed first",
+    "headline": "Heating and cooling, diagnosed first.",
+    "subheading": "You want to know what failed before anyone sells a new system. You get a diagnosis and written options.",
+    "benefits": [
+      { "icon": "tools", "label": "Repair" },
+      { "icon": "home", "label": "Install" },
+      { "icon": "clipboard-list", "label": "Written\noptions" }
+    ],
+    "ctaCall": "Call {{phone}}",
+    "scheduleHref": "/contact",
+    "financingNote": "Diagnose first. Clear next steps.",
+    "locationNote": "Serving {{region}} from {{city}}",
+    "trustLine": "Repair, maintenance, and installation",
+    "reviewCard": { "rating": 5, "count": "Google Reviews", "href": "/reviews" },
+    "ownerNote": "Call or send the form — {{ownerName}} will follow up.",
+    "ownerCta": "Talk to {{ownerName}}"
+  },
+  "trustBar": {
+    "heading": "Heating and cooling for {{region}}",
+    "badges": [
+      { "type": "google", "rating": 5, "label": "Google reviews", "eyebrow": "Google", "title": "Google reviews", "icon": "star" },
+      { "type": "cert", "label": "Based in\n{{city}}, {{state}}", "eyebrow": "Based in", "title": "{{city}}, {{state}}", "icon": "map-marker-alt" },
+      { "type": "cert", "label": "Diagnosis\nfirst", "eyebrow": "Before we quote", "title": "Diagnosis first", "icon": "clipboard-list" },
+      { "type": "cert", "label": "Repair &\ninstall", "eyebrow": "Repair &", "title": "Install", "icon": "tools" }
+    ]
+  },
+  "process": {
+    "label": "How it works",
+    "title": "From the call to a working system",
+    "subtitle": "You know the diagnosis before you approve work.",
+    "meetMessage": "Tell us what the system is doing. We follow up with the next opening.",
+    "steps": [
+      { "title": "Call or send the form", "meta": "Fast start", "description": "No heat, no cool, maintenance, or a new system — and the address." },
+      { "title": "Diagnose", "meta": "See the system", "description": "We test before we recommend a repair or a replacement." },
+      { "title": "Written options", "meta": "No guessing", "description": "You see the choice in writing." },
+      { "title": "Do the work", "meta": "The job", "description": "Repair or install, then startup." },
+      { "title": "Walk-through", "meta": "Done", "description": "We show you what changed." }
+    ]
+  },
+  "offersSection": {
+    "label": "Getting started",
+    "title": "Get a clear next step.",
+    "subtitle": "Repair, maintenance, or a new system."
+  },
+  "offers": [
+    {
+      "slug": "repair-visit",
+      "title": "Repair",
+      "price": "Custom quote",
+      "hook": "A diagnosis before a replacement conversation.",
+      "includes": ["System test", "Failed part identified", "Repair price", "Replacement only if needed"],
+      "ctaText": "Request a repair",
+      "ctaHref": "/contact",
+      "icon": "tools",
+      "featured": true,
+      "financingAnchor": true
+    },
+    {
+      "slug": "maintenance-visit",
+      "title": "Maintenance",
+      "price": "Custom quote",
+      "hook": "A seasonal checkup with notes you can read.",
+      "includes": ["Heating or cooling check", "Filter and drain", "Wear notes", "Schedule"],
+      "ctaText": "Book maintenance",
+      "ctaHref": "/contact",
+      "icon": "clipboard-list"
+    },
+    {
+      "slug": "install-estimate",
+      "title": "Installation",
+      "price": "Custom quote",
+      "hook": "New equipment sized to the house.",
+      "includes": ["House walk-through", "Options", "Removal", "Startup"],
+      "ctaText": "Get an install estimate",
+      "ctaHref": "/contact",
+      "icon": "home"
+    }
+  ],
+  "servicesHeading": "Heating and cooling",
+  "servicesLabel": "Services",
+  "servicesIntro": "Here is the work we take on in {{region}}.",
+  "valueProps": [
+    { "icon": "clipboard-list", "title": "Diagnose first", "description": "Quotes follow a test, not a phone guess." },
+    { "icon": "tools", "title": "Repair when it can be repaired", "description": "Replacement is a recommendation, not the opening line." },
+    { "icon": "home", "title": "Install when it is time", "description": "Capacity matched to the house." },
+    { "icon": "map-marker-alt", "title": "Local from {{city}}", "description": "You are calling {{region}}." }
+  ],
+  "whyChoose": {
+    "title": "Why choose {{name}}?",
+    "items": [
+      { "title": "You are calling {{city}}", "body": "{{ownerName}} serves {{region}} from nearby." },
+      { "title": "You hear the diagnosis first", "body": "Repair and replacement options in writing." },
+      { "title": "The house is treated carefully", "body": "Drop cloths, cleanup, and a walk-through." },
+      { "title": "You can request service", "body": "Call {{phone}} or send the form." }
+    ]
+  },
+  "reviewsSection": {
+    "label": "Google reviews",
+    "title": "What neighbors are saying",
+    "titleLine2": "",
+    "subtitle": "Work across {{city}} and {{region}}.",
+    "bullets": ["{{tradeLabel}}", "Based in {{city}}", "{{ownerName}}, owner", "Repair and installation"],
+    "ctaText": "Read more reviews on Google",
+    "viewAllHref": "/reviews",
+    "viewAllText": "See all reviews"
+  },
+  "reviewsPage": {
+    "label": "Google Reviews",
+    "title": "What customers are saying",
+    "subtitle": "Feedback from people who hired {{name}}.",
+    "description": "Read reviews for {{legalName}}."
+  },
+  "shop": { "heading": "Contact Us", "hours": [{ "days": "Hours", "time": "Call for hours" }] },
+  "workGallery": {
+    "label": "Recent work",
+    "title": "Recent work in your area",
+    "intro": "Job photos show up here when they are on file."
+  },
+  "ownerStory": {
+    "label": "About Us",
+    "quote": "{{tagline}}",
+    "caption": "{{ownerName}} · {{ownerRole}}",
+    "ctaText": "{{ctaPrimaryLabel}}",
+    "ctaHref": "/contact",
+    "quoteAttribution": "{{ownerName}}",
+    "quoteRole": "{{ownerRole}}, {{legalName}}",
+    "homepageParagraphLimit": 2,
+    "paragraphs": [
+      "{{ownerName}} built {{name}} on diagnosing the system and putting options in writing.",
+      "We serve {{region}} from {{city}}. Call {{phone}}."
+    ]
+  },
+  "teamSection": { "label": "The team", "title": "People who do the work", "intro": "Diagnosis first." },
+  "teamMembers": [
+    {
+      "name": "{{ownerName}}",
+      "role": "{{ownerRole}}",
+      "headline": "Leads with a diagnosis and written options.",
+      "bio": ["{{ownerName}} runs {{name}} from {{city}}."]
+    }
+  ],
+  "serviceArea": { "heading": "Areas We Serve", "body": "Based in {{city}}, {{state}} — serving {{region}}.", "country": "US" },
+  "ctaBanner": {
+    "title": "Need the system looked at?",
+    "subtitle": "Call or send the form.",
+    "body": "Repair, maintenance, or installation across {{region}}.",
+    "scheduleHref": "/contact",
+    "scheduleLabel": "{{ctaPrimaryLabel}}",
+    "scheduleSub": "No obligation",
+    "callSub": "Call to schedule"
+  },
+  "beforeAfter": {
+    "enabled": false,
+    "title": "Before and after",
+    "intro": "Drag the slider to compare the job.",
+    "beforeImage": "/placeholders/hero.svg",
+    "afterImage": "/placeholders/hero.svg",
+    "beforeLabel": "Before",
+    "afterLabel": "After"
+  },
+  "footerBlurb": "{{tradeLabel}}. Serving {{region}} from {{city}}."
+}

@@ -1,0 +1,309 @@
+---
+// src/layouts/BaseLayout.astro
+import { SITE, AREA_PAGES } from '../config/site';
+import { siteOrigin } from '../lib/origin';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  hideMobileCta?: boolean;
+  /** Preload this image as LCP (homepage hero). */
+  preloadLcpImage?: string;
+  /** Narrower LCP still for phones; preloaded only under 768px. */
+  preloadLcpImageMobile?: string;
+}
+
+const {
+  title       = SITE.seoTitle,
+  description = SITE.seoDescription,
+  image       = SITE.ogImage,
+  noindex     = false,
+  hideMobileCta = false,
+  preloadLcpImage,
+  preloadLcpImageMobile,
+} = Astro.props;
+
+const origin = siteOrigin(Astro.site);
+const canonical = new URL(Astro.url.pathname, origin).href;
+const ogImage = image.startsWith('http') ? image : new URL(image, origin).href;
+const counties = [...new Set(AREA_PAGES.map((area) => area.county).filter(Boolean))];
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": SITE.schemaType,
+  "name": SITE.name,
+  "legalName": SITE.legalName,
+  "slogan": SITE.catchphrase,
+  "telephone": SITE.phone,
+  "email": SITE.email,
+  "image": SITE.ogImage,
+  "logo": SITE.brandLogoUrl,
+  "address": {
+    "@type": "PostalAddress",
+    ...(SITE.address ? { streetAddress: SITE.address } : {}),
+    "addressLocality": SITE.city,
+    "addressRegion": SITE.state,
+    "postalCode": SITE.zip,
+    "addressCountry": "US",
+  },
+  "url": canonical,
+  "description": SITE.seoDescription,
+  "priceRange": "$$",
+  "additionalType": "https://schema.org/HomeAndConstructionBusiness",
+  "knowsAbout": SITE.schemaKnowsAbout,
+  "areaServed": [
+    ...counties.map((county) => ({
+      "@type": "AdministrativeArea",
+      "name": `${county} County, ${SITE.state}`,
+    })),
+    ...SITE.serviceAreas.map((city) => ({
+      "@type": "City",
+      "name": `${city}, ${SITE.state}`,
+    })),
+  ],
+  ...(SITE.googleReviews.count > 0
+    ? {
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: SITE.googleReviews.rating,
+          reviewCount: SITE.googleReviews.count,
+        },
+      }
+    : {}),
+};
+
+/** Display + body faces. Oswald 500 unused. */
+const fontQuery = [
+  `family=${encodeURIComponent(SITE.fonts.display)}:wght@600;700`,
+  `family=${encodeURIComponent(SITE.fonts.body)}:wght@400;600`,
+].join('&');
+const fontsHref = `https://fonts.googleapis.com/css2?${fontQuery}&display=swap`;
+const faCore =
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css';
+const faSolid =
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {!noindex && <meta name="keywords" content={SITE.seoKeywords} />}
+    <link rel="canonical" href={canonical} />
+
+    <link rel="preconnect" href={SITE.mediaOrigin} crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    {preloadLcpImageMobile && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadLcpImageMobile}
+        type="image/avif"
+        media="(max-width: 767px)"
+        fetchpriority="high"
+      />
+    )}
+    {preloadLcpImage && preloadLcpImageMobile && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadLcpImage}
+        type="image/avif"
+        media="(min-width: 768px)"
+        fetchpriority="high"
+      />
+    )}
+    {preloadLcpImage && !preloadLcpImageMobile && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadLcpImage}
+        type="image/avif"
+        fetchpriority="high"
+      />
+    )}
+
+    <link
+      rel="preload"
+      as="font"
+      href="https://fonts.gstatic.com/s/oswald/v57/TK3_WkUHHAIjg75cFRf3bXL8LICs1y9osUZiZSSShiA.woff2"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      as="style"
+      href={fontsHref}
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href={fontsHref} media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href={fontsHref} />
+    </noscript>
+
+    {/* Deferred solid icons only — brands dropped (footer uses inline SVGs). */}
+    <link
+      rel="preload"
+      as="style"
+      href={faCore}
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href={faCore} media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      as="style"
+      href={faSolid}
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href={faSolid} media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href={faCore} />
+      <link rel="stylesheet" href={faSolid} />
+    </noscript>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={SITE.ogImageAlt} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {!noindex && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+
+    <style define:vars={{
+      deep: SITE.palette.deep,
+      surface: SITE.palette.surface,
+      panel: SITE.palette.panel,
+      panel2: SITE.palette.panel2,
+      border: SITE.palette.border,
+      accent: SITE.palette.accent,
+      accent2: SITE.palette.accent2,
+      accentHover: SITE.palette.accentHover,
+      gold: SITE.palette.gold,
+        text: SITE.palette.text,
+      muted: SITE.palette.muted,
+      fontDisplay: `'${SITE.fonts.display}', sans-serif`,
+      fontBody: `'${SITE.fonts.body}', sans-serif`,
+    }}>
+      :root {
+        --font-display: var(--fontDisplay);
+        --font-body: var(--fontBody);
+        --deep: var(--deep);
+        --surface: var(--surface);
+        --panel: var(--panel);
+        --panel2: var(--panel2);
+        --border: var(--border);
+        --accent: var(--accent);
+        --accent2: var(--accent2);
+        --accent-hover: var(--accentHover);
+        --gold: var(--gold);
+        --text: var(--text);
+        --muted: var(--muted);
+      }
+    </style>
+
+    <link rel="icon" href={SITE.faviconUrl} type="image/avif" />
+    <link rel="apple-touch-icon" href={SITE.faviconUrl} />
+    <slot name="head" />
+  </head>
+
+  <body class:list={[!hideMobileCta && 'has-mobile-cta']}>
+    <slot />
+
+    {!hideMobileCta && (
+      <div class="mobile-cta-bar">
+        <a class="mobile-cta-bar__btn mobile-cta-bar__btn--schedule" href={SITE.hero.scheduleHref}>
+          <i class="fas fa-calendar" aria-hidden="true"></i>
+          Get a Quote
+        </a>
+        <a class="mobile-cta-bar__btn mobile-cta-bar__btn--call" href={telHref}>
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          Call
+        </a>
+      </div>
+    )}
+  </body>
+</html>
+
+<style>
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    gap: 0.65rem;
+    padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.97);
+    border-top: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-cta-bar__btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.85rem 0.75rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  .mobile-cta-bar__btn--schedule {
+    background: #fff;
+    color: var(--deep);
+    border: 1px solid var(--border);
+  }
+
+  .mobile-cta-bar__btn--schedule:hover {
+    background: var(--panel);
+  }
+
+  .mobile-cta-bar__btn--call {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+  }
+
+  .mobile-cta-bar__btn--call:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    :global(body.has-mobile-cta) {
+      padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-cta-bar {
+      display: flex;
+    }
+  }
+</style>

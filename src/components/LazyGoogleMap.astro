@@ -1,0 +1,132 @@
+---
+import { SITE } from '../config/site';
+
+interface Props {
+  class?: string;
+  title?: string;
+}
+
+const {
+  class: className,
+  title = `${SITE.name} service area — ${SITE.city}, ${SITE.state}`,
+} = Astro.props;
+
+const mapsKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY as string | undefined;
+const { lat, lng } = SITE.map.center;
+const center = `${lat},${lng}`;
+const zoom = SITE.map.zoom;
+const marker = encodeURIComponent(`color:0xE31837|${center}`);
+
+const staticSrc = mapsKey
+  ? `https://maps.googleapis.com/maps/api/staticmap?center=${center}&zoom=${zoom}&size=600x450&scale=2&maptype=roadmap&markers=${marker}&key=${mapsKey}`
+  : `https://staticmap.openstreetmap.de/staticmap.php?center=${center}&zoom=${zoom}&size=600x450&maptype=mapnik&markers=${lat},${lng},red-pushpin`;
+
+const embedSrc = SITE.map.embedUrl;
+---
+
+<div
+  class:list={['lazy-map', className]}
+  data-lazy-map
+  data-embed-src={embedSrc}
+>
+  <div class="lazy-map__placeholder" aria-hidden="true">
+    <img
+      src={staticSrc}
+      alt=""
+      loading="lazy"
+      fetchpriority="low"
+      decoding="async"
+      width="600"
+      height="450"
+    />
+  </div>
+
+  <iframe
+    class="lazy-map__frame"
+    title={title}
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<script>
+  function loadLazyMap(mapEl: HTMLElement) {
+    if (mapEl.classList.contains('lazy-map--loaded')) return;
+
+    const frame = mapEl.querySelector('.lazy-map__frame');
+    const embedSrc = mapEl.dataset.embedSrc;
+    if (!(frame instanceof HTMLIFrameElement) || !embedSrc) return;
+
+    frame.src = embedSrc;
+    mapEl.classList.add('lazy-map--loaded');
+  }
+
+  function initLazyMaps() {
+    const maps = document.querySelectorAll('[data-lazy-map]');
+    if (!('IntersectionObserver' in window)) {
+      maps.forEach((el) => {
+        if (el instanceof HTMLElement) loadLazyMap(el);
+      });
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || !(entry.target instanceof HTMLElement)) return;
+          loadLazyMap(entry.target);
+          io.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '200px 0px' },
+    );
+
+    maps.forEach((el) => io.observe(el));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLazyMaps, { once: true });
+  } else {
+    initLazyMaps();
+  }
+</script>
+
+<style>
+  .lazy-map {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 28px rgba(19, 40, 75, 0.12);
+  }
+
+  .lazy-map__placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--panel);
+  }
+
+  .lazy-map__placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .lazy-map__frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+    display: none;
+  }
+
+  .lazy-map--loaded .lazy-map__placeholder {
+    display: none;
+  }
+
+  .lazy-map--loaded .lazy-map__frame {
+    display: block;
+  }
+</style>

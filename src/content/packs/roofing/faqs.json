@@ -1,0 +1,18 @@
+[
+  {
+    "q": "What roofing work do you take on?",
+    "a": "Replacement, repair, storm damage, and inspections in {{city}} and {{region}}. Call {{phone}}."
+  },
+  {
+    "q": "Do you offer emergency 24/7 service?",
+    "a": "Storm leaks get priority when we can reach them. Call {{phone}} and we will tell you the next opening."
+  },
+  {
+    "q": "Where do you work?",
+    "a": "{{city}} and {{region}}. Call {{phone}} to confirm your address."
+  },
+  {
+    "q": "How do I get an estimate?",
+    "a": "Call {{phone}} or send the form. We inspect the roof before a written estimate."
+  }
+]

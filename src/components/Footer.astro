@@ -1,0 +1,251 @@
+---
+import { SITE } from '../config/site';
+import BrandLogo from './BrandLogo.astro';
+
+const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
+const year = new Date().getFullYear();
+---
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        {SITE.brandLogoUrl ? (
+          <BrandLogo variant="light" class="footer__logo" loading="lazy" />
+        ) : (
+          <p class="footer__wordmark">{SITE.shortName}</p>
+        )}
+        <p class="footer__legal-name">{SITE.legalName}</p>
+        <p class="footer__blurb">{SITE.footerBlurb}</p>
+        <div class="footer__social">
+          {SITE.social.facebook ? (
+            <a href={SITE.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2L17 12h-4V9c0-.6.4-1 1-1Z" />
+              </svg>
+            </a>
+          ) : null}
+          {SITE.social.google ? (
+            <a href={SITE.social.google} aria-label="Google" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+                <path d="M22.6 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h5.9c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7c2.2-2 3.3-5 3.3-8.3Z" />
+                <path d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.4 1.1-3.9 1.1-3 0-5.6-2-6.5-4.8H1.7v2.9C3.6 20.6 7.5 23 12 23Z" />
+                <path d="M5.5 13.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V6.4H1.7C.9 8.1.5 10 .5 11.5s.4 3.4 1.2 5.1l3.8-2.9Z" />
+                <path d="M12 4.6c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 1.2 15.1.2 12 .2 7.5.2 3.6 2.6 1.7 6.4l3.8 2.9C6.4 6.6 9 4.6 12 4.6Z" />
+              </svg>
+            </a>
+          ) : null}
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          {SITE.footerCompany.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Services</h4>
+        <ul class="footer__links">
+          {SITE.footerServices.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Contact Us</h4>
+        <ul class="footer__contact">
+          <li>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <a href={telHref}>{SITE.phone}</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          </li>
+          <li>
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span>{SITE.businessHours}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__areas">
+      Serving {SITE.region} —
+      <a href="/areas">Areas we serve</a>
+    </p>
+
+    <div class="footer__bottom">
+      <p>© {year} {SITE.legalName}. All Rights Reserved.</p>
+      <div class="footer__legal">
+        <a href="/policy">Privacy Policy</a>
+        <span>|</span>
+        <a href="/terms">Terms & Conditions</a>
+        <span>|</span>
+        <span>Licensed & Insured</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--deep);
+    color: rgba(255, 255, 255, 0.78);
+    padding: 4rem 0 2rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer__logo :global(.brand-logo) {
+    height: clamp(3rem, 10vw, 4rem);
+    margin-bottom: 0.75rem;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer__wordmark,
+  .footer__legal-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.35rem;
+  }
+
+  .footer__blurb {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    max-width: 22rem;
+  }
+
+  .footer__social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer__social a {
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__social svg {
+    display: block;
+  }
+
+  .footer__social a:hover {
+    color: var(--accent);
+  }
+
+  .footer__heading {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .footer__links a,
+  .footer__contact a {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.9rem;
+  }
+
+  .footer__links a:hover,
+  .footer__contact a:hover {
+    color: var(--accent);
+  }
+
+  .footer__contact {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .footer__contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .footer__contact i {
+    color: var(--accent);
+    margin-top: 0.2rem;
+    width: 1rem;
+  }
+
+  .footer__areas {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .footer__areas a {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  .footer__legal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__legal a {
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  @media (min-width: 768px) {
+    .footer__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__grid {
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    }
+  }
+</style>

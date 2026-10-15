@@ -1,0 +1,233 @@
+---
+import type { MockReview } from '../data/mock-reviews';
+
+interface Props {
+  review: MockReview;
+  showGoogleLink?: boolean;
+}
+
+const { review, showGoogleLink = false } = Astro.props;
+const location = review.location ?? review.date;
+const photos = (review.images ?? []).filter(Boolean);
+const photoCount = photos.length;
+/** 1 = full; 2 = side-by-side; 3+ = first full, rest paired side-by-side */
+const photoLayout =
+  photoCount <= 1 ? '1' : photoCount === 2 ? '2' : 'hero-grid';
+---
+
+<article class="review-card">
+  <div class="review-card__head">
+    <span class="review-card__source review-card__source--google" aria-hidden="true">G</span>
+    <div class="review-card__stars" aria-hidden="true">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    </div>
+    <span class="review-card__rating">{review.rating.toFixed(1)}</span>
+  </div>
+  <p class="review-card__text">"{review.text}"</p>
+  {photoCount > 0 ? (
+    <div
+      class:list={[
+        'review-card__photos',
+        `review-card__photos--${photoLayout}`,
+      ]}
+    >
+      {photos.map((src) => (
+        <div class="review-card__photo-cell">
+          <img
+            src={src}
+            alt=""
+            class="review-card__photo"
+            loading="lazy"
+            width={photoCount === 1 ? 640 : 320}
+            height={photoCount === 1 ? 400 : 240}
+          />
+        </div>
+      ))}
+    </div>
+  ) : null}
+  <div class="review-card__footer">
+    <div class="review-card__author">
+      {review.avatarUrl ? (
+        <img
+          src={review.avatarUrl}
+          alt=""
+          class="review-card__avatar"
+          loading="lazy"
+          width="40"
+          height="40"
+        />
+      ) : (
+        <span class="review-card__avatar review-card__avatar--placeholder" aria-hidden="true"></span>
+      )}
+      <div>
+        <strong>{review.author}</strong>
+        <span>{location}</span>
+      </div>
+    </div>
+    {showGoogleLink && review.reviewUrl ? (
+      <a
+        href={review.reviewUrl}
+        class="review-card__google-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View on Google <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+      </a>
+    ) : null}
+  </div>
+</article>
+
+<style>
+  .review-card {
+    background: #fff;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .review-card__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .review-card__source {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .review-card__source--google {
+    color: #4285f4;
+  }
+
+  .review-card__stars {
+    color: var(--gold);
+    font-size: 0.7rem;
+  }
+
+  .review-card__rating {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-left: auto;
+  }
+
+  .review-card__text {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    max-width: none;
+  }
+
+  .review-card__photos {
+    display: grid;
+    gap: 0.4rem;
+    margin: -0.35rem 0 1.25rem;
+  }
+
+  .review-card__photos--1 {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card__photos--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* 3+: first full-width, remaining side-by-side in pairs */
+  .review-card__photos--hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .review-card__photos--hero-grid .review-card__photo-cell:first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Odd leftover after the hero + pairs → full width */
+  .review-card__photos--hero-grid .review-card__photo-cell:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+  }
+
+  .review-card__photo-cell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: var(--panel2);
+    aspect-ratio: 4 / 3;
+  }
+
+  .review-card__photos--1 .review-card__photo-cell,
+  .review-card__photos--hero-grid .review-card__photo-cell:first-child,
+  .review-card__photos--hero-grid .review-card__photo-cell:last-child:nth-child(even) {
+    aspect-ratio: 16 / 9;
+  }
+
+  .review-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .review-card__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: auto;
+  }
+
+  .review-card__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .review-card__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .review-card__avatar--placeholder {
+    background: var(--panel2);
+  }
+
+  .review-card__author strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--deep);
+  }
+
+  .review-card__author span {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .review-card__google-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4285f4;
+    text-decoration: none;
+  }
+
+  .review-card__google-link:hover {
+    text-decoration: underline;
+  }
+
+  .review-card__google-link i {
+    font-size: 0.65rem;
+  }
+</style>

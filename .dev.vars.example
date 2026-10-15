@@ -1,0 +1,6 @@
+# Local secrets for `npx wrangler pages dev ./dist`
+# Copy to .dev.vars (gitignored) — do not commit real tokens.
+
+# GHL_WEBHOOK_URL=
+# GHL_PRIVATE_TOKEN=
+# GHL_LOCATION_ID=

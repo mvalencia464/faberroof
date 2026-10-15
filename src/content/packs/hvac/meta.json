@@ -1,0 +1,27 @@
+{
+  "trade": "hvac",
+  "tradeLabel": "HVAC contractor",
+  "schemaType": "HVACBusiness",
+  "serviceNoun": "HVAC",
+  "serviceType": "HVAC services",
+  "ctaPrimaryLabel": "Get an HVAC estimate",
+  "phoneCtaLabel": "Call for HVAC service",
+  "primaryServiceSlugs": ["repair", "maintenance", "installation", "indoor-air"],
+  "palette": {
+    "deep": "#0b1f33",
+    "surface": "#f3f7fb",
+    "panel": "#e6eef6",
+    "panel2": "#d7e4f0",
+    "border": "rgba(11, 31, 51, 0.12)",
+    "accent": "#0e7490",
+    "accent2": "#0b1f33",
+    "accentHover": "#0c5f75",
+    "gold": "#f5b942",
+    "text": "#0b1f33",
+    "muted": "#536273"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "body": "Open Sans"
+  }
+}
