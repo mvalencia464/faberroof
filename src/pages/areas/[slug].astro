@@ -126,7 +126,7 @@ const pageSchema = {
               <div class="area-jobs">
                 {areaJobs.map((job) => (
                   <a href={`/jobs/${job.slug}`} class="area-job-card">
-                    <img src={r2img(job.cover)} alt={job.title} width="400" height="280" loading="lazy" />
+                    <img src={r2img(job.cover)} alt={job.coverAlt} width="400" height="280" loading="lazy" />
                     <strong>{job.serviceLabel}</strong>
                     <span>{job.title}</span>
                   </a>

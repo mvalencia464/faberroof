@@ -16,10 +16,10 @@ export const COMPANY_IMAGES = JOBS.map((job) => ({
   slug: job.slug,
   title: job.title,
   caption: job.caption,
-  alt: `${job.serviceLabel} in ${job.city}, ${BRAND.state} by ${BRAND.name}`,
+  alt: job.coverAlt,
   image: job.cover,
-  materialImage: job.images[1] ?? job.cover,
-  materialAlt: job.summary,
+  materialImage: job.images[1]?.src ?? job.cover,
+  materialAlt: job.images[1]?.alt ?? job.coverAlt,
   serviceSlug: job.serviceSlug,
 }));
 
@@ -55,8 +55,8 @@ export const SITE = {
   brandLogoLightUrl: r2img(images.logo),
   brandLogoDarkUrl: r2img(images.logo),
   faviconUrl: r2img(images.favicon),
-  brandLogoWidth: 800,
-  brandLogoHeight: 800,
+  brandLogoWidth: 1500,
+  brandLogoHeight: 675,
   ogImage: r2img(images.hero),
 
   businessHours: "Call for hours",

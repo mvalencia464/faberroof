@@ -26,7 +26,10 @@ const jobReview = job.reviewAuthor
   : undefined;
 
 const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
-const pageTitle = `${job.serviceLabel} in ${job.city}, ${SITE.state} | ${SITE.name}`;
+const place = job.city ? `${job.city}, ${SITE.state}` : "";
+const pageTitle = place
+  ? `${job.serviceLabel} in ${place} | ${SITE.name}`
+  : `${job.title} | ${SITE.name}`;
 const pageDescription = job.caption;
 ---
 
@@ -35,7 +38,7 @@ const pageDescription = job.caption;
   <main>
     <section class="job-hero">
       <div class="container">
-        <p class="section-label">{job.city}, {SITE.state} · {job.serviceLabel}</p>
+        <p class="section-label">{place ? `${place} · ` : ""}{job.serviceLabel}</p>
         <h1>{job.title}</h1>
         <p class="job-hero__intro">{job.caption}</p>
         <div class="job-hero__actions">
@@ -59,15 +62,15 @@ const pageDescription = job.caption;
             <img
               class="job-detail__cover"
               src={r2img(job.cover)}
-              alt={`${job.serviceLabel} in ${job.city}`}
+              alt={job.coverAlt}
               width="1200"
               height="800"
             />
           )}
 
           <div class="job-detail__gallery">
-            {job.images.filter((src) => src !== job.cover).map((src) => (
-              <img src={r2img(src)} alt="" loading="lazy" width="640" height="480" />
+            {job.images.filter((item) => item.src !== job.cover).map((item) => (
+              <img src={r2img(item.src)} alt={item.alt} loading="lazy" width="640" height="480" />
             ))}
           </div>
         </div>
