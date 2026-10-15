@@ -13,8 +13,34 @@
     },
     "icon": "home",
     "iconStyle": "navy",
-    "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
-    "gallery": ["faber-roof-standing-seam-metal-roof-aerial.avif"]
+    "image": "faber-roof-two-story-home-shingle-roof.avif",
+    "imageAlt": "Two-story home with a completed asphalt shingle roof.",
+    "gallery": [
+      {
+        "image": "faber-roof-lakefront-home-gray-shingle-roof.avif",
+        "alt": "Lakefront house with a gray asphalt shingle roof."
+      },
+      {
+        "image": "faber-roof-duplex-architectural-shingle-replacement.avif",
+        "alt": "Duplex with architectural shingles during a roof replacement."
+      },
+      {
+        "image": "faber-roof-condo-shingle-roof-replacement-finished.avif",
+        "alt": "Finished shingle roof on a condominium building."
+      },
+      {
+        "image": "faber-roof-crew-reroofing-neighborhood-homes.avif",
+        "alt": "Crew reroofing homes along a neighborhood street."
+      },
+      {
+        "image": "faber-roof-crew-winter-roof-installation.avif",
+        "alt": "Crew installing a roof in winter, with snow on the ground."
+      },
+      {
+        "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
+        "alt": "Medium shot of a house with shingle bundles stacked on the roof. The filename says ridge vents; the photo is not a close-up of ridge vents."
+      }
+    ]
   },
   {
     "slug": "commercial-roofing",
@@ -30,8 +56,14 @@
     },
     "icon": "building",
     "iconStyle": "navy",
-    "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
-    "gallery": ["faber-roof-shingle-roof-ridge-vents-closeup.avif"]
+    "image": "faber-roof-crew-commercial-shingle-replacement.avif",
+    "imageAlt": "Crew replacing shingles on a commercial building.",
+    "gallery": [
+      {
+        "image": "faber-roof-new-construction-roof-install-crane.avif",
+        "alt": "Crane setting roof materials during a new-construction roof install."
+      }
+    ]
   },
   {
     "slug": "shingle-roofing",
@@ -47,7 +79,34 @@
     },
     "icon": "home",
     "iconStyle": "navy",
-    "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif"
+    "image": "faber-roof-dark-architectural-shingles-brick-home.avif",
+    "imageAlt": "Brick home with dark architectural shingles.",
+    "gallery": [
+      {
+        "image": "faber-roof-condo-shingle-roof-replacement-finished.avif",
+        "alt": "Finished shingle roof on a condominium building."
+      },
+      {
+        "image": "faber-roof-shingle-replacement-materials-on-site.avif",
+        "alt": "Shingle bundles and roofing materials staged on site for a replacement."
+      },
+      {
+        "image": "faber-roof-duplex-architectural-shingle-replacement.avif",
+        "alt": "Duplex with architectural shingles during a roof replacement."
+      },
+      {
+        "image": "faber-roof-two-story-home-shingle-roof.avif",
+        "alt": "Two-story home with a completed asphalt shingle roof."
+      },
+      {
+        "image": "faber-roof-lakefront-home-gray-shingle-roof.avif",
+        "alt": "Lakefront house with a gray asphalt shingle roof."
+      },
+      {
+        "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
+        "alt": "Medium shot of a house with shingle bundles stacked on the roof. The filename says ridge vents; the photo is not a close-up of ridge vents."
+      }
+    ]
   },
   {
     "slug": "metal-roofing",
@@ -63,6 +122,7 @@
     },
     "icon": "building",
     "iconStyle": "navy",
-    "image": "faber-roof-standing-seam-metal-roof-aerial.avif"
+    "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
+    "imageAlt": "Aerial view of a standing-seam metal roof with skylights."
   }
 ]

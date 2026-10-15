@@ -4,7 +4,7 @@ import { JOBS } from '../data/jobs';
 import { r2img } from '../lib/r2';
 
 const gallery = SITE.workGallery;
-const jobs = JOBS.slice(0, 8);
+const jobs = JOBS;
 
 const pad = (n: number) => String(n + 1).padStart(2, '0');
 ---
@@ -25,13 +25,13 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
             <div class="work-card__media">
               <img
                 src={r2img(job.cover)}
-                alt={`${job.serviceLabel} in ${job.city}, ${SITE.state}`}
+                alt={job.coverAlt}
                 loading="lazy"
                 decoding="async"
                 width="640"
                 height="480"
               />
-              <span class="work-card__city">{job.city}, {SITE.state}</span>
+              {job.city && <span class="work-card__city">{job.city}, {SITE.state}</span>}
             </div>
             <span class="work-card__meta">
               <span class="work-card__index">{pad(i)}</span>

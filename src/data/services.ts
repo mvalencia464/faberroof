@@ -14,6 +14,7 @@ export type SiteService = {
   icon: string;
   iconStyle: string;
   image: string;
+  imageAlt: string;
   galleryImages: { image: string; alt: string }[];
   fullDesc: string;
   highlights: string[];
@@ -33,7 +34,8 @@ type PackService = {
   icon: string;
   iconStyle?: string;
   image: string;
-  gallery?: string[];
+  imageAlt?: string;
+  gallery?: Array<string | { image: string; alt: string }>;
 };
 
 const PACKS: Record<string, PackService[]> = {
@@ -70,12 +72,17 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
     icon: service.icon,
     iconStyle: service.iconStyle ?? "navy",
     image,
+    imageAlt: service.imageAlt || `${service.title} by ${BRAND.name}`,
     galleryImages: [
-      { image, alt: `${service.title} by ${BRAND.name}` },
-      ...(service.gallery ?? []).map((src) => ({
-        image: src,
-        alt: `${service.title} by ${BRAND.name}`,
-      })),
+      {
+        image,
+        alt: service.imageAlt || `${service.title} by ${BRAND.name}`,
+      },
+      ...(service.gallery ?? []).map((item) =>
+        typeof item === "string"
+          ? { image: item, alt: `${service.title} by ${BRAND.name}` }
+          : { image: item.image, alt: item.alt },
+      ),
     ],
     fullDesc: service.fullDesc,
     highlights: service.highlights,
