@@ -351,17 +351,18 @@
       "intro": "Houses, attached homes, a retail shingle tear-off, and a standing-seam metal roof."
     },
     "ownerStory": {
-      "label": "About Us",
-      "quote": "You call. Someone looks at the roof. You get the estimate in writing.",
+      "label": "Our Story",
+      "quote": "Your roof, looked after by a company that still cares.",
       "caption": "Matt Atrard \u00b7 Owner",
       "ctaText": "Get a roofing estimate",
       "ctaHref": "/contact",
       "quoteAttribution": "Matt Atrard",
       "quoteRole": "Owner, Faber Roof",
-      "homepageParagraphLimit": 2,
+      "homepageParagraphLimit": 3,
       "paragraphs": [
-        "Matt Atrard owns Faber Roof, LLC. The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
-        "He has owned businesses since he was 18. He and his family lived in Alaska for nine years. You reach the estimate line at (810) 360-7385. Property managers have hired the company for commercial roofs."
+        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing.",
+        "Roof work goes wrong in the same ways. The schedule slips. Materials show up late. The yard is a mess when the crew leaves. We stay small so we can still care about those things. Homeowners have said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time.",
+        "We are not perfect. When we miss something, we own it and we make it right. Call (810) 360-7385."
       ]
     },
     "teamSection": {
