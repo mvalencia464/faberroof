@@ -43,7 +43,6 @@
     },
     "images": {
       "logo": "faber_logo.avif",
-      "logoLight": "/logo-white.svg",
       "favicon": "/favicon.avif",
       "hero": "faber-roof-standing-seam-metal-roof-aerial.avif",
       "heroSm": "faber-roof-standing-seam-metal-roof-aerial.avif",
@@ -70,7 +69,7 @@
   },
   "seo": {
     "title": "Faber Roof | Commercial and residential roofing in Farmington Hills, MI",
-    "description": "Commercial and residential roofing in Farmington Hills, MI. Call (810) 360-7385.",
+    "description": "Get the old shingles off your house or building in Farmington Hills. Call (810) 360-7385 for a written estimate.",
     "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
   },
   "copy": {
@@ -79,7 +78,7 @@
     "serviceType": "Roofing services",
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
-    "heroImageAlt": "Standing-seam metal roof from Faber Roof project photos",
+    "heroImageAlt": "Standing-seam metal roof with skylights on a brick building",
     "formConsent": "and consent to be contacted about my roofing estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
@@ -117,19 +116,19 @@
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
       "trustBadge": "Farmington Hills, MI",
-      "headingLine1": "A leaking roof",
-      "headingLine2": "does not wait.",
-      "headingAccent": "Get it looked at.",
-      "headline": "A leaking roof does not wait.",
-      "subheading": "Water in the ceiling, a patch that fails again, or a building you cannot close. Faber Roof looks at the roof, then gives you a written estimate. Call (810) 360-7385.",
+      "headingLine1": "Get the old shingles off",
+      "headingLine2": "before the snow",
+      "headingAccent": "before the snow",
+      "headline": "Get the old shingles off before the snow",
+      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385. Someone looks at your roof and writes the estimate. Homeowners say the crew was on time, and the cleanup looked like they were never there.",
       "benefits": [
         {
           "icon": "home",
-          "label": "Residential\nroofing"
+          "label": "Tear-off and\nnew shingles"
         },
         {
           "icon": "building",
-          "label": "Commercial\nroofing"
+          "label": "Homes and\nbuildings"
         },
         {
           "icon": "clipboard-list",
@@ -140,14 +139,14 @@
       "scheduleHref": "/contact",
       "financingNote": "0% financing options. 12\u201324 month terms are available. Financing is subject to credit approval.",
       "locationNote": "22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335",
-      "trustLine": "Homes and commercial buildings. Written estimate after we see the roof.",
+      "trustLine": "On time. Cleanup when they leave. 5.0 from 5 Google reviews.",
       "reviewCard": {
         "rating": 0,
         "count": "Google reviews",
         "href": "/reviews"
       },
-      "ownerNote": "Matt Atrard owns Faber Roof. Call (810) 360-7385.",
-      "ownerCta": "Talk to Matt"
+      "ownerNote": "Matt Atrard owns Faber Roof. Call (810) 360-7385 for the estimate.",
+      "ownerCta": "Call for an estimate"
     },
     "trustBar": {
       "heading": "roofing for Farmington Hills homes and buildings",
@@ -270,49 +269,49 @@
         "icon": "cloud-lightning"
       }
     ],
-    "servicesHeading": "roofing for your home and your building",
+    "servicesHeading": "The roof work on your house or your building",
     "servicesLabel": "Services",
-    "servicesIntro": "Here is the roof work we take on in Farmington Hills.",
+    "servicesIntro": "You need the old shingles off, a leak stopped, or a building kept dry.",
     "valueProps": [
       {
         "icon": "clipboard-list",
-        "title": "Inspect first",
-        "description": "Estimates come from the roof, not a phone guess."
+        "title": "You see the price after the look",
+        "description": "The estimate comes from your roof, not a guess over the phone."
       },
       {
         "icon": "home",
-        "title": "Repair or replace",
-        "description": "We tell you which one the roof actually needs."
+        "title": "Tear-off and new shingles",
+        "description": "One homeowner had the old roof torn off and reshingled in a day."
       },
       {
         "icon": "building",
-        "title": "Homes and buildings",
-        "description": "The same straight conversation for a house or a small commercial roof."
+        "title": "Your house or your building",
+        "description": "Houses, attached homes, and commercial roofs. A property manager said the job finished on budget."
       },
       {
         "icon": "map-marker-alt",
-        "title": "Local from Farmington Hills",
-        "description": "You are calling Farmington Hills, not a national dispatch line."
+        "title": "You call Farmington Hills",
+        "description": "The office is on Haggerty Road. You are not calling a national dispatch line."
       }
     ],
     "whyChoose": {
       "title": "Why choose Faber Roof?",
       "items": [
         {
-          "title": "You are calling Farmington Hills",
+          "title": "You want them gone when it is done",
+          "body": "A homeowner said the cleanup looked like the crew was never there."
+        },
+        {
+          "title": "You want it on time",
+          "body": "Reviews mention on-time work, including a commercial job that finished on budget."
+        },
+        {
+          "title": "You want the price in writing",
+          "body": "Someone looks at your roof first. Then you get the estimate. Call (810) 360-7385."
+        },
+        {
+          "title": "You are calling the owner’s company",
           "body": "Matt Atrard owns Faber Roof at 22710 Haggerty Rd. Suite 100B, Farmington Hills."
-        },
-        {
-          "title": "You hear the scope first",
-          "body": "Repair versus replacement in writing \u2014 not a guess from the street."
-        },
-        {
-          "title": "The property is treated carefully",
-          "body": "Protection, cleanup, and a walk-through when the job is done."
-        },
-        {
-          "title": "You can get an estimate",
-          "body": "Call (810) 360-7385 or send the form."
         }
       ]
     },
@@ -320,7 +319,7 @@
       "label": "Google reviews",
       "title": "What neighbors are saying",
       "titleLine2": "",
-      "subtitle": "roofing across Farmington Hills and Farmington Hills.",
+      "subtitle": "Homeowners and a commercial customer, in their words.",
       "bullets": [
         "Roofing contractor",
         "Based in Farmington Hills, MI",
@@ -349,11 +348,11 @@
     "workGallery": {
       "label": "Recent work",
       "title": "Recent work in your area",
-      "intro": "Job photos show up here when they are on file."
+      "intro": "Houses, attached homes, a retail shingle tear-off, and a standing-seam metal roof."
     },
     "ownerStory": {
       "label": "About Us",
-      "quote": "A leaking roof does not wait. We look at it, then put the estimate in writing.",
+      "quote": "You call. Someone looks at the roof. You get the estimate in writing.",
       "caption": "Matt Atrard \u00b7 Owner",
       "ctaText": "Get a roofing estimate",
       "ctaHref": "/contact",
@@ -361,8 +360,8 @@
       "quoteRole": "Owner, Faber Roof",
       "homepageParagraphLimit": 2,
       "paragraphs": [
-        "Matt Atrard owns Faber Roof, LLC in Farmington Hills.",
-        "Faber Roof, LLC lists 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335 and (810) 360-7385."
+        "Matt Atrard owns Faber Roof, LLC. The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
+        "He has owned businesses since he was 18. He and his family lived in Alaska for nine years. You reach the estimate line at (810) 360-7385. Property managers have hired the company for commercial roofs."
       ]
     },
     "teamSection": {
@@ -374,9 +373,9 @@
       {
         "name": "Matt Atrard",
         "role": "Owner",
-        "headline": "Looks at the roof, then writes the estimate.",
+        "headline": "You get a written estimate after the roof is looked at.",
         "bio": [
-          "Matt Atrard owns Faber Roof in Farmington Hills."
+          "Matt Atrard owns Faber Roof in Farmington Hills. He has run businesses since he was 18."
         ]
       }
     ],

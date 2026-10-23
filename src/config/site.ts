@@ -52,7 +52,7 @@ export const SITE = {
   mediaOrigin: new URL(BRAND.mediaBase).origin,
 
   brandLogoUrl: r2img(images.logo),
-  brandLogoLightUrl: r2img(images.logoLight || images.logo),
+  brandLogoLightUrl: r2img(images.logo),
   brandLogoDarkUrl: r2img(images.logo),
   faviconUrl: r2img(images.favicon),
   brandLogoWidth: 1500,

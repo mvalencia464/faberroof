@@ -2,11 +2,11 @@
   {
     "slug": "residential-roofing",
     "title": "Residential roofing",
-    "shortDesc": "A house roof that leaks or is worn out lets water into the rooms you live in. We look at the house, then write the estimate.",
-    "fullDesc": "A stain on the ceiling or a roof that is past its years is not a problem that stays on the roof. {{name}} looks at the house in {{city}}, then gives you a written estimate. Call {{phone}}.",
-    "highlights": ["Homes", "Written estimate after we see the roof", "Call {{phone}}"],
-    "heading": "When the house roof starts letting water in",
-    "body": "A patch that fails again means the leak is still finding a way inside. {{name}} roofs homes and commercial buildings. Call {{phone}} and we look at the house before anyone names a price.",
+    "shortDesc": "Your shingles are tired, or the ceiling already has a stain. You get a look at the house and a written estimate. One homeowner had the tear-off and new shingles finished in a day.",
+    "fullDesc": "Water in the ceiling does not stay in the ceiling. You call {{phone}}. Someone looks at the house in {{city}}, then writes the estimate. Project photos show gray and brown architectural shingles on houses, lake houses, and attached homes.",
+    "highlights": ["Houses and attached homes", "Tear-off and new shingles", "Call {{phone}}"],
+    "heading": "When the stain shows up in your ceiling",
+    "body": "Another patch does not stop the next rain. You want the old shingles off before snow sits on them. Call {{phone}} and the price comes after the roof is looked at.",
     "faq": {
       "q": "Do you roof houses?",
       "a": "Faber Roof's site says it roofs homes and businesses. Call {{phone}} about a specific house."
@@ -14,27 +14,27 @@
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-two-story-home-shingle-roof.avif",
-    "imageAlt": "Two-story home with a completed asphalt shingle roof.",
+    "imageAlt": "Two-story attached homes with asphalt shingle roofs over the entries.",
     "gallery": [
       {
         "image": "faber-roof-lakefront-home-gray-shingle-roof.avif",
-        "alt": "Lakefront house with a gray asphalt shingle roof."
+        "alt": "House beside the water with gray architectural shingles and a ridge vent."
       },
       {
         "image": "faber-roof-duplex-architectural-shingle-replacement.avif",
-        "alt": "Duplex with architectural shingles during a roof replacement."
+        "alt": "Two-garage home with gray architectural shingles and stone accents."
       },
       {
         "image": "faber-roof-condo-shingle-roof-replacement-finished.avif",
-        "alt": "Finished shingle roof on a condominium building."
+        "alt": "Attached homes with dark architectural shingles, stone columns, and white garage doors."
       },
       {
         "image": "faber-roof-crew-reroofing-neighborhood-homes.avif",
-        "alt": "Crew reroofing homes along a neighborhood street."
+        "alt": "Crew installing shingles on a house, with yellow underlayment on the roof next door."
       },
       {
-        "image": "faber-roof-crew-winter-roof-installation.avif",
-        "alt": "Crew installing a roof in winter, with snow on the ground."
+        "image": "faber-roof-new-construction-roof-install-crane.avif",
+        "alt": "Boom truck loading shingles onto new houses still wrapped in sheathing."
       },
       {
         "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
@@ -45,11 +45,11 @@
   {
     "slug": "commercial-roofing",
     "title": "Commercial roofing",
-    "shortDesc": "A commercial roof problem can stop a close or soak the space underneath. We look at the building, then write the estimate.",
-    "fullDesc": "Water in a commercial space does not wait for a convenient week. {{name}} looks at the building, then gives you a written estimate. Call {{phone}}.",
-    "highlights": ["Commercial buildings", "Written estimate after we see the roof", "Call {{phone}}"],
-    "heading": "When the building roof is in the way of the business",
-    "body": "A leak over a workspace or a roof that holds up a sale needs a look, not a guess from the street. {{name}} does commercial and residential roofing. Call {{phone}} with the address.",
+    "shortDesc": "Your building roof is leaking over the business, or a property manager needs the job on a calendar. A commercial customer said the project finished on budget and on time.",
+    "fullDesc": "A leak over a workspace does not wait for a slow week. You call {{phone}}. The photos show a crew tearing off shingles on a retail building, with underlayment and roof vents, and a standing-seam metal roof on a larger brick building. Property managers have hired {{name}} for commercial work.",
+    "highlights": ["Retail and larger buildings", "On budget, from a commercial review", "Call {{phone}}"],
+    "heading": "When the roof is in the way of the business",
+    "body": "You need the building dry and the date kept. A Google review from a commercial project says the team finished on budget and on time. Call {{phone}} with the address.",
     "faq": {
       "q": "Do you take commercial jobs?",
       "a": "The site says Faber Roof does commercial and residential roofing. Call {{phone}} with the address."
@@ -57,22 +57,22 @@
     "icon": "building",
     "iconStyle": "navy",
     "image": "faber-roof-crew-commercial-shingle-replacement.avif",
-    "imageAlt": "Crew replacing shingles on a commercial building.",
+    "imageAlt": "Crew tearing off shingles on a retail building, with underlayment and roof vents.",
     "gallery": [
       {
-        "image": "faber-roof-new-construction-roof-install-crane.avif",
-        "alt": "Crane setting roof materials during a new-construction roof install."
+        "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
+        "alt": "Aerial view of a standing-seam metal roof with skylights on a brick building."
       }
     ]
   },
   {
     "slug": "shingle-roofing",
     "title": "Shingle roofing",
-    "shortDesc": "Curling or missing shingles let the next storm into the deck. We look at the roof, then write the estimate. CertainTeed and Landmark Pro marks are on our materials.",
-    "fullDesc": "Missing shingles and a soft spot in the deck get worse every rain. {{name}} shows shingle roofs in its project photos and displays CertainTeed and Landmark Pro marks. Call {{phone}} to confirm the product for your roof.",
-    "highlights": ["Project photos show asphalt shingles", "CertainTeed mark", "Landmark Pro mark"],
-    "heading": "When the shingles are no longer keeping water out",
-    "body": "A bundle of new shingles does not help until someone looks at what is under the old ones. {{name}} shows CertainTeed and Landmark Pro marks and photos of shingle roofs. Those are not the only products we may install. Call {{phone}}.",
+    "shortDesc": "Missing shingles and a soft deck get worse every rain. You get architectural shingles like the gray and charcoal roofs in these photos. Call to confirm the product.",
+    "fullDesc": "You can see the bundles on the roof and the underlayment in the yard before the new shingles go down. Finished photos show gray and dark architectural shingles on brick, stone, and sided houses. CertainTeed and Landmark Pro marks have appeared on the Faber Roof site. Confirm the product on your estimate. Call {{phone}}.",
+    "highlights": ["Architectural shingles in the photos", "Tear-off, then new shingles", "Confirm the product on your estimate"],
+    "heading": "When the shingles stop keeping water out",
+    "body": "One homeowner said the crew tore off the old roof and reshingled it the same day. That is not a promise for every house. You call {{phone}}, someone looks, and you get the estimate.",
     "faq": {
       "q": "Which shingles do you install?",
       "a": "The current site shows CertainTeed and Landmark Pro marks. Call {{phone}} to confirm what goes on a specific roof."
@@ -80,27 +80,27 @@
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-dark-architectural-shingles-brick-home.avif",
-    "imageAlt": "Brick home with dark architectural shingles.",
+    "imageAlt": "Brick house with dark gray architectural shingles and stone accents.",
     "gallery": [
       {
         "image": "faber-roof-condo-shingle-roof-replacement-finished.avif",
-        "alt": "Finished shingle roof on a condominium building."
+        "alt": "Attached homes with dark architectural shingles, stone columns, and white garage doors."
       },
       {
         "image": "faber-roof-shingle-replacement-materials-on-site.avif",
-        "alt": "Shingle bundles and roofing materials staged on site for a replacement."
+        "alt": "Finished gray architectural shingles on a two-story house, with plywood and a ladder still in the yard."
       },
       {
         "image": "faber-roof-duplex-architectural-shingle-replacement.avif",
-        "alt": "Duplex with architectural shingles during a roof replacement."
+        "alt": "Two-garage home with gray architectural shingles and stone accents."
       },
       {
         "image": "faber-roof-two-story-home-shingle-roof.avif",
-        "alt": "Two-story home with a completed asphalt shingle roof."
+        "alt": "Two-story attached homes with asphalt shingle roofs over the entries."
       },
       {
         "image": "faber-roof-lakefront-home-gray-shingle-roof.avif",
-        "alt": "Lakefront house with a gray asphalt shingle roof."
+        "alt": "House beside the water with gray architectural shingles and a ridge vent."
       },
       {
         "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
@@ -111,11 +111,11 @@
   {
     "slug": "metal-roofing",
     "title": "Metal roofing",
-    "shortDesc": "If shingles keep failing on a roof you want to stop replacing, ask about metal. A standing-seam roof is in our project photos. Call to see if it fits your building.",
-    "fullDesc": "Another shingle replacement on a roof that wants metal is money spent twice. {{name}} publishes a photo of a standing-seam metal roof. Call {{phone}} to ask whether metal is an option for your building.",
-    "highlights": ["Standing-seam photo", "Shown alongside residential photos", "Confirm the system on your estimate"],
-    "heading": "When you want to stop repeating the same shingle job",
-    "body": "A standing-seam metal roof with skylights is in the project photos. Confirm that system on your estimate before you plan on metal. Call {{phone}}.",
+    "shortDesc": "You want metal instead of another shingle cycle. The project photo is a standing-seam roof with skylights on a brick building. Call to ask if metal fits yours.",
+    "fullDesc": "The aerial photo shows standing-seam metal panels, skylights, and a brick building. It is not a house. Call {{phone}} before you plan on that system for your building.",
+    "highlights": ["Standing-seam panels", "Skylights on a brick building", "Confirm the system on your estimate"],
+    "heading": "When you want metal instead of another shingle roof",
+    "body": "You see the system in the photo first. Then you ask if it belongs on your building. Call {{phone}}.",
     "faq": {
       "q": "Do you install metal roofs?",
       "a": "A standing-seam metal roof is pictured on faberroof.com. Call {{phone}} to ask about your building."
@@ -123,6 +123,6 @@
     "icon": "building",
     "iconStyle": "navy",
     "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
-    "imageAlt": "Aerial view of a standing-seam metal roof with skylights."
+    "imageAlt": "Aerial view of a standing-seam metal roof with skylights on a brick building."
   }
 ]
