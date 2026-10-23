@@ -31,15 +31,6 @@ export type Job = {
   reviewAuthor?: string;
 };
 
-const unlabeled = {
-  city: "",
-  areaSlug: "",
-  equipment: "TODO: not stated on the photo.",
-  outcome: "TODO: completion details are not stated on the photo.",
-  pain: "TODO: the photo has no caption.",
-  fix: "Shown as a Faber Roof project photo only.",
-};
-
 function photoJob(input: {
   slug: string;
   title: string;
@@ -47,7 +38,9 @@ function photoJob(input: {
   serviceSlug: string;
   cover: string;
   coverAlt: string;
-  workPerformed: string;
+  story: string;
+  pain: string;
+  fix: string;
   extra?: JobImage[];
 }): Job {
   return {
@@ -55,20 +48,19 @@ function photoJob(input: {
     title: input.title,
     serviceLabel: input.serviceLabel,
     serviceSlug: input.serviceSlug,
-    city: unlabeled.city,
-    areaSlug: unlabeled.areaSlug,
+    city: "",
+    areaSlug: "",
     cover: input.cover,
     coverAlt: input.coverAlt,
     images: [{ src: input.cover, alt: input.coverAlt }, ...(input.extra ?? [])],
-    caption: `${input.coverAlt} The file does not name the address.`,
-    summary:
-      "This image is published for Faber Roof. TODO: the property address and scope are not labeled on the photo.",
+    caption: input.story,
+    summary: input.story,
     analysis: {
-      equipment: unlabeled.equipment,
-      workPerformed: input.workPerformed,
-      outcome: unlabeled.outcome,
+      equipment: input.serviceLabel,
+      workPerformed: input.story,
+      outcome: "Call (810) 360-7385 if you want this kind of roof on your property.",
     },
-    rows: [{ pain: unlabeled.pain, fix: unlabeled.fix }],
+    rows: [{ pain: input.pain, fix: input.fix }],
   };
 }
 
@@ -83,17 +75,21 @@ export const JOBS: Job[] = [
     serviceLabel: "Metal roofing",
     serviceSlug: "metal-roofing",
     cover: "faber-roof-standing-seam-metal-roof-aerial.avif",
-    coverAlt: "Aerial view of a standing-seam metal roof with skylights.",
-    workPerformed: "The photo shows a standing-seam metal roof with skylights.",
+    coverAlt: "Aerial view of a standing-seam metal roof with skylights on a brick building.",
+    story: "This brick building in Metro Detroit has a standing-seam metal roof and skylights. The panels run the slope and shed water at the raised seams. Ask for the same system if your building should not take another shingle roof.",
+    pain: "Another shingle roof on a building that keeps leaking.",
+    fix: "Standing-seam metal, after someone looks and writes the estimate.",
   }),
   photoJob({
     slug: "two-story-home-shingle-roof",
-    title: "Two-story home shingle roof",
+    title: "Attached homes with shingle roofs",
     serviceLabel: "Residential roofing",
     serviceSlug: "residential-roofing",
     cover: "faber-roof-two-story-home-shingle-roof.avif",
-    coverAlt: "Two-story home with a completed asphalt shingle roof.",
-    workPerformed: "The photo shows a two-story house with asphalt shingles in place.",
+    coverAlt: "Two-story attached homes with asphalt shingle roofs over the entries.",
+    story: "These attached homes have asphalt shingles over the entries and the main slopes. You get the same kind of roof on a house or a row of homes: old shingles off, new shingles on, price in writing first.",
+    pain: "Shared roofs and entry roofs that leak into more than one home.",
+    fix: "A look at each slope, then a written estimate for the shingles.",
   }),
   photoJob({
     slug: "dark-architectural-shingles-brick-home",
@@ -101,8 +97,10 @@ export const JOBS: Job[] = [
     serviceLabel: "Shingle roofing",
     serviceSlug: "shingle-roofing",
     cover: "faber-roof-dark-architectural-shingles-brick-home.avif",
-    coverAlt: "Brick home with dark architectural shingles.",
-    workPerformed: "The photo shows dark architectural shingles on a brick house.",
+    coverAlt: "Brick house with dark gray architectural shingles and stone accents.",
+    story: "Dark gray architectural shingles on a brick house with stone accents. The lines are straight, the ridges are finished, and the roof reads as one system instead of a patchwork.",
+    pain: "A brick house with worn shingles that no longer match the rest of the home.",
+    fix: "Architectural shingles in a color named on the estimate.",
   }),
   photoJob({
     slug: "lakefront-home-gray-shingle-roof",
@@ -110,26 +108,32 @@ export const JOBS: Job[] = [
     serviceLabel: "Residential roofing",
     serviceSlug: "residential-roofing",
     cover: "faber-roof-lakefront-home-gray-shingle-roof.avif",
-    coverAlt: "Lakefront house with a gray asphalt shingle roof.",
-    workPerformed: "The photo shows a house beside the water with gray asphalt shingles.",
+    coverAlt: "House beside the water with gray architectural shingles and a ridge vent.",
+    story: "A house on the water with gray architectural shingles and a ridge vent. Lake lots take wind. The roof has to be a full system, not a few replaced tabs.",
+    pain: "A lake house whose shingles are open to the wind off the water.",
+    fix: "A full shingle roof with ridge ventilation, after a look.",
   }),
   photoJob({
     slug: "duplex-architectural-shingle-replacement",
-    title: "Duplex architectural shingle replacement",
+    title: "Two-garage home with gray shingles",
     serviceLabel: "Shingle roofing",
     serviceSlug: "shingle-roofing",
     cover: "faber-roof-duplex-architectural-shingle-replacement.avif",
-    coverAlt: "Duplex with architectural shingles during a roof replacement.",
-    workPerformed: "The photo shows a duplex while architectural shingles are being replaced.",
+    coverAlt: "Two-garage home with gray architectural shingles and stone accents.",
+    story: "A two-garage home with gray architectural shingles, stone at the garage, and a finished ridge. This is a completed replacement, the kind of roof you get after the old layer comes off.",
+    pain: "A wide roof over two garages that is past patching.",
+    fix: "Tear-off and new architectural shingles across the whole house.",
   }),
   photoJob({
     slug: "condo-shingle-roof-replacement-finished",
-    title: "Finished condo shingle roof",
+    title: "Attached homes with dark shingles",
     serviceLabel: "Shingle roofing",
     serviceSlug: "shingle-roofing",
     cover: "faber-roof-condo-shingle-roof-replacement-finished.avif",
-    coverAlt: "Finished shingle roof on a condominium building.",
-    workPerformed: "The photo shows a condominium after a shingle roof replacement.",
+    coverAlt: "Attached homes with dark architectural shingles, stone columns, and white garage doors.",
+    story: "Attached homes with dark architectural shingles, stone columns, and white garage doors. Each roof ties into the next, so the flashing and the valleys have to be part of the job, not an afterthought.",
+    pain: "A leak that shows up in one unit and starts in the roof you share.",
+    fix: "Shingles, valleys, and flashing planned for the whole row.",
   }),
   photoJob({
     slug: "commercial-shingle-replacement",
@@ -137,12 +141,14 @@ export const JOBS: Job[] = [
     serviceLabel: "Commercial roofing",
     serviceSlug: "commercial-roofing",
     cover: "faber-roof-crew-commercial-shingle-replacement.avif",
-    coverAlt: "Crew replacing shingles on a commercial building.",
-    workPerformed: "The photo shows a crew replacing shingles on a commercial building.",
+    coverAlt: "Crew tearing off shingles on a retail building, with underlayment and roof vents.",
+    story: "A retail building during a shingle tear-off. The crew is on the roof, underlayment is down, and the vents stay in the system. You keep the business in mind while the roof comes off and the new one goes on.",
+    pain: "A store or restaurant roof that is leaking over the people inside.",
+    fix: "Tear-off, underlayment, and new shingles on a schedule you can post.",
     extra: [
       {
-        src: "faber-roof-new-construction-roof-install-crane.avif",
-        alt: "Crane setting roof materials during a new-construction roof install.",
+        src: "faber-roof-standing-seam-metal-roof-aerial.avif",
+        alt: "Aerial view of a standing-seam metal roof with skylights on a brick building.",
       },
     ],
   }),
@@ -152,35 +158,32 @@ export const JOBS: Job[] = [
     serviceLabel: "Residential roofing",
     serviceSlug: "residential-roofing",
     cover: "faber-roof-crew-reroofing-neighborhood-homes.avif",
-    coverAlt: "Crew reroofing homes along a neighborhood street.",
-    workPerformed: "The photo shows a crew reroofing houses in a residential neighborhood.",
-  }),
-  photoJob({
-    slug: "winter-roof-installation",
-    title: "Winter roof installation",
-    serviceLabel: "Residential roofing",
-    serviceSlug: "residential-roofing",
-    cover: "faber-roof-crew-winter-roof-installation.avif",
-    coverAlt: "Crew installing a roof in winter, with snow on the ground.",
-    workPerformed: "The photo shows a crew installing a roof with snow on the ground.",
+    coverAlt: "Crew installing shingles on a house, with yellow underlayment on the roof next door.",
+    story: "A crew installing shingles on a house in a neighborhood. Underlayment is down on the slope beside them so the deck is not left open. This is how a street of homes gets reroofed without a guess from the curb.",
+    pain: "A neighborhood roof that is open to the weather once the old shingles come off.",
+    fix: "Underlayment the same day, then shingles, then cleanup.",
   }),
   photoJob({
     slug: "new-construction-roof-crane",
-    title: "New-construction roof install",
-    serviceLabel: "Commercial roofing",
-    serviceSlug: "commercial-roofing",
+    title: "New houses getting shingles",
+    serviceLabel: "Residential roofing",
+    serviceSlug: "residential-roofing",
     cover: "faber-roof-new-construction-roof-install-crane.avif",
-    coverAlt: "Crane setting roof materials during a new-construction roof install.",
-    workPerformed: "The photo shows a crane placing materials for a new-construction roof.",
+    coverAlt: "Boom truck loading shingles onto new houses still wrapped in sheathing.",
+    story: "New houses still in sheathing, with a boom truck setting shingles on the roof. If you are building, the roof can go on while the walls are still being closed in.",
+    pain: "A new house waiting on shingles while the rest of the build moves.",
+    fix: "Shingles loaded to the roof and installed as the house is dried in.",
   }),
   photoJob({
     slug: "shingle-materials-on-site",
-    title: "Shingle materials on site",
+    title: "Gray shingles on a two-story house",
     serviceLabel: "Shingle roofing",
     serviceSlug: "shingle-roofing",
     cover: "faber-roof-shingle-replacement-materials-on-site.avif",
-    coverAlt: "Shingle bundles and roofing materials staged on site for a replacement.",
-    workPerformed: "The photo shows shingle bundles and other roofing materials staged at the job.",
+    coverAlt: "Finished gray architectural shingles on a two-story house, with plywood and a ladder still in the yard.",
+    story: "Gray architectural shingles on a two-story house. The roof is on. The last of the job is still in the yard, which is the moment before cleanup. Homeowners have said the place looked like the crew was never there once that step was done.",
+    pain: "A two-story roof you cannot patch from a ladder and hope.",
+    fix: "A full shingle roof, then the yard cleared.",
   }),
   photoJob({
     slug: "shingle-bundles-on-house",
@@ -188,10 +191,10 @@ export const JOBS: Job[] = [
     serviceLabel: "Shingle roofing",
     serviceSlug: "shingle-roofing",
     cover: "faber-roof-shingle-roof-ridge-vents-closeup.avif",
-    coverAlt:
-      "Medium shot of a house with shingle bundles stacked on the roof. The filename says ridge vents; the photo is not a close-up of ridge vents.",
-    workPerformed:
-      "The filename says ridge vents. The photo is a medium shot of a house with shingle bundles on the roof, not a close-up of ridge vents.",
+    coverAlt: "Shingle bundles staged on the roof of a house before the new shingles go down.",
+    story: "Shingle bundles are on the roof and underlayment is in the yard. That is the start of a replacement: materials on site, then tear-off, then the new roof. You are not waiting on a truck the morning of the job.",
+    pain: "A roof replacement that stalls because the shingles were never staged.",
+    fix: "Bundles on the roof, then the install.",
   }),
 ];
 

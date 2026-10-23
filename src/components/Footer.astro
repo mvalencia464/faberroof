@@ -63,10 +63,12 @@ const year = new Date().getFullYear();
             <i class="fas fa-phone" aria-hidden="true"></i>
             <a href={telHref}>{SITE.phone}</a>
           </li>
-          <li>
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-          </li>
+          {SITE.email && !SITE.email.startsWith("TODO") && (
+            <li>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            </li>
+          )}
           <li>
             <i class="fas fa-clock" aria-hidden="true"></i>
             <span>{SITE.businessHours}</span>
@@ -110,7 +112,6 @@ const year = new Date().getFullYear();
   .footer__logo :global(.brand-logo) {
     height: clamp(3rem, 10vw, 4rem);
     margin-bottom: 0.75rem;
-    filter: brightness(0) invert(1);
   }
 
   .footer__wordmark,
@@ -146,7 +147,7 @@ const year = new Date().getFullYear();
   }
 
   .footer__social a:hover {
-    color: var(--accent);
+    color: var(--panel);
   }
 
   .footer__heading {
@@ -172,8 +173,9 @@ const year = new Date().getFullYear();
   }
 
   .footer__links a:hover,
-  .footer__contact a:hover {
-    color: var(--accent);
+  .footer__contact a:hover,
+  .footer__legal a:hover {
+    color: var(--panel);
   }
 
   .footer__contact {
@@ -191,7 +193,7 @@ const year = new Date().getFullYear();
   }
 
   .footer__contact i {
-    color: var(--accent);
+    color: var(--panel);
     margin-top: 0.2rem;
     width: 1rem;
   }
@@ -204,7 +206,7 @@ const year = new Date().getFullYear();
   }
 
   .footer__areas a {
-    color: var(--accent);
+    color: var(--panel);
     font-weight: 600;
   }
 

@@ -36,7 +36,7 @@ const displayHeight = Math.round(
   <img
     src={logoSrc}
     alt={SITE.name}
-    class:list={['brand-logo', className]}
+    class:list={['brand-logo', variant === 'light' && 'brand-logo--knockout', className]}
     width={displayWidth}
     height={displayHeight}
     loading={loading}
@@ -63,6 +63,10 @@ const displayHeight = Math.round(
     max-width: min(220px, 58vw);
     object-fit: contain;
     object-position: left center;
+  }
+
+  .brand-logo--knockout {
+    filter: brightness(0) invert(1);
   }
 
   .brand-wordmark {

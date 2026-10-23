@@ -1,10 +1,56 @@
 {
-  "businessName": "",
-  "rating": 0,
-  "reviewsCount": 0,
-  "cid": "",
-  "placeId": null,
-  "profileUrl": "",
-  "syncedAt": null,
-  "rawReviews": []
+  "businessName": "Faber Roof",
+  "rating": 5,
+  "reviewsCount": 5,
+  "cid": "2039319338774567315",
+  "placeId": "ChIJHVmRna-vJIgRkxk-QyIeTRw",
+  "profileUrl": "https://www.google.com/maps?cid=2039319338774567315",
+  "syncedAt": "2026-10-23T11:37:59.367Z",
+  "rawReviews": [
+    {
+      "date": "March 2026",
+      "text": "",
+      "author": "Wesley Phillips",
+      "rating": 5,
+      "source": "Google",
+      "avatarUrl": "Ci9DQUlRQUNvZENodHljRjlvT2pKeE4zUTNZV0pYT0hwUVVXdHRUR1JEYlhreU0zYxAB.jpg",
+      "images": []
+    },
+    {
+      "date": "March 2026",
+      "text": "I would recommend them to anyone, very satisfied with their price and service!",
+      "author": "Lisa O'Brien",
+      "rating": 5,
+      "source": "Google",
+      "avatarUrl": "Ci9DQUlRQUNvZENodHljRjlvT25GbVNsUmxNRTFmTnpSRWFqQTNjbEpsVVZCZlluYxAB.jpg",
+      "images": []
+    },
+    {
+      "date": "March 2026",
+      "text": "A commercial project was completed on budget. The team was professional, completed the work on time, and the quality of the work was outstanding!",
+      "author": "Property Services",
+      "rating": 5,
+      "source": "Google",
+      "avatarUrl": "Ci9DQUlRQUNvZENodHljRjlvT2tRNVdrRlljMmRGVm5RelVFRnRORXN0VTNCalFrRRAB.jpg",
+      "images": []
+    },
+    {
+      "date": "March 2026",
+      "text": "Was on time, installed beautiful new roof! Clean up was like they were never there! Would recommend!",
+      "author": "Daniel knight",
+      "rating": 5,
+      "source": "Google",
+      "avatarUrl": "Ci9DQUlRQUNvZENodHljRjlvT25SNVRpMXNNRXRFZFVwRlZEVlJMVTlZWjIxV2FYYxAB.jpg",
+      "images": []
+    },
+    {
+      "date": "March 2026",
+      "text": "Awesome roof company, they did my roof in one day tear off and re-shingled,",
+      "author": "Mario Goff",
+      "rating": 5,
+      "source": "Google",
+      "avatarUrl": "Ci9DQUlRQUNvZENodHljRjlvT2psVE9EZHlXRU5UUlVSZk5sQnhVM2hGTUdsaFNVRRAB.jpg",
+      "images": []
+    }
+  ]
 }

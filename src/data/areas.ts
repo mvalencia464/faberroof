@@ -5,6 +5,7 @@ export type AreaPage = {
   slug: string;
   name: string;
   county: string;
+  note: string;
   headline: string;
   intro: string;
   body: string;
@@ -24,6 +25,7 @@ export const AREA_PAGES: AreaPage[] = client.serviceAreas.map((area) => {
     slug: area.slug,
     name: area.name,
     county: area.county,
+    note: area.note,
     headline: fillTemplate(copy.areaHeadline, vars),
     intro: fillTemplate(copy.areaIntro, vars),
     body: fillTemplate(copy.areaBody, vars),

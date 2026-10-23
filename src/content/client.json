@@ -12,9 +12,9 @@
     "state": "MI",
     "zip": "48335",
     "license": "TODO: license number not published on faberroof.com",
-    "ownerName": "TODO",
-    "ownerRole": "TODO: owner not named on faberroof.com",
-    "region": "Farmington Hills",
+    "ownerName": "Matt Atrard",
+    "ownerRole": "Owner",
+    "region": "Metro Detroit",
     "trade": "roofing",
     "tradeLabel": "Roofing contractor",
     "schemaType": "RoofingContractor",
@@ -53,23 +53,23 @@
     "lat": 42.4564467,
     "lng": -83.4345146,
     "zoom": 14,
-    "radiusMiles": 0,
+    "radiusMiles": 25,
     "listingUrl": "",
     "query": "Faber Roof, 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335"
   },
   "googleReviews": {
     "businessName": "Faber Roof",
-    "rating": 0,
-    "count": 0,
+    "rating": 5,
+    "count": 5,
     "category": "Roofing contractor in Farmington Hills, MI",
-    "profileUrl": "",
+    "profileUrl": "https://www.google.com/maps?cid=2039319338774567315",
     "maxDisplay": 8,
     "cid": "",
-    "placeId": ""
+    "placeId": "ChIJHVmRna-vJIgRkxk-QyIeTRw"
   },
   "seo": {
-    "title": "Faber Roof | Commercial and residential roofing in Farmington Hills, MI",
-    "description": "Commercial and residential roofing in Farmington Hills, MI. Call (810) 360-7385.",
+    "title": "Roofing Contractor Farmington Hills | Faber Roof",
+    "description": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit. Call (810) 360-7385.",
     "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
   },
   "copy": {
@@ -78,35 +78,35 @@
     "serviceType": "Roofing services",
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
-    "heroImageAlt": "Standing-seam metal roof from Faber Roof project photos",
+    "heroImageAlt": "Standing-seam metal roof with skylights on a brick building",
     "formConsent": "and consent to be contacted about my roofing estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
-    "serviceAreasIntro": "TODO: faberroof.com does not publish a city list. The office address is in Farmington Hills.",
+    "serviceAreasIntro": "The office is on Haggerty Road in Farmington Hills. The towns below are a short drive from that office.",
     "contactTitle": "Get a roofing estimate | Faber Roof",
     "contactDescription": "Request an estimate from Faber Roof in Farmington Hills. Call (810) 360-7385.",
     "contactHeading": "Get a roofing estimate",
     "contactIntro": "Tell us the property and what you need.",
     "aboutDescription": "Faber Roof, LLC \u2014 commercial and residential roofing at 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
-    "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Farmington Hills.",
-    "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Farmington Hills.",
+    "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Metro Detroit.",
+    "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Metro Detroit.",
     "areaEyebrow": "Roofing contractor \u00b7 Service area",
     "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
     "areaHeadline": "Roofing contractor in {{areaName}}",
-    "areaIntro": "When your {{areaName}} property needs roofing work, you get a clear estimate and a crew that treats the place like it is yours.",
-    "areaBody": "Faber Roof serves {{areaName}} and nearby Farmington Hills from Farmington Hills. Tell us the address and we look at the job before work starts.",
-    "areaServicesNote": "roofing for {{areaName}} homes and buildings.",
+    "areaIntro": "Your {{areaName}} roof is leaking, missing shingles, or due before winter. You get a look and a written estimate. Call (810) 360-7385.",
+    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Someone gets on the roof and checks the shingles, flashing, and deck. You then get a written choice: repair the spot, or take the old shingles off and install a new roof. Architectural shingles are the usual house roof. Standing-seam metal is the conversation for a building that should not take another shingle roof. A commercial customer said their project finished on budget and on time. A homeowner said the cleanup looked like the crew was never there. Say the address when you call.",
+    "areaServicesNote": "Shingle replacement, repairs, and commercial roofs for {{areaName}} homes and buildings.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
-      "Written estimates",
-      "Local scheduling from Farmington Hills",
-      "Homes and light commercial",
-      "Photos and a clear scope"
+      "A look at the roof before a price",
+      "Repair or full replacement, in writing",
+      "Architectural shingles, and metal when it fits",
+      "Cleanup when the job is done"
     ],
     "areaFaqs": [
       {
         "q": "Do you work in {{areaName}}?",
-        "a": "Yes. {{areaName}} is in our Farmington Hills service area. Call (810) 360-7385."
+        "a": "Yes. {{areaName}} is within a short drive of the Farmington Hills office. Call (810) 360-7385 to confirm the address."
       },
       {
         "q": "How do I get an estimate in {{areaName}}?",
@@ -115,20 +115,20 @@
     ],
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
-      "trustBadge": "Farmington Hills, MI",
-      "headingLine1": "Commercial /",
-      "headingLine2": "residential",
-      "headingAccent": "roofing",
-      "headline": "Commercial / residential roofing.",
-      "subheading": "Faber Roof says it provides dependable roofing for businesses and homes, with craftsmanship and quality products.",
+      "trustBadge": "Farmington Hills · Metro Detroit",
+      "headingLine1": "Get the old shingles off",
+      "headingLine2": "before the snow",
+      "headingAccent": "before the snow",
+      "headline": "Get the old shingles off before the snow",
+      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385 from Farmington Hills, the west suburbs, or Detroit. Someone looks at your roof and writes the estimate. Homeowners say the crew was on time, and the cleanup looked like they were never there.",
       "benefits": [
         {
           "icon": "home",
-          "label": "Residential\nroofing"
+          "label": "Tear-off and\nnew shingles"
         },
         {
           "icon": "building",
-          "label": "Commercial\nroofing"
+          "label": "Homes and\nbuildings"
         },
         {
           "icon": "clipboard-list",
@@ -139,14 +139,14 @@
       "scheduleHref": "/contact",
       "financingNote": "0% financing options. 12\u201324 month terms are available. Financing is subject to credit approval.",
       "locationNote": "22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335",
-      "trustLine": "Commercial and residential roofing",
+      "trustLine": "On time. Cleanup when they leave. 5.0 from 5 Google reviews.",
       "reviewCard": {
         "rating": 0,
         "count": "Google reviews",
         "href": "/reviews"
       },
-      "ownerNote": "TODO: owner is not named on faberroof.com.",
-      "ownerCta": "Call (810) 360-7385"
+      "ownerNote": "Matt Atrard owns Faber Roof. Call (810) 360-7385 for the estimate.",
+      "ownerCta": "Call for an estimate"
     },
     "trustBar": {
       "heading": "roofing for Farmington Hills homes and buildings",
@@ -269,49 +269,49 @@
         "icon": "cloud-lightning"
       }
     ],
-    "servicesHeading": "roofing for your home and your building",
+    "servicesHeading": "The roof work on your house or your building",
     "servicesLabel": "Services",
-    "servicesIntro": "Here is the roof work we take on in Farmington Hills.",
+    "servicesIntro": "You need the old shingles off, a leak stopped, or a Detroit-area building kept dry. The office is in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
-        "title": "Inspect first",
-        "description": "Estimates come from the roof, not a phone guess."
+        "title": "You see the price after the look",
+        "description": "The estimate comes from your roof, not a guess over the phone."
       },
       {
         "icon": "home",
-        "title": "Repair or replace",
-        "description": "We tell you which one the roof actually needs."
+        "title": "Tear-off and new shingles",
+        "description": "One homeowner had the old roof torn off and reshingled in a day."
       },
       {
         "icon": "building",
-        "title": "Homes and buildings",
-        "description": "The same straight conversation for a house or a small commercial roof."
+        "title": "Your house or your building",
+        "description": "Houses, attached homes, and commercial roofs. A property manager said the job finished on budget."
       },
       {
         "icon": "map-marker-alt",
-        "title": "Local from Farmington Hills",
-        "description": "You are calling Farmington Hills, not a national dispatch line."
+        "title": "You call Farmington Hills",
+        "description": "The office is on Haggerty Road. You are not calling a national dispatch line."
       }
     ],
     "whyChoose": {
       "title": "Why choose Faber Roof?",
       "items": [
         {
-          "title": "You are calling Farmington Hills",
-          "body": "TODO and the crew serve Farmington Hills from nearby."
+          "title": "You want them gone when it is done",
+          "body": "A homeowner said the cleanup looked like the crew was never there."
         },
         {
-          "title": "You hear the scope first",
-          "body": "Repair versus replacement in writing \u2014 not a guess from the street."
+          "title": "You want it on time",
+          "body": "Reviews mention on-time work, including a commercial job that finished on budget."
         },
         {
-          "title": "The property is treated carefully",
-          "body": "Protection, cleanup, and a walk-through when the job is done."
+          "title": "You want the price in writing",
+          "body": "Someone looks at your roof first. Then you get the estimate. Call (810) 360-7385."
         },
         {
-          "title": "You can get an estimate",
-          "body": "Call (810) 360-7385 or send the form."
+          "title": "You are calling the owner’s company",
+          "body": "Matt Atrard owns Faber Roof at 22710 Haggerty Rd. Suite 100B, Farmington Hills."
         }
       ]
     },
@@ -319,11 +319,11 @@
       "label": "Google reviews",
       "title": "What neighbors are saying",
       "titleLine2": "",
-      "subtitle": "roofing across Farmington Hills and Farmington Hills.",
+      "subtitle": "Homeowners and a commercial customer, in their words.",
       "bullets": [
         "Roofing contractor",
         "Based in Farmington Hills, MI",
-        "TODO, owner",
+        "Matt Atrard, owner",
         "Homes and buildings"
       ],
       "ctaText": "Read more reviews on Google",
@@ -334,7 +334,7 @@
       "label": "Google Reviews",
       "title": "What customers are saying",
       "subtitle": "Feedback from people who hired Faber Roof.",
-      "description": "Read reviews for Faber Roof \u2014 Roofing contractor in Farmington Hills and Farmington Hills."
+      "description": "Read reviews for Faber Roof, a roofing contractor in Farmington Hills and Metro Detroit."
     },
     "shop": {
       "heading": "Contact Us",
@@ -348,20 +348,21 @@
     "workGallery": {
       "label": "Recent work",
       "title": "Recent work in your area",
-      "intro": "Job photos show up here when they are on file."
+      "intro": "Houses, attached homes, a retail shingle tear-off, and a standing-seam metal roof."
     },
     "ownerStory": {
-      "label": "About Us",
-      "quote": "Commercial / residential roofing.",
-      "caption": "TODO \u00b7 Owner",
+      "label": "Our Story",
+      "quote": "Your roof, looked after by a company that still cares.",
+      "caption": "Matt Atrard \u00b7 Owner",
       "ctaText": "Get a roofing estimate",
       "ctaHref": "/contact",
-      "quoteAttribution": "TODO",
+      "quoteAttribution": "Matt Atrard",
       "quoteRole": "Owner, Faber Roof",
-      "homepageParagraphLimit": 2,
+      "homepageParagraphLimit": 3,
       "paragraphs": [
-        "TODO: faberroof.com does not name an owner.",
-        "Faber Roof, LLC lists 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335 and (810) 360-7385."
+        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing.",
+        "Roof work goes wrong in the same ways. The schedule slips. Materials show up late. The yard is a mess when the crew leaves. We stay small so we can still care about those things. Homeowners have said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time.",
+        "We are not perfect. When we miss something, we own it and we make it right. Call (810) 360-7385."
       ]
     },
     "teamSection": {
@@ -371,17 +372,17 @@
     },
     "teamMembers": [
       {
-        "name": "TODO",
+        "name": "Matt Atrard",
         "role": "Owner",
-        "headline": "Leads with an inspection and a written estimate.",
+        "headline": "You get a written estimate after the roof is looked at.",
         "bio": [
-          "TODO runs Faber Roof from Farmington Hills."
+          "Matt Atrard owns Faber Roof in Farmington Hills. He has run businesses since he was 18."
         ]
       }
     ],
     "serviceArea": {
       "heading": "Areas We Serve",
-      "body": "Office: 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. TODO: a service-area list is not published on faberroof.com.",
+      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335, on the west side of Metro Detroit. Detroit is about half an hour east. These are the towns we write estimates for.",
       "country": "US"
     },
     "ctaBanner": {
@@ -402,7 +403,7 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Roofing contractor. Serving Farmington Hills from Farmington Hills.",
+    "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit.",
     "schemaKnowsAbout": [
       "Roof replacement",
       "Roof repair",
@@ -413,7 +414,7 @@
     "faqs": [
       {
         "q": "What roofing work do you take on?",
-        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills and Farmington Hills. Call (810) 360-7385."
+        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills, Detroit, and the suburbs between them. Call (810) 360-7385."
       },
       {
         "q": "Do you offer emergency 24/7 service?",
@@ -421,7 +422,7 @@
       },
       {
         "q": "Where do you work?",
-        "a": "Farmington Hills and Farmington Hills. Call (810) 360-7385 to confirm your address."
+        "a": "Farmington Hills, Detroit, and nearby towns including Farmington, Novi, Livonia, Northville, Southfield, and Plymouth. Call (810) 360-7385 to confirm your address."
       },
       {
         "q": "How do I get an estimate?",
@@ -494,7 +495,80 @@
     {
       "slug": "farmington-hills",
       "name": "Farmington Hills",
-      "county": "Oakland County"
+      "county": "Oakland",
+      "note": "The office is at 22710 Haggerty Rd. Suite 100B. Houses here run from older colonials to newer subdivisions."
+    },
+    {
+      "slug": "farmington",
+      "name": "Farmington",
+      "county": "Oakland",
+      "note": "Downtown Farmington is a few minutes from the Haggerty Road office. Lots are smaller and many roofs are on older blocks."
+    },
+    {
+      "slug": "novi",
+      "name": "Novi",
+      "county": "Oakland",
+      "note": "Novi is north of the office, along Haggerty and 12 Mile. You will see newer subdivisions and commercial roofs."
+    },
+    {
+      "slug": "livonia",
+      "name": "Livonia",
+      "county": "Wayne",
+      "note": "Livonia is south of Farmington Hills, in Wayne County. Streets are mostly ranches and colonials."
+    },
+    {
+      "slug": "northville",
+      "name": "Northville",
+      "county": "Wayne",
+      "note": "Northville is southwest of the office, with a walkable downtown and subdivisions around it."
+    },
+    {
+      "slug": "west-bloomfield",
+      "name": "West Bloomfield",
+      "county": "Oakland",
+      "note": "West Bloomfield is north and east of the office. Homes are larger, and many sit on lake lots."
+    },
+    {
+      "slug": "southfield",
+      "name": "Southfield",
+      "county": "Oakland",
+      "note": "Southfield is east along I-696. The work is houses plus commercial roofs on the main roads."
+    },
+    {
+      "slug": "walled-lake",
+      "name": "Walled Lake",
+      "county": "Oakland",
+      "note": "Walled Lake is northwest of the office, a smaller city on the lake."
+    },
+    {
+      "slug": "commerce-township",
+      "name": "Commerce Township",
+      "county": "Oakland",
+      "note": "Commerce Township is northwest of Haggerty Road, with lake neighborhoods and subdivisions."
+    },
+    {
+      "slug": "plymouth",
+      "name": "Plymouth",
+      "county": "Wayne",
+      "note": "Plymouth is south of the office, in Wayne County, with a downtown and surrounding subdivisions."
+    },
+    {
+      "slug": "redford",
+      "name": "Redford",
+      "county": "Wayne",
+      "note": "Redford is southeast of Farmington Hills. Lots are tighter and many of the houses are older."
+    },
+    {
+      "slug": "milford",
+      "name": "Milford",
+      "county": "Oakland",
+      "note": "Milford is northwest of the office, the village and township toward the GM Proving Grounds. Roofs here take wind off open ground. You still call Farmington Hills for the estimate."
+    },
+    {
+      "slug": "detroit",
+      "name": "Detroit",
+      "county": "Wayne",
+      "note": "Detroit is east of the Farmington Hills office, about half an hour by I-696 and the Lodge. There is no second shop in the city. You call (810) 360-7385, someone drives to the address, and you get a written estimate after the roof is seen. That covers houses and commercial buildings, including work property managers send."
     }
   ],
   "primaryServiceSlugs": [
