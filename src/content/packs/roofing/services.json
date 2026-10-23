@@ -2,14 +2,38 @@
   {
     "slug": "residential-roofing",
     "title": "Residential roofing",
-    "shortDesc": "Your shingles are tired, or the ceiling already has a stain. You get a look at the house and a written estimate. One homeowner had the tear-off and new shingles finished in a day.",
-    "fullDesc": "Water in the ceiling does not stay in the ceiling. You call {{phone}}. Someone looks at the house in {{city}}, then writes the estimate. Project photos show gray and brown architectural shingles on houses, lake houses, and attached homes.",
-    "highlights": ["Houses and attached homes", "Tear-off and new shingles", "Call {{phone}}"],
+    "shortDesc": "Your shingles are tired, or the ceiling already has a stain. You get a look at the house and a written estimate before anyone names a price.",
+    "fullDesc": "Water in the ceiling does not stay in the ceiling. It finds the insulation, the drywall, and the next rain. You call {{phone}}. Someone gets on the roof in {{city}} or elsewhere in Metro Detroit, then writes what the house actually needs: a repair, or the old shingles off and a new roof on.",
+    "highlights": [
+      "On-roof look before a price",
+      "Repair when the rest of the roof still has life",
+      "Tear-off and architectural shingles when it does not",
+      "Written estimate you can act on",
+      "Houses, lake homes, and attached homes"
+    ],
     "heading": "When the stain shows up in your ceiling",
-    "body": "Another patch does not stop the next rain. You want the old shingles off before snow sits on them. Call {{phone}} and the price comes after the roof is looked at.",
+    "body": "A bucket under the drip is not a repair. The stain means water already passed the shingles. Another patch on the same spot usually fails at the next storm. You want the leak found, then a price for the fix that will hold through winter.",
+    "sections": [
+      {
+        "heading": "When the stain shows up in your ceiling",
+        "body": "A bucket under the drip is not a repair. The stain means water already passed the shingles. Another patch on the same spot usually fails at the next storm. You want the leak found, then a price for the fix that will hold through winter."
+      },
+      {
+        "heading": "What gets checked on your house",
+        "body": "Someone looks at the shingles, the flashing at walls and chimneys, the pipe boots, the ridge, and any soft spots in the deck. You hear whether a repair will hold or the roof needs to come off. The estimate names the work. It is not a guess from the street."
+      },
+      {
+        "heading": "Tear-off and new shingles",
+        "body": "When the roof is done, the old shingles come off, the deck is checked, and new architectural shingles go on. Faber Roof has put gray and charcoal shingles on houses, lake homes, and attached homes across the west side of Metro Detroit. One homeowner had a tear-off and new shingles finished in a day. Another said the cleanup looked like the crew was never there. A one-day finish depends on the size of the roof."
+      },
+      {
+        "heading": "Farmington Hills, Detroit, and the towns between",
+        "body": "The office is on Haggerty Road in Farmington Hills. You can call from Farmington, Novi, Livonia, Northville, or Detroit. {{phone}} is the estimate line. Say the address and you get a time to look at the roof."
+      }
+    ],
     "faq": {
       "q": "Do you roof houses?",
-      "a": "Faber Roof's site says it roofs homes and businesses. Call {{phone}} about a specific house."
+      "a": "Yes. Houses, lake homes, and attached homes. Call {{phone}} with the address and you get a look, then a written estimate."
     },
     "icon": "home",
     "iconStyle": "navy",
@@ -38,21 +62,45 @@
       },
       {
         "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
-        "alt": "Medium shot of a house with shingle bundles stacked on the roof. The filename says ridge vents; the photo is not a close-up of ridge vents."
+        "alt": "Shingle bundles staged on the roof of a house before the new shingles go down."
       }
     ]
   },
   {
     "slug": "commercial-roofing",
     "title": "Commercial roofing",
-    "shortDesc": "Your building roof is leaking over the business, or a property manager needs the job on a calendar. A commercial customer said the project finished on budget and on time.",
-    "fullDesc": "A leak over a workspace does not wait for a slow week. You call {{phone}}. The photos show a crew tearing off shingles on a retail building, with underlayment and roof vents, and a standing-seam metal roof on a larger brick building. Property managers have hired {{name}} for commercial work.",
-    "highlights": ["Retail and larger buildings", "On budget, from a commercial review", "Call {{phone}}"],
+    "shortDesc": "Your building is leaking over the work, or a property manager needs the roof on a calendar. You get a look, a written scope, and a date.",
+    "fullDesc": "A drip over a sales floor or a tenant space does not wait for a slow week. You call {{phone}} with the address. Someone looks at the roof, then you get a written estimate. Property managers in Metro Detroit have hired Faber Roof for commercial work. One commercial customer said the project finished on budget, on time, and with a professional crew.",
+    "highlights": [
+      "Retail buildings and larger roofs",
+      "Tear-off, underlayment, and new shingles",
+      "Standing-seam metal when the building calls for it",
+      "A date a property manager can plan around",
+      "Written price after the roof is seen"
+    ],
     "heading": "When the roof is in the way of the business",
-    "body": "You need the building dry and the date kept. A Google review from a commercial project says the team finished on budget and on time. Call {{phone}} with the address.",
+    "body": "You cannot keep customers, tenants, or inventory under a leak. You need the building dry and the work finished when you were told it would be finished. The estimate comes after someone is on the roof, not from a photo you texted.",
+    "sections": [
+      {
+        "heading": "When the roof is in the way of the business",
+        "body": "You cannot keep customers, tenants, or inventory under a leak. You need the building dry and the work finished when you were told it would be finished. The estimate comes after someone is on the roof, not from a photo you texted."
+      },
+      {
+        "heading": "What commercial work looks like",
+        "body": "Crews tear off worn shingles, lay underlayment, and install the new roof around vents and curbs so the building can stay in use as much as the job allows. Larger brick buildings have also been roofed in standing-seam metal, including roofs with skylights. You are told which system fits the building before you agree to it."
+      },
+      {
+        "heading": "On the budget and on the date",
+        "body": "A commercial customer wrote that the project was completed on budget, the team was professional, the work finished on time, and the quality was outstanding. That is the standard to ask about when you call. {{phone}}."
+      },
+      {
+        "heading": "Detroit-area buildings",
+        "body": "The office is in Farmington Hills. Commercial calls come from the west suburbs and from property managers farther into Metro Detroit, including Detroit. You send the address. You get a time for the look."
+      }
+    ],
     "faq": {
       "q": "Do you take commercial jobs?",
-      "a": "The site says Faber Roof does commercial and residential roofing. Call {{phone}} with the address."
+      "a": "Yes. Retail buildings, larger roofs, and property-management work. Call {{phone}} with the address."
     },
     "icon": "building",
     "iconStyle": "navy",
@@ -68,14 +116,38 @@
   {
     "slug": "shingle-roofing",
     "title": "Shingle roofing",
-    "shortDesc": "Missing shingles and a soft deck get worse every rain. You get architectural shingles like the gray and charcoal roofs in these photos. Call to confirm the product.",
-    "fullDesc": "You can see the bundles on the roof and the underlayment in the yard before the new shingles go down. Finished photos show gray and dark architectural shingles on brick, stone, and sided houses. CertainTeed and Landmark Pro marks have appeared on the Faber Roof site. Confirm the product on your estimate. Call {{phone}}.",
-    "highlights": ["Architectural shingles in the photos", "Tear-off, then new shingles", "Confirm the product on your estimate"],
+    "shortDesc": "Missing shingles and a soft deck get worse every rain. You get the old layer off, the deck checked, and architectural shingles named on the estimate.",
+    "fullDesc": "Curled tabs, missing pieces, and granules in the gutter mean the roof is done protecting the house. You call {{phone}}. The crew strips the old shingles, checks the deck, and installs architectural shingles. Gray and charcoal roofs on brick, stone, and sided houses are the kind of work Faber Roof does across Metro Detroit. CertainTeed Landmark Pro is one shingle to ask about. Your estimate names the product.",
+    "highlights": [
+      "Full tear-off, not a second layer over a tired roof",
+      "Deck checked before the new shingles go on",
+      "Architectural shingles in gray and charcoal",
+      "CertainTeed Landmark Pro when that is the right product",
+      "Price in writing after the look"
+    ],
     "heading": "When the shingles stop keeping water out",
-    "body": "One homeowner said the crew tore off the old roof and reshingled it the same day. That is not a promise for every house. You call {{phone}}, someone looks, and you get the estimate.",
+    "body": "A few new shingles on a worn roof only hide the next leak. Wind gets under the loose tabs. Water reaches the deck. You feel it later as a stain. The useful step is a look at the whole slope, then a decision: repair the spot, or take the roof off.",
+    "sections": [
+      {
+        "heading": "When the shingles stop keeping water out",
+        "body": "A few new shingles on a worn roof only hide the next leak. Wind gets under the loose tabs. Water reaches the deck. You feel it later as a stain. The useful step is a look at the whole slope, then a decision: repair the spot, or take the roof off."
+      },
+      {
+        "heading": "What a replacement includes",
+        "body": "The old shingles come off. The crew checks the deck for soft wood and replaces what will not hold a nail. Underlayment goes down. New architectural shingles, flashing, and ridge detail go on. Bundles are staged on the roof before the install so the job is not waiting on a delivery. One homeowner said the tear-off and new shingles were done the same day. That depends on the size of the house."
+      },
+      {
+        "heading": "The shingle on your estimate",
+        "body": "Ask about CertainTeed Landmark Pro. It is one of the architectural shingles Faber Roof installs. The written estimate names the product, the color, and the scope so you are not guessing what lands on the house. Call {{phone}}."
+      },
+      {
+        "heading": "Where the shingle roofs are",
+        "body": "The work is on houses, two-garage homes, lake houses, and attached homes from the Farmington Hills office out toward Detroit. You do not need to live next door to the office. You need an address someone can drive to and look at."
+      }
+    ],
     "faq": {
       "q": "Which shingles do you install?",
-      "a": "The current site shows CertainTeed and Landmark Pro marks. Call {{phone}} to confirm what goes on a specific roof."
+      "a": "Architectural shingles. CertainTeed Landmark Pro is one to ask about. Your estimate names the product and color. Call {{phone}}."
     },
     "icon": "home",
     "iconStyle": "navy",
@@ -104,21 +176,45 @@
       },
       {
         "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
-        "alt": "Medium shot of a house with shingle bundles stacked on the roof. The filename says ridge vents; the photo is not a close-up of ridge vents."
+        "alt": "Shingle bundles staged on the roof of a house before the new shingles go down."
       }
     ]
   },
   {
     "slug": "metal-roofing",
     "title": "Metal roofing",
-    "shortDesc": "You want metal instead of another shingle cycle. The project photo is a standing-seam roof with skylights on a brick building. Call to ask if metal fits yours.",
-    "fullDesc": "The aerial photo shows standing-seam metal panels, skylights, and a brick building. It is not a house. Call {{phone}} before you plan on that system for your building.",
-    "highlights": ["Standing-seam panels", "Skylights on a brick building", "Confirm the system on your estimate"],
-    "heading": "When you want metal instead of another shingle roof",
-    "body": "You see the system in the photo first. Then you ask if it belongs on your building. Call {{phone}}.",
+    "shortDesc": "You are done replacing the same shingles. Standing-seam metal is an option for the right building, including roofs with skylights.",
+    "fullDesc": "A building that has already had two shingle roofs does not need a third if metal is the better roof. Faber Roof installs standing-seam metal: long panels, raised seams, and a finish that sheds water instead of soaking a tab. A brick building in Metro Detroit carries this system, skylights included. Call {{phone}} and ask if it fits your building. The estimate says yes or no after someone sees the roof.",
+    "highlights": [
+      "Standing-seam panels, not exposed-fastener sheets",
+      "Skylights set into the roof when the building has them",
+      "A system for buildings that should not take another shingle roof",
+      "Written yes or no after the look",
+      "Metro Detroit, from the Farmington Hills office"
+    ],
+    "heading": "When shingles are the wrong roof",
+    "body": "You already know the cycle: granules in the gutter, a patch, another replacement. Metal ends that cycle on buildings that can carry it. You should not order it from a photo. You should ask, then get a look.",
+    "sections": [
+      {
+        "heading": "When shingles are the wrong roof",
+        "body": "You already know the cycle: granules in the gutter, a patch, another replacement. Metal ends that cycle on buildings that can carry it. You should not order it from a photo. You should ask, then get a look."
+      },
+      {
+        "heading": "Standing seam, including skylights",
+        "body": "Standing-seam panels run the length of the slope. The seams stand up and lock, so the fasteners are not sitting in the weather the way they do on a screw-down panel. Skylights can stay in the roof. Faber Roof has installed this on a brick building. If your building needs the same kind of roof, that is the conversation to start."
+      },
+      {
+        "heading": "How you find out if it fits",
+        "body": "Call {{phone}}. Give the address, whether the building is a house or a commercial property, and whether you want metal instead of shingles. Someone looks at the structure and the slopes. You get a written estimate if metal is the right roof, or a straight no if it is not."
+      },
+      {
+        "heading": "Metro Detroit",
+        "body": "The crew works from Farmington Hills into Detroit and the suburbs between them. Metal is not limited to one township. It is limited to buildings where the system belongs."
+      }
+    ],
     "faq": {
       "q": "Do you install metal roofs?",
-      "a": "A standing-seam metal roof is pictured on faberroof.com. Call {{phone}} to ask about your building."
+      "a": "Yes. Standing-seam metal, including roofs with skylights. Call {{phone}} and ask if it fits your building."
     },
     "icon": "building",
     "iconStyle": "navy",

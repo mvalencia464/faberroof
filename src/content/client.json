@@ -14,7 +14,7 @@
     "license": "TODO: license number not published on faberroof.com",
     "ownerName": "Matt Atrard",
     "ownerRole": "Owner",
-    "region": "Farmington Hills",
+    "region": "Metro Detroit",
     "trade": "roofing",
     "tradeLabel": "Roofing contractor",
     "schemaType": "RoofingContractor",
@@ -53,7 +53,7 @@
     "lat": 42.4564467,
     "lng": -83.4345146,
     "zoom": 14,
-    "radiusMiles": 15,
+    "radiusMiles": 25,
     "listingUrl": "",
     "query": "Faber Roof, 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335"
   },
@@ -69,7 +69,7 @@
   },
   "seo": {
     "title": "Roofing Contractor Farmington Hills | Faber Roof",
-    "description": "Roofing contractor in Farmington Hills and nearby Farmington, Novi, Livonia, and Northville. Call (810) 360-7385.",
+    "description": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit. Call (810) 360-7385.",
     "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
   },
   "copy": {
@@ -88,20 +88,20 @@
     "contactHeading": "Get a roofing estimate",
     "contactIntro": "Tell us the property and what you need.",
     "aboutDescription": "Faber Roof, LLC \u2014 commercial and residential roofing at 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
-    "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Farmington Hills.",
-    "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Farmington Hills.",
+    "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Metro Detroit.",
+    "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Metro Detroit.",
     "areaEyebrow": "Roofing contractor \u00b7 Service area",
     "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
     "areaHeadline": "Roofing contractor in {{areaName}}",
-    "areaIntro": "Your {{areaName}} roof gets a look first, then a written estimate. Call (810) 360-7385.",
-    "areaBody": "You are calling the Farmington Hills office on Haggerty Road, not a national dispatch line. Tell us the {{areaName}} address and someone looks at the roof before a price.",
-    "areaServicesNote": "roofing for {{areaName}} homes and buildings.",
+    "areaIntro": "Your {{areaName}} roof is leaking, missing shingles, or due before winter. You get a look and a written estimate. Call (810) 360-7385.",
+    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Someone gets on the roof and checks the shingles, flashing, and deck. You then get a written choice: repair the spot, or take the old shingles off and install a new roof. Architectural shingles are the usual house roof. Standing-seam metal is the conversation for a building that should not take another shingle roof. A commercial customer said their project finished on budget and on time. A homeowner said the cleanup looked like the crew was never there. Say the address when you call.",
+    "areaServicesNote": "Shingle replacement, repairs, and commercial roofs for {{areaName}} homes and buildings.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
-      "Written estimates",
-      "Local scheduling from Farmington Hills",
-      "Homes and light commercial",
-      "Photos and a clear scope"
+      "A look at the roof before a price",
+      "Repair or full replacement, in writing",
+      "Architectural shingles, and metal when it fits",
+      "Cleanup when the job is done"
     ],
     "areaFaqs": [
       {
@@ -115,12 +115,12 @@
     ],
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
-      "trustBadge": "Farmington Hills, MI",
+      "trustBadge": "Farmington Hills · Metro Detroit",
       "headingLine1": "Get the old shingles off",
       "headingLine2": "before the snow",
       "headingAccent": "before the snow",
       "headline": "Get the old shingles off before the snow",
-      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385 from Farmington Hills, Farmington, Novi, Livonia, Northville, or a town a short drive from the Haggerty Road office. Someone looks at your roof and writes the estimate.",
+      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385 from Farmington Hills, the west suburbs, or Detroit. Someone looks at your roof and writes the estimate. Homeowners say the crew was on time, and the cleanup looked like they were never there.",
       "benefits": [
         {
           "icon": "home",
@@ -271,7 +271,7 @@
     ],
     "servicesHeading": "The roof work on your house or your building",
     "servicesLabel": "Services",
-    "servicesIntro": "You need the old shingles off, a leak stopped, or a building kept dry.",
+    "servicesIntro": "You need the old shingles off, a leak stopped, or a Detroit-area building kept dry. The office is in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
@@ -334,7 +334,7 @@
       "label": "Google Reviews",
       "title": "What customers are saying",
       "subtitle": "Feedback from people who hired Faber Roof.",
-      "description": "Read reviews for Faber Roof \u2014 Roofing contractor in Farmington Hills and Farmington Hills."
+      "description": "Read reviews for Faber Roof, a roofing contractor in Farmington Hills and Metro Detroit."
     },
     "shop": {
       "heading": "Contact Us",
@@ -381,7 +381,7 @@
     ],
     "serviceArea": {
       "heading": "Areas We Serve",
-      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. These towns are within about 15 miles.",
+      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335, on the west side of Metro Detroit. Detroit is about half an hour east. These are the towns we write estimates for.",
       "country": "US"
     },
     "ctaBanner": {
@@ -402,7 +402,7 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Roofing contractor in Farmington Hills. Serving nearby towns within about 15 miles.",
+    "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit.",
     "schemaKnowsAbout": [
       "Roof replacement",
       "Roof repair",
@@ -413,7 +413,7 @@
     "faqs": [
       {
         "q": "What roofing work do you take on?",
-        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills and nearby towns. Call (810) 360-7385."
+        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills, Detroit, and the suburbs between them. Call (810) 360-7385."
       },
       {
         "q": "Do you offer emergency 24/7 service?",
@@ -421,7 +421,7 @@
       },
       {
         "q": "Where do you work?",
-        "a": "Farmington Hills and towns within about 15 miles, including Farmington, Novi, Livonia, and Northville. Call (810) 360-7385 to confirm your address."
+        "a": "Farmington Hills, Detroit, and nearby towns including Farmington, Novi, Livonia, Northville, Southfield, and Plymouth. Call (810) 360-7385 to confirm your address."
       },
       {
         "q": "How do I get an estimate?",
@@ -561,7 +561,13 @@
       "slug": "milford",
       "name": "Milford",
       "county": "Oakland",
-      "note": "Milford is northwest, the village and township toward the GM Proving Grounds."
+      "note": "Milford is northwest of the office, the village and township toward the GM Proving Grounds. Roofs here take wind off open ground. You still call Farmington Hills for the estimate."
+    },
+    {
+      "slug": "detroit",
+      "name": "Detroit",
+      "county": "Wayne",
+      "note": "Detroit is east of the Farmington Hills office, about half an hour by I-696 and the Lodge. There is no second shop in the city. You call (810) 360-7385, someone drives to the address, and you get a written estimate after the roof is seen. That covers houses and commercial buildings, including work property managers send."
     }
   ],
   "primaryServiceSlugs": [

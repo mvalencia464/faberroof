@@ -134,9 +134,11 @@ const address = formatSiteAddress();
       <p>
         <strong>{SITE.name}</strong><br />
         {address}<br />
-        Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br />
         Phone: <a href={telHref}>{SITE.phone}</a><br />
-        License: {SITE.license}
+        {SITE.email && !SITE.email.startsWith("TODO") && (
+          <>Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a><br /></>
+        )}
+        {SITE.license && !SITE.license.startsWith("TODO") && <>License: {SITE.license}</>}
       </p>
     </div>
   </main>

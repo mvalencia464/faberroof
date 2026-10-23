@@ -38,7 +38,7 @@ const jsonLd = {
   "legalName": SITE.legalName,
   "slogan": SITE.catchphrase,
   "telephone": SITE.phone,
-  "email": SITE.email,
+  ...(SITE.email && !SITE.email.startsWith("TODO") ? { email: SITE.email } : {}),
   "image": SITE.ogImage,
   "logo": SITE.brandLogoUrl,
   "address": {

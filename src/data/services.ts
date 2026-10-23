@@ -30,6 +30,7 @@ type PackService = {
   highlights: string[];
   heading: string;
   body: string;
+  sections?: { heading: string; body: string }[];
   faq: { q: string; a: string };
   icon: string;
   iconStyle?: string;
@@ -66,7 +67,7 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
   return {
     slug: service.slug,
     title: service.title,
-    seoTitle: `${service.title} | ${BRAND.name} in ${BRAND.city}, ${BRAND.state}`,
+    seoTitle: `${service.title} in Metro Detroit | ${BRAND.name}`,
     seoDescription: `${service.shortDesc} Call ${BRAND.phone}.`,
     shortDesc: service.shortDesc,
     icon: service.icon,
@@ -86,13 +87,15 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
     ],
     fullDesc: service.fullDesc,
     highlights: service.highlights,
-    bodySections: [
-      { heading: service.heading, body: service.body },
-      {
-        heading: `${BRAND.tradeLabel} across ${BRAND.region}`,
-        body: `${BRAND.legalName} serves ${BRAND.city} and ${BRAND.region}. Call ${BRAND.phone}.`,
-      },
-    ],
+    bodySections: service.sections?.length
+      ? service.sections
+      : [
+          { heading: service.heading, body: service.body },
+          {
+            heading: `Roofing across ${BRAND.region}`,
+            body: `${BRAND.name} is based at ${BRAND.address}, ${BRAND.city}, ${BRAND.state}. Call ${BRAND.phone} for a roof in ${BRAND.city} or Detroit.`,
+          },
+        ],
     faqs: where ? [service.faq, where] : [service.faq],
   };
 });

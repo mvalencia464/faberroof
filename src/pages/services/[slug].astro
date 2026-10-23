@@ -128,7 +128,7 @@ const pageSchema = {
     <section class="section">
       <div class="container service-detail">
         <div class="service-detail__main">
-          <h2>About This Service</h2>
+          <h2>What this means for your roof</h2>
           <p class="service-detail__body">{service.fullDesc}</p>
 
           <h3>What's Included</h3>
@@ -202,7 +202,9 @@ const pageSchema = {
             <a href={telHref} class="btn btn--primary sidebar-call">
               Call {SITE.phone}
             </a>
-            <a href={`mailto:${SITE.email}`} class="sidebar-email">{SITE.email}</a>
+            {SITE.email && !SITE.email.startsWith("TODO") && (
+              <a href={`mailto:${SITE.email}`} class="sidebar-email">{SITE.email}</a>
+            )}
           </div>
 
           <div class="sidebar-card panel-card">
