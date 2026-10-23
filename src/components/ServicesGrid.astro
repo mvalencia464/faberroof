@@ -8,15 +8,11 @@ const services = primarySlugs
   .map((slug) => SITE.services.find((service) => service.slug === slug))
   .filter((service): service is (typeof SITE.services)[number] => Boolean(service));
 
-const iconClass: Record<string, string> = {
-  snowflake: 'fa-snowflake',
-  fire: 'fa-fire',
-  tools: 'fa-tools',
-  'house-chimney': 'fa-house-chimney',
-  wind: 'fa-wind',
-  home: 'fa-home',
-  building: 'fa-building',
-  'clipboard-list': 'fa-clipboard-list',
+const cardMarks: Record<string, string> = {
+  'residential-roofing': 'Houses',
+  'commercial-roofing': 'Retail',
+  'shingle-roofing': 'Tear-off',
+  'metal-roofing': 'Standing seam',
 };
 ---
 
@@ -42,10 +38,10 @@ const iconClass: Record<string, string> = {
                   width="640"
                   height="420"
                 />
+                {cardMarks[service.slug] && (
+                  <span class="service-card__mark">{cardMarks[service.slug]}</span>
+                )}
               </a>
-              <span class={`service-card__icon service-card__icon--${service.iconStyle}`}>
-                <i class={`fas ${iconClass[service.icon] ?? 'fa-check'}`} aria-hidden="true" />
-              </span>
             </div>
             <div class="service-card__body">
               <h3>
@@ -113,7 +109,6 @@ const iconClass: Record<string, string> = {
 
   .service-card__visual {
     position: relative;
-    overflow: visible;
   }
 
   .service-card__media {
@@ -131,29 +126,34 @@ const iconClass: Record<string, string> = {
     object-fit: cover;
   }
 
-  .service-card__icon {
+  .service-card__mark {
     position: absolute;
-    left: 1rem;
-    bottom: 0;
     z-index: 1;
-    transform: translateY(50%);
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    display: inline-flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.8rem;
+    background: color-mix(in srgb, var(--deep) 90%, transparent);
     color: #fffdfb;
-    background: var(--accent);
-    box-shadow: 0 6px 16px rgba(168, 75, 40, 0.28);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
-  .service-card__icon--red {
-    background: var(--accent);
+  .service-card__mark::before {
+    content: '';
+    width: 1.15rem;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
   }
 
   .service-card__body {
-    padding: 1.85rem 1.25rem 1.35rem;
+    padding: 1.15rem 1.25rem 1.35rem;
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
