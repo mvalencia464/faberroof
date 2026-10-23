@@ -57,6 +57,16 @@ type StoryPart = { text: string; highlight?: Highlight };
           )}
         </p>
       ))}
+      {story.principles?.length > 0 && (
+        <ul class="owner-story__principles">
+          {story.principles.map((item: { title: string; body: string }) => (
+            <li>
+              <strong>{item.title}</strong>
+              <span>{item.body}</span>
+            </li>
+          ))}
+        </ul>
+      )}
       <a href={ctaHref} class="btn btn--primary owner-story__cta">{ctaText}</a>
     </div>
   </div>
@@ -162,6 +172,43 @@ type StoryPart = { text: string; highlight?: Highlight };
     font-weight: 300;
     line-height: 1.75;
     max-width: none;
+  }
+
+  .owner-story__principles {
+    list-style: none;
+    display: grid;
+    gap: 0.9rem 1.25rem;
+    margin: 0.35rem 0 0;
+    padding: 0;
+  }
+
+  @media (min-width: 700px) {
+    .owner-story__principles {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .owner-story__principles li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .owner-story__principles strong {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--deep);
+  }
+
+  .owner-story__principles span {
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.55;
   }
 
   .owner-story__mark {

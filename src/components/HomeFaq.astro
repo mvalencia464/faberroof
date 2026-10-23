@@ -1,0 +1,67 @@
+---
+import { SITE } from '../config/site';
+import { telHref } from '../config/brand';
+
+const faqs = SITE.serviceFaqs;
+---
+
+<section id="faq" class="section home-faq">
+  <div class="container home-faq__layout">
+    <div>
+      <p class="section-label">Questions</p>
+      <h2>Questions we get a lot</h2>
+      <p class="subtext">Don’t see yours? Call <a href={telHref()}>{SITE.phone}</a>.</p>
+    </div>
+    <div class="home-faq__list">
+      {faqs.map((faq: { q: string; a: string }) => (
+        <details>
+          <summary>{faq.q}</summary>
+          <p>{faq.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-faq {
+    background: var(--surface);
+  }
+
+  .home-faq__layout {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .home-faq__layout {
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 3rem;
+      align-items: start;
+    }
+  }
+
+  .home-faq__list {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .home-faq details {
+    background: #fffdfb;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 0.9rem 1rem;
+  }
+
+  .home-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--deep);
+  }
+
+  .home-faq details p {
+    margin: 0.7rem 0 0;
+    max-width: none;
+    color: var(--text);
+  }
+</style>

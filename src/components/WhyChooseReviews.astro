@@ -62,8 +62,8 @@ const googleUrl = SITE.googleReviews.profileUrl;
   .why-reviews {
     scroll-margin-top: 6.5rem;
     background:
-      radial-gradient(ellipse 80% 50% at 10% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 55%),
-      linear-gradient(180deg, #f7f1e6 0%, #efe8d8 100%);
+      radial-gradient(ellipse 70% 45% at 0% 0%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 58%),
+      var(--surface);
     color: var(--deep);
     padding: 5rem 0;
   }
@@ -104,10 +104,10 @@ const googleUrl = SITE.googleReviews.profileUrl;
     width: auto;
     max-width: 100%;
     padding: 0.35rem 0.4rem 0.35rem 0.7rem;
-    background: #fff;
-    border: 1px solid rgba(19, 40, 75, 0.08);
+    background: #fffdfb;
+    border: 1px solid var(--border);
     border-radius: 999px;
-    box-shadow: 0 6px 18px rgba(19, 40, 75, 0.05);
+    box-shadow: 0 8px 22px rgba(28, 24, 22, 0.05);
   }
 
   .why-reviews__rating {
@@ -159,7 +159,7 @@ const googleUrl = SITE.googleReviews.profileUrl;
   }
 
   .why-reviews__grid :global(.review-card) {
-    background: #fff;
+    background: #fffdfb;
     color: var(--text);
   }
 

@@ -59,7 +59,6 @@ const isContactActive = currentPath.startsWith('/contact');
           <span class="header__phone-label">{SITE.phoneCtaLabel}</span>
         </span>
       </a>
-      <a href="/contact" class="header__quote-cta">{SITE.ctaPrimaryLabel}</a>
     </div>
 
     <button class="header__burger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false">
@@ -90,9 +89,6 @@ const isContactActive = currentPath.startsWith('/contact');
       <a href={telHref} class="btn btn--primary mobile-nav__action">
         <i class="fas fa-phone" aria-hidden="true"></i>
         Call {SITE.phone}
-      </a>
-      <a href="/contact" class="btn btn--outline mobile-nav__action">
-        {SITE.ctaPrimaryLabel}
       </a>
     </div>
   </div>
@@ -198,7 +194,7 @@ const isContactActive = currentPath.startsWith('/contact');
     right: 0.7rem;
     bottom: 0.2rem;
     height: 1.5px;
-    background: #fff;
+    background: var(--gold);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease;
@@ -228,7 +224,7 @@ const isContactActive = currentPath.startsWith('/contact');
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    background: var(--panel);
+    background: var(--gold);
     color: var(--deep);
     padding: 0.45rem 0.9rem 0.45rem 0.75rem;
     border-radius: 3px;
@@ -239,7 +235,7 @@ const isContactActive = currentPath.startsWith('/contact');
   }
 
   .header__phone-cta:hover {
-    background: #fff;
+    background: color-mix(in srgb, var(--gold) 86%, #fff);
     color: var(--deep);
     transform: translateY(-1px);
   }
@@ -362,15 +358,15 @@ const isContactActive = currentPath.startsWith('/contact');
   }
 
   .mobile-nav :global(.btn--primary) {
-    background: var(--panel);
+    background: var(--gold);
     color: var(--deep);
-    border-color: var(--panel);
+    border-color: var(--gold);
   }
 
   .mobile-nav :global(.btn--primary:hover) {
-    background: #fff;
+    background: color-mix(in srgb, var(--gold) 86%, #fff);
     color: var(--deep);
-    border-color: #fff;
+    border-color: var(--gold);
   }
 
   .mobile-nav :global(.btn--outline) {

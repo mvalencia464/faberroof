@@ -1,0 +1,90 @@
+---
+import { SITE } from '../config/site';
+
+const decision = SITE.decision;
+---
+
+<section id="repair-or-replace" class="section repair-choice">
+  <div class="container">
+    <p class="section-label">{decision.label}</p>
+    <h2>{decision.title}</h2>
+    <p class="subtext repair-choice__intro">{decision.intro}</p>
+
+    <div class="repair-choice__grid">
+      <article class="repair-choice__card">
+        <h3>{decision.repair.title}</h3>
+        <ul>
+          {decision.repair.items.map((item: string) => <li>{item}</li>)}
+        </ul>
+      </article>
+      <article class="repair-choice__card">
+        <h3>{decision.replace.title}</h3>
+        <ul>
+          {decision.replace.items.map((item: string) => <li>{item}</li>)}
+        </ul>
+      </article>
+    </div>
+
+    {decision.note && <p class="repair-choice__note">{decision.note}</p>}
+  </div>
+</section>
+
+<style>
+  .repair-choice {
+    background: var(--panel);
+  }
+
+  .repair-choice h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .repair-choice__intro {
+    margin-bottom: 2rem;
+    max-width: 38rem;
+  }
+
+  .repair-choice__grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    .repair-choice__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  .repair-choice__card {
+    background: #fffdfb;
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: 2px;
+    padding: 1.35rem 1.35rem 1.1rem;
+  }
+
+  .repair-choice__card h3 {
+    margin-bottom: 0.85rem;
+    color: var(--deep);
+  }
+
+  .repair-choice__card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .repair-choice__card li {
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .repair-choice__note {
+    margin: 1.25rem 0 0;
+    max-width: 42rem;
+    color: var(--muted);
+    font-size: 0.98rem;
+  }
+</style>

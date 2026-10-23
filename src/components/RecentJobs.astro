@@ -55,7 +55,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
 
 <style is:global>
   .recent-jobs {
-    background: var(--surface);
+    background: var(--panel);
   }
 
   .recent-jobs__header {
@@ -87,21 +87,21 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
   }
 
   #work .work-card {
-    --job-accent: var(--accent);
+    --job-accent: var(--deep);
     display: flex;
     flex-direction: column;
     text-decoration: none;
     border-radius: 10px;
     overflow: hidden;
-    background: #fff;
+    background: #fffdfb;
     border: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(10, 25, 47, 0.06);
+    box-shadow: 0 10px 28px rgba(28, 24, 22, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   #work .work-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(10, 25, 47, 0.1);
+    box-shadow: 0 16px 32px rgba(28, 24, 22, 0.1);
   }
 
   #work .work-card__media {
@@ -129,7 +129,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
     left: 0.75rem;
     padding: 0.28rem 0.55rem;
     border-radius: 999px;
-    background: rgba(10, 25, 47, 0.78);
+    background: color-mix(in srgb, var(--deep) 82%, transparent);
     color: #fff;
     font-size: 0.68rem;
     font-weight: 700;
@@ -152,7 +152,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
     font-weight: 700;
     letter-spacing: 0.04em;
     line-height: 1;
-    opacity: 0.85;
+    color: var(--gold);
   }
 
   #work .work-card__service {
@@ -194,7 +194,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
     padding-top: 0.45rem;
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--job-accent);
+    color: var(--accent);
   }
 
   #work .work-card:hover .work-card__link {

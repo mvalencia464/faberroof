@@ -3,22 +3,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
+import RepairOrReplace from '../components/RepairOrReplace.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
 import WhyChooseReviews from '../components/WhyChooseReviews.astro';
 import RecentJobs from '../components/RecentJobs.astro';
+import HomeFaq from '../components/HomeFaq.astro';
 import BeforeAfterSection from '../components/BeforeAfterSection.astro';
 import CTABanner from '../components/CTABanner.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config/site';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SITE.serviceFaqs.map((faq: { q: string; a: string }) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+};
 ---
 
 <BaseLayout preloadLcpImage={SITE.hero.image} preloadLcpImageMobile={SITE.hero.imageSm}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
   <Header />
   <main class="home-main">
     <Hero />
     <ServicesGrid />
+    <RepairOrReplace />
+    <ProcessSteps />
     <WhyChooseReviews />
     <RecentJobs />
     <BeforeAfterSection />
+    <HomeFaq />
     <CTABanner />
   </main>
   <Footer />

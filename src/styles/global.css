@@ -209,7 +209,7 @@ img {
 }
 
 .btn--navy:hover {
-  background: #0f2038;
+  background: color-mix(in srgb, var(--deep) 82%, #000);
   color: #fff;
 }
 

@@ -148,8 +148,11 @@ export const SITE = {
     quoteAttribution: copy.ownerStory.quoteAttribution,
     quoteRole: copy.ownerStory.quoteRole,
     homepageParagraphLimit: copy.ownerStory.homepageParagraphLimit,
+    principles: copy.ownerStory.principles ?? [],
     paragraphs: copy.ownerStory.paragraphs.map((text) => ({ parts: [{ text }] })),
   },
+
+  decision: copy.decision,
 
   teamSection: copy.teamSection,
   teamMembers: copy.teamMembers.map((member) => ({

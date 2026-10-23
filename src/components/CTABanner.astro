@@ -42,8 +42,8 @@ const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 60% 80% at 100% 0%, rgba(255, 255, 255, 0.06), transparent 55%),
-      radial-gradient(ellipse 50% 70% at 0% 100%, rgba(255, 255, 255, 0.06), transparent 50%);
+      radial-gradient(ellipse 55% 80% at 100% 0%, color-mix(in srgb, var(--gold) 22%, transparent), transparent 58%),
+      radial-gradient(ellipse 45% 70% at 0% 100%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 52%);
     pointer-events: none;
   }
 
@@ -106,19 +106,19 @@ const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
   }
 
   .cta-banner__btn--schedule {
-    background: var(--panel);
+    background: var(--gold);
     color: var(--deep);
   }
 
   .cta-banner__btn--schedule:hover {
-    background: #fff;
+    background: color-mix(in srgb, var(--gold) 86%, #fff);
     color: var(--deep);
   }
 
   .cta-banner__btn--call {
     background: transparent;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fffdfb;
+    border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
   }
 
   .cta-banner__btn--call:hover {

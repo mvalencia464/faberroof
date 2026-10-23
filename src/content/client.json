@@ -25,17 +25,17 @@
   },
   "branding": {
     "palette": {
-      "deep": "#2a2829",
-      "surface": "#e0e0db",
-      "panel": "#f4f4f1",
-      "panel2": "#e0e0db",
-      "border": "rgba(42, 40, 41, 0.12)",
-      "accent": "#253551",
-      "accent2": "#2a2829",
-      "accentHover": "#1b2840",
-      "gold": "#e0a100",
-      "text": "#000000",
-      "muted": "#3e3e3e"
+      "deep": "#1c1816",
+      "surface": "#f7f4ef",
+      "panel": "#efe8df",
+      "panel2": "#e6ddd2",
+      "border": "rgba(28, 24, 22, 0.12)",
+      "accent": "#a84b28",
+      "accent2": "#c9922e",
+      "accentHover": "#86391d",
+      "gold": "#c9922e",
+      "text": "#2a2420",
+      "muted": "#6e655c"
     },
     "fonts": {
       "display": "Poppins",
@@ -196,22 +196,22 @@
         {
           "title": "Inspect the roof",
           "meta": "See the work",
-          "description": "We look at the deck, flashing, and age so the estimate matches the roof you have."
+          "description": "Someone gets on the roof and checks the shingles or panels, the flashing, and how the deck feels."
         },
         {
           "title": "Written estimate",
           "meta": "No guessing",
-          "description": "You get the scope in writing before work starts."
+          "description": "You get the scope and the price in writing. If a repair will do, that is what the estimate says."
         },
         {
           "title": "Do the work",
           "meta": "The job",
-          "description": "The crew follows the scope and keeps the property tidy."
+          "description": "The crew follows that scope. Homeowners have said the cleanup looked like the crew was never there."
         },
         {
           "title": "Walk-through",
           "meta": "Done",
-          "description": "We review the finished work with you."
+          "description": "We walk the finished roof with you before the job is closed."
         }
       ]
     },
@@ -359,6 +359,24 @@
       "quoteAttribution": "Matt Atrard",
       "quoteRole": "Owner, Faber Roof",
       "homepageParagraphLimit": 3,
+      "principles": [
+        {
+          "title": "Inspect first",
+          "body": "The estimate comes from the roof itself, not a guess from the street."
+        },
+        {
+          "title": "Quote in writing",
+          "body": "Scope and price on paper before work starts, so you can compare bids line by line."
+        },
+        {
+          "title": "Leave it clean",
+          "body": "Homeowners have said the yard looked like the crew was never there."
+        },
+        {
+          "title": "Own the misses",
+          "body": "If something is not right, call. We come back and make it right."
+        }
+      ],
       "paragraphs": [
         "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing.",
         "Roof work goes wrong in the same ways. The schedule slips. Materials show up late. The yard is a mess when the crew leaves. We stay small so we can still care about those things. Homeowners have said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time.",
@@ -404,17 +422,55 @@
       "afterLabel": "After"
     },
     "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit.",
+    "decision": {
+      "label": "Repair or replace",
+      "title": "Repair or replace?",
+      "intro": "The honest answer depends on the roof. These are the signs we look for when we get up there.",
+      "repair": {
+        "title": "A repair usually makes sense when",
+        "items": [
+          "The leak is in one spot, like a pipe boot, a chimney, or a skylight",
+          "Wind took off a handful of shingles and the rest still lie flat",
+          "Flashing has pulled loose and the deck under it still feels solid"
+        ]
+      },
+      "replace": {
+        "title": "Replacement usually makes sense when",
+        "items": [
+          "Shingles are curling, cracking, or shedding granules into the gutters",
+          "Leaks keep showing up in new places",
+          "The deck feels soft underfoot",
+          "There are already two layers of shingles"
+        ]
+      },
+      "note": "A winter stain along an outside wall can be an ice dam. We look at the eave before we tell you the whole roof is done."
+    },
     "schemaKnowsAbout": [
       "Roof replacement",
       "Roof repair",
       "Storm damage",
-      "Roof inspections",
-      "Gutters"
+      "Roof inspections"
     ],
     "faqs": [
       {
-        "q": "What roofing work do you take on?",
-        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills, Detroit, and the suburbs between them. Call (810) 360-7385."
+        "q": "Should I repair my roof or replace it?",
+        "a": "If the problem is in one spot and the rest of the roof still lies flat, a repair usually makes sense. If shingles are curling or shedding granules, leaks keep moving, or the deck feels soft, replacement is usually the better spend. We say which one we would choose after we look. Call (810) 360-7385."
+      },
+      {
+        "q": "How do I get an estimate?",
+        "a": "Call (810) 360-7385 or send the form. Someone looks at the roof, then you get the scope and the price in writing."
+      },
+      {
+        "q": "How long does a roof replacement take?",
+        "a": "One homeowner said their tear-off and new shingles were done in a day. Steeper roofs, attached homes, and commercial jobs take longer. The estimate includes the schedule."
+      },
+      {
+        "q": "Do you work on attached homes and commercial buildings?",
+        "a": "Yes. Houses, attached homes, and commercial roofs. A commercial customer said their job finished on budget and on time. Property managers get the same thing homeowners get: a look, then a written estimate."
+      },
+      {
+        "q": "Do you offer financing?",
+        "a": "Yes. 0% financing options with 12 to 24 month terms, subject to credit approval. Ask when you get the estimate."
       },
       {
         "q": "Do you offer emergency 24/7 service?",
@@ -423,10 +479,6 @@
       {
         "q": "Where do you work?",
         "a": "Farmington Hills, Detroit, and nearby towns including Farmington, Novi, Livonia, Northville, Southfield, and Plymouth. Call (810) 360-7385 to confirm your address."
-      },
-      {
-        "q": "How do I get an estimate?",
-        "a": "Call (810) 360-7385 or send the form. We inspect the roof before a written estimate."
       }
     ]
   },
