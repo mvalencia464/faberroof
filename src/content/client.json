@@ -12,8 +12,8 @@
     "state": "MI",
     "zip": "48335",
     "license": "TODO: license number not published on faberroof.com",
-    "ownerName": "TODO",
-    "ownerRole": "TODO: owner not named on faberroof.com",
+    "ownerName": "Matt Atrard",
+    "ownerRole": "Owner",
     "region": "Farmington Hills",
     "trade": "roofing",
     "tradeLabel": "Roofing contractor",
@@ -43,6 +43,7 @@
     },
     "images": {
       "logo": "faber_logo.avif",
+      "logoLight": "/logo-white.svg",
       "favicon": "/favicon.avif",
       "hero": "faber-roof-standing-seam-metal-roof-aerial.avif",
       "heroSm": "faber-roof-standing-seam-metal-roof-aerial.avif",
@@ -59,13 +60,13 @@
   },
   "googleReviews": {
     "businessName": "Faber Roof",
-    "rating": 0,
-    "count": 0,
+    "rating": 5,
+    "count": 5,
     "category": "Roofing contractor in Farmington Hills, MI",
-    "profileUrl": "",
+    "profileUrl": "https://www.google.com/maps?cid=2039319338774567315",
     "maxDisplay": 8,
     "cid": "",
-    "placeId": ""
+    "placeId": "ChIJHVmRna-vJIgRkxk-QyIeTRw"
   },
   "seo": {
     "title": "Faber Roof | Commercial and residential roofing in Farmington Hills, MI",
@@ -116,11 +117,11 @@
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
       "trustBadge": "Farmington Hills, MI",
-      "headingLine1": "Commercial /",
-      "headingLine2": "residential",
-      "headingAccent": "roofing",
-      "headline": "Commercial / residential roofing.",
-      "subheading": "Faber Roof says it provides dependable roofing for businesses and homes, with craftsmanship and quality products.",
+      "headingLine1": "A leaking roof",
+      "headingLine2": "does not wait.",
+      "headingAccent": "Get it looked at.",
+      "headline": "A leaking roof does not wait.",
+      "subheading": "Water in the ceiling, a patch that fails again, or a building you cannot close. Faber Roof looks at the roof, then gives you a written estimate. Call (810) 360-7385.",
       "benefits": [
         {
           "icon": "home",
@@ -139,14 +140,14 @@
       "scheduleHref": "/contact",
       "financingNote": "0% financing options. 12\u201324 month terms are available. Financing is subject to credit approval.",
       "locationNote": "22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335",
-      "trustLine": "Commercial and residential roofing",
+      "trustLine": "Homes and commercial buildings. Written estimate after we see the roof.",
       "reviewCard": {
         "rating": 0,
         "count": "Google reviews",
         "href": "/reviews"
       },
-      "ownerNote": "TODO: owner is not named on faberroof.com.",
-      "ownerCta": "Call (810) 360-7385"
+      "ownerNote": "Matt Atrard owns Faber Roof. Call (810) 360-7385.",
+      "ownerCta": "Talk to Matt"
     },
     "trustBar": {
       "heading": "roofing for Farmington Hills homes and buildings",
@@ -299,7 +300,7 @@
       "items": [
         {
           "title": "You are calling Farmington Hills",
-          "body": "TODO and the crew serve Farmington Hills from nearby."
+          "body": "Matt Atrard owns Faber Roof at 22710 Haggerty Rd. Suite 100B, Farmington Hills."
         },
         {
           "title": "You hear the scope first",
@@ -323,7 +324,7 @@
       "bullets": [
         "Roofing contractor",
         "Based in Farmington Hills, MI",
-        "TODO, owner",
+        "Matt Atrard, owner",
         "Homes and buildings"
       ],
       "ctaText": "Read more reviews on Google",
@@ -352,15 +353,15 @@
     },
     "ownerStory": {
       "label": "About Us",
-      "quote": "Commercial / residential roofing.",
-      "caption": "TODO \u00b7 Owner",
+      "quote": "A leaking roof does not wait. We look at it, then put the estimate in writing.",
+      "caption": "Matt Atrard \u00b7 Owner",
       "ctaText": "Get a roofing estimate",
       "ctaHref": "/contact",
-      "quoteAttribution": "TODO",
+      "quoteAttribution": "Matt Atrard",
       "quoteRole": "Owner, Faber Roof",
       "homepageParagraphLimit": 2,
       "paragraphs": [
-        "TODO: faberroof.com does not name an owner.",
+        "Matt Atrard owns Faber Roof, LLC in Farmington Hills.",
         "Faber Roof, LLC lists 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335 and (810) 360-7385."
       ]
     },
@@ -371,11 +372,11 @@
     },
     "teamMembers": [
       {
-        "name": "TODO",
+        "name": "Matt Atrard",
         "role": "Owner",
-        "headline": "Leads with an inspection and a written estimate.",
+        "headline": "Looks at the roof, then writes the estimate.",
         "bio": [
-          "TODO runs Faber Roof from Farmington Hills."
+          "Matt Atrard owns Faber Roof in Farmington Hills."
         ]
       }
     ],

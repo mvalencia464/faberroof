@@ -5,11 +5,12 @@
       "slug": "faberroof",
       "name": "Faber Roof",
       "cid": "",
+      "place_id": "ChIJHVmRna-vJIgRkxk-QyIeTRw",
       "location_code": 2840,
       "language_code": "en",
       "depth": 20,
       "sort_by": "newest",
-      "profileUrl": "",
+      "profileUrl": "https://www.google.com/maps?cid=2039319338774567315",
       "outputJson": "src/data/google-reviews.json",
       "outputAvatarsDir": "src/assets/avatars",
       "outputReviewImagesDir": "src/assets/review-images"
