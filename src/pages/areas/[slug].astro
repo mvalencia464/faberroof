@@ -3,10 +3,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTABanner from '../../components/CTABanner.astro';
+import AreaIndex from '../../components/AreaIndex.astro';
 import { SITE, AREA_PAGES, type AreaPage } from '../../config/site';
 import { jobsForArea } from '../../data/jobs';
 import { r2img } from '../../lib/r2';
 import { siteHref, siteOrigin } from '../../lib/origin';
+import { fillTemplate } from '../../lib/template';
+import clientJson from '../../content/client.json';
 
 export function getStaticPaths() {
   return AREA_PAGES.map((area) => ({
@@ -33,7 +36,7 @@ const pageTitle = area.pageTitle;
 const pageDescription = `${area.headline}. ${area.intro.slice(0, 140)} Call ${SITE.phone}.`;
 const origin = siteOrigin(Astro.site);
 const canonical = new URL(`/areas/${area.slug}`, origin).href;
-const areaFaqs = 'faqs' in area && Array.isArray(area.faqs) ? area.faqs : [];
+const areaFaqs = fillTemplate(clientJson.copy.areaFaqs, { areaName: area.name });
 const areaBody = 'body' in area ? area.body : '';
 const servicesNote =
   area.servicesNote;
@@ -164,12 +167,8 @@ const pageSchema = {
         <aside class="area-detail__aside">
           <h3>Nearby areas</h3>
           <p class="area-detail__aside-note">{area.county} County & nearby</p>
-          <ul>
-            {otherAreas.map((a) => (
-              <li><a href={`/areas/${a.slug}`}>{a.name}</a></li>
-            ))}
-            <li><a href="/areas">Full service map</a></li>
-          </ul>
+          <AreaIndex areas={otherAreas} grouped stack />
+          <a class="area-detail__map-link" href="/areas">Full service map</a>
           <a class="btn btn--primary" href={telHref}>Call {SITE.phone}</a>
         </aside>
       </div>
@@ -393,16 +392,18 @@ const pageSchema = {
     margin: 0 0 0.75rem;
   }
 
-  .area-detail__aside ul {
-    list-style: none;
-    margin: 0 0 1.25rem;
-    padding: 0;
-    display: grid;
-    gap: 0.5rem;
+  .area-detail__aside :global(.area-index) {
+    margin-bottom: 1.15rem;
   }
 
-  .area-detail__aside a {
-    font-weight: 600;
+  .area-detail__map-link {
+    display: block;
+    margin-bottom: 1.15rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
   }
 
   @media (min-width: 860px) {

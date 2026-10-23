@@ -32,6 +32,7 @@ type PackService = {
   body: string;
   sections?: { heading: string; body: string }[];
   faq: { q: string; a: string };
+  moreFaqs?: { q: string; a: string }[];
   icon: string;
   iconStyle?: string;
   image: string;
@@ -96,6 +97,10 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
             body: `${BRAND.name} is based at ${BRAND.address}, ${BRAND.city}, ${BRAND.state}. Call ${BRAND.phone} for a roof in ${BRAND.city} or Detroit.`,
           },
         ],
-    faqs: where ? [service.faq, where] : [service.faq],
+    faqs: [
+      service.faq,
+      ...(service.moreFaqs ?? []),
+      ...(where ? [where] : []),
+    ],
   };
 });

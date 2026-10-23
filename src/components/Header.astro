@@ -49,6 +49,10 @@ const isContactActive = currentPath.startsWith('/contact');
       />
       <a href="/#reviews" class:list={['header__link', isReviewsActive && 'header__link--active']}>{SITE.nav.reviewsLabel}</a>
       <a href="/contact" class:list={['header__link', isContactActive && 'header__link--active']}>{SITE.nav.contactLabel}</a>
+      <a href="/contact" class="header__finance" title="0% financing, 12–24 month terms, subject to credit approval">
+        <span class="header__finance-rate">0%</span>
+        Financing
+      </a>
     </nav>
 
     <div class="header__actions">
@@ -84,6 +88,10 @@ const isContactActive = currentPath.startsWith('/contact');
     />
     <a href="/#reviews" class="mobile-nav__link">{SITE.nav.reviewsLabel}</a>
     <a href="/contact" class="mobile-nav__link">{SITE.nav.contactLabel}</a>
+    <a href="/contact" class="mobile-nav__finance" title="0% financing, 12–24 month terms, subject to credit approval">
+      <span>0%</span> Financing
+      <small>12–24 months · subject to credit</small>
+    </a>
 
     <div class="mobile-nav__actions">
       <a href={telHref} class="btn btn--primary mobile-nav__action">
@@ -212,6 +220,49 @@ const isContactActive = currentPath.startsWith('/contact');
   .header__link--active::after,
   .header__nav :global(.nav-dropdown--active .nav-dropdown__trigger)::after {
     transform: scaleX(1);
+  }
+
+  .header__nav a.header__finance {
+    margin-left: 0.45rem;
+    padding: 0.42rem 0.7rem 0.42rem 0.55rem;
+    border: 1px solid color-mix(in srgb, var(--gold) 62%, transparent);
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--gold) 16%, transparent);
+    color: var(--gold);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    gap: 0.4rem;
+  }
+
+  .header__nav a.header__finance::after {
+    content: none;
+  }
+
+  .header__finance-rate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.7rem;
+    padding: 0.16rem 0.28rem;
+    border-radius: 2px;
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.72rem;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .header__nav a.header__finance:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--deep);
+  }
+
+  .header__nav a.header__finance:hover .header__finance-rate {
+    background: var(--deep);
+    color: var(--gold);
   }
 
   .header__actions {
@@ -345,11 +396,49 @@ const isContactActive = currentPath.startsWith('/contact');
     text-decoration: none;
   }
 
+  .mobile-nav__finance {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.55rem;
+    margin-top: 0.9rem;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid color-mix(in srgb, var(--gold) 62%, transparent);
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--gold) 16%, transparent);
+    color: var(--gold);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .mobile-nav__finance span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.12rem 0.35rem;
+    border-radius: 2px;
+    background: var(--gold);
+    color: var(--deep);
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+
+  .mobile-nav__finance small {
+    flex-basis: 100%;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
   .mobile-nav__actions {
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
 
   .mobile-nav__action {

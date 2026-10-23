@@ -111,6 +111,14 @@
       {
         "q": "How do I get an estimate in {{areaName}}?",
         "a": "Call (810) 360-7385 or send the form. We look at the job and give you a next step."
+      },
+      {
+        "q": "How soon can you look at a roof in {{areaName}}?",
+        "a": "Call (810) 360-7385 with the address. Storm leaks get the next opening we can reach. A planned replacement is scheduled after someone has seen the roof."
+      },
+      {
+        "q": "Do you only replace roofs in {{areaName}}?",
+        "a": "No. A leak in one spot, with the rest of the roof still flat, is often a repair. Curling shingles, moving leaks, or a soft deck usually means replacement. We say which one after the look."
       }
     ],
     "jobAreaLink": "Roofing contractor in Farmington Hills",
@@ -475,6 +483,26 @@
       {
         "q": "Do you offer emergency 24/7 service?",
         "a": "Storm leaks get priority when we can reach them. Call (810) 360-7385 and we will tell you the next opening."
+      },
+      {
+        "q": "Will you roof over the old shingles?",
+        "a": "Usually no. A second layer hides a soft deck and fails sooner. If there are already two layers, those come off. We say what we find after someone is on the roof."
+      },
+      {
+        "q": "What if the deck is soft?",
+        "a": "Soft plywood gets replaced before new shingles go down. The estimate names the bad spots we can see. If more shows up after tear-off, you hear about it before anyone covers it."
+      },
+      {
+        "q": "Do you pull a permit?",
+        "a": "Most Metro Detroit cities want a permit for a replacement. When your city requires one, that paperwork is part of the job. Call (810) 360-7385 and we will tell you what your address needs."
+      },
+      {
+        "q": "Can you work with my insurance after a storm?",
+        "a": "We can look at storm damage and write what the roof needs. You still deal with your insurer. The estimate is based on the roof, not on a guess from the adjuster’s photo."
+      },
+      {
+        "q": "What if it rains on the day of the job?",
+        "a": "Tear-off does not start if the deck would sit open in a storm. If weather turns during the day, the open slope gets covered before the crew leaves."
       },
       {
         "q": "Where do you work?",

@@ -35,6 +35,20 @@
       "q": "Do you roof houses?",
       "a": "Yes. Houses, lake homes, and attached homes. Call {{phone}} with the address and you get a look, then a written estimate."
     },
+    "moreFaqs": [
+      {
+        "q": "Can you repair one leak instead of replacing the roof?",
+        "a": "Yes, when the leak is in one spot and the rest of the shingles still lie flat. A pipe boot, a chimney, or a skylight is often a repair. If leaks keep moving, replacement is usually the better spend."
+      },
+      {
+        "q": "What do you look at before you name a price?",
+        "a": "Someone gets on the roof. Shingles, flashing, pipe boots, the ridge, and any soft deck. The estimate names repair or tear-off. It is not a number from the street."
+      },
+      {
+        "q": "Do you work on lake homes?",
+        "a": "Yes. Lake lots take more wind. Those roofs are scoped as a full system, not a handful of replaced tabs. Call {{phone}} with the address."
+      }
+    ],
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-two-story-home-shingle-roof.avif",
@@ -55,10 +69,6 @@
       {
         "image": "faber-roof-crew-reroofing-neighborhood-homes.avif",
         "alt": "Crew installing shingles on a house, with yellow underlayment on the roof next door."
-      },
-      {
-        "image": "faber-roof-new-construction-roof-install-crane.avif",
-        "alt": "Boom truck loading shingles onto new houses still wrapped in sheathing."
       },
       {
         "image": "faber-roof-shingle-roof-ridge-vents-closeup.avif",
@@ -102,6 +112,20 @@
       "q": "Do you take commercial jobs?",
       "a": "Yes. Retail buildings, larger roofs, and property-management work. Call {{phone}} with the address."
     },
+    "moreFaqs": [
+      {
+        "q": "Can the business stay open?",
+        "a": "Often yes. Tear-off is planned so the building is not left open overnight, and the date is one a property manager can post. Steep or very large roofs take longer. The estimate includes the schedule."
+      },
+      {
+        "q": "Do you work from a property manager’s list?",
+        "a": "Yes. You get the same thing a homeowner gets: someone on the roof, then a written scope and a price. A commercial customer said their job finished on budget and on time."
+      },
+      {
+        "q": "Shingles or metal on a commercial building?",
+        "a": "Most retail roofs we replace are architectural shingles. Standing-seam metal is the conversation when the building should not take another shingle roof. We say which one after the look."
+      }
+    ],
     "icon": "building",
     "iconStyle": "navy",
     "image": "faber-roof-crew-commercial-shingle-replacement.avif",
@@ -149,6 +173,20 @@
       "q": "Which shingles do you install?",
       "a": "Architectural shingles. CertainTeed Landmark Pro is one to ask about. Your estimate names the product and color. Call {{phone}}."
     },
+    "moreFaqs": [
+      {
+        "q": "How many layers of shingles will you tear off?",
+        "a": "Whatever is on the roof. One layer comes off. Two layers come off. We do not add a third. You hear the layer count after someone is up there."
+      },
+      {
+        "q": "Do you replace the deck if it is soft?",
+        "a": "Yes. Soft plywood is replaced before the new shingles go down. Spots we can see are on the estimate. Anything else that shows up at tear-off is called out before it is covered."
+      },
+      {
+        "q": "Who picks the color?",
+        "a": "You do. The estimate names the product and the color before the shingles are ordered, so the roof is not a surprise when the crew arrives."
+      }
+    ],
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-dark-architectural-shingles-brick-home.avif",
@@ -216,6 +254,20 @@
       "q": "Do you install metal roofs?",
       "a": "Yes. Standing-seam metal, including roofs with skylights. Call {{phone}} and ask if it fits your building."
     },
+    "moreFaqs": [
+      {
+        "q": "Can you put metal over the old shingles?",
+        "a": "We do not. The shingles come off so the deck can be checked. Standing seam goes on a roof we have seen, not on top of a layer that is already tired."
+      },
+      {
+        "q": "Will a metal roof be loud in the rain?",
+        "a": "Standing seam over a solid deck is not the drumming people remember from a barn roof. If noise is the worry, say so when you call. We will tell you what the building will actually sound like."
+      },
+      {
+        "q": "Can the skylights stay?",
+        "a": "Often yes. Skylights can be flashed into the panels. If one is already leaking, that gets called out on the estimate instead of being buried."
+      }
+    ],
     "icon": "building",
     "iconStyle": "navy",
     "image": "faber-roof-standing-seam-metal-roof-aerial.avif",

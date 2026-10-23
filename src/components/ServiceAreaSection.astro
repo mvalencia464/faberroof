@@ -1,13 +1,9 @@
 ---
 import { SITE, AREA_PAGES } from '../config/site';
 import LazyGoogleMap from './LazyGoogleMap.astro';
+import AreaIndex from './AreaIndex.astro';
 
 const mapTitle = `${SITE.name} — ${SITE.map.radiusMiles}-mile service area around ${SITE.city}, ${SITE.state}`;
-
-/** Map display names → area page slugs */
-const areaByName: Record<string, string> = {
-  ...Object.fromEntries(AREA_PAGES.map((a) => [a.name, a.slug])),
-};
 ---
 
 <section id="service-areas" class="section section--alt service-area">
@@ -16,16 +12,7 @@ const areaByName: Record<string, string> = {
       <p class="section-label">Service Map</p>
       <h2>{SITE.serviceArea.heading}</h2>
       <p>{SITE.serviceArea.body}</p>
-      <div class="service-area__labels" role="list">
-        {SITE.serviceAreas.map((city) => {
-          const slug = areaByName[city];
-          return slug ? (
-            <a class="service-area__label" role="listitem" href={`/areas/${slug}`}>{city}</a>
-          ) : (
-            <span class="service-area__label" role="listitem">{city}</span>
-          );
-        })}
-      </div>
+      <AreaIndex areas={AREA_PAGES} grouped />
       {SITE.map.radiusMiles > 0 && (
         <p class="service-area__radius">
           Within {SITE.map.radiusMiles} miles of {SITE.city}, {SITE.state}
@@ -68,35 +55,9 @@ const areaByName: Record<string, string> = {
     margin-bottom: 1.25rem;
   }
 
-  .service-area__labels {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
+  .service-area__copy :global(.area-index) {
     margin-bottom: 1.15rem;
     max-width: 36rem;
-  }
-
-  .service-area__label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.55rem 1.05rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--deep);
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    white-space: nowrap;
-    text-decoration: none;
-    transition: border-color 0.2s ease, color 0.2s ease;
-  }
-
-  a.service-area__label:hover {
-    border-color: var(--accent);
-    color: var(--accent);
   }
 
   .service-area__radius {

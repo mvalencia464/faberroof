@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CTABanner from '../../components/CTABanner.astro';
+import AreaIndex from '../../components/AreaIndex.astro';
 import { SITE, AREA_PAGES, formatSiteAddress } from '../../config/site';
 import { siteHref, siteOrigin } from '../../lib/origin';
 import { r2img } from '../../lib/r2';
@@ -168,13 +169,7 @@ const pageSchema = {
           <p class="service-areas-intro">
             {SITE.serviceAreasIntro}
           </p>
-          <ul class="service-areas-list">
-            {AREA_PAGES.map((area) => (
-              <li>
-                <a href={`/areas/${area.slug}`}>{area.name}, {SITE.state}</a>
-              </li>
-            ))}
-          </ul>
+          <AreaIndex areas={AREA_PAGES} grouped />
 
           <h3>Frequently Asked Questions</h3>
           <div class="faq-list">
@@ -224,11 +219,7 @@ const pageSchema = {
 
           <div class="sidebar-card panel-card">
             <h4>Service Areas</h4>
-            <ul class="sidebar-areas">
-              {AREA_PAGES.map((area) => (
-                <li><a href={`/areas/${area.slug}`}>{area.name}</a></li>
-              ))}
-            </ul>
+            <AreaIndex areas={AREA_PAGES} grouped stack />
           </div>
         </aside>
       </div>
@@ -384,33 +375,8 @@ const pageSchema = {
 
   .service-areas-intro {
     color: var(--muted);
-    margin: 0.35rem 0 0.85rem;
+    margin: 0.35rem 0 1rem;
     max-width: none;
-  }
-
-  .service-areas-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    margin: 0 0 1.75rem;
-    padding: 0;
-  }
-
-  .service-areas-list a {
-    font-weight: 600;
-  }
-
-  .sidebar-areas {
-    list-style: none;
-    margin: 0.5rem 0 0;
-    padding: 0;
-    display: grid;
-    gap: 0.45rem;
-  }
-
-  .sidebar-areas a {
-    font-weight: 600;
   }
 
   .highlights {
