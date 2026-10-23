@@ -32,6 +32,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
                 height="480"
               />
               {job.city && <span class="work-card__city">{job.city}, {SITE.state}</span>}
+              {job.imageNote && <span class="work-card__note">{job.imageNote}</span>}
             </div>
             <span class="work-card__meta">
               <span class="work-card__index">{pad(i)}</span>
@@ -121,6 +122,20 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
 
   #work .work-card:hover .work-card__media img {
     transform: scale(1.05);
+  }
+
+  #work .work-card__note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.9rem 0.55rem 0.35rem;
+    background: linear-gradient(180deg, transparent, rgba(28, 24, 22, 0.55));
+    color: rgba(255, 253, 251, 0.78);
+    font-size: 0.62rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
   }
 
   #work .work-card__city {

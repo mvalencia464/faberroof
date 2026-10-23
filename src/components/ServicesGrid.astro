@@ -13,6 +13,7 @@ const cardMarks: Record<string, string> = {
   'commercial-roofing': 'Retail',
   'shingle-roofing': 'Tear-off',
   'metal-roofing': 'Standing seam',
+  concrete: 'Flatwork',
 };
 ---
 
@@ -30,14 +31,16 @@ const cardMarks: Record<string, string> = {
           <article class="service-card">
             <div class="service-card__visual">
               <a href={`/services/${service.slug}`} class="service-card__media">
-                <img
-                  src={r2img(service.image)}
-                  alt={service.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                  width="640"
-                  height="420"
-                />
+                {service.image && (
+                  <img
+                    src={r2img(service.image)}
+                    alt={service.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                    width="640"
+                    height="420"
+                  />
+                )}
                 {cardMarks[service.slug] && (
                   <span class="service-card__mark">{cardMarks[service.slug]}</span>
                 )}

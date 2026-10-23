@@ -79,7 +79,7 @@
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
     "heroImageAlt": "Standing-seam metal roof with skylights on a brick building",
-    "formConsent": "and consent to be contacted about my roofing estimate. Msg & data rates may apply.",
+    "formConsent": "and consent to be contacted about my estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
     "serviceAreasIntro": "The office is on Haggerty Road in Farmington Hills. The towns below are a short drive from that office.",
@@ -95,7 +95,7 @@
     "areaHeadline": "Roofing contractor in {{areaName}}",
     "areaIntro": "Your {{areaName}} roof is leaking, missing shingles, or due before winter. You get a look and a written estimate. Call (810) 360-7385.",
     "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Someone gets on the roof and checks the shingles, flashing, and deck. You then get a written choice: repair the spot, or take the old shingles off and install a new roof. Architectural shingles are the usual house roof. Standing-seam metal is the conversation for a building that should not take another shingle roof. A commercial customer said their project finished on budget and on time. A homeowner said the cleanup looked like the crew was never there. Say the address when you call.",
-    "areaServicesNote": "Shingle replacement, repairs, and commercial roofs for {{areaName}} homes and buildings.",
+    "areaServicesNote": "Shingle replacement, repairs, commercial roofs, and concrete flatwork for {{areaName}} homes and buildings.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
       "A look at the roof before a price",
@@ -279,7 +279,7 @@
     ],
     "servicesHeading": "The roof work on your house or your building",
     "servicesLabel": "Services",
-    "servicesIntro": "You need the old shingles off, a leak stopped, or a Detroit-area building kept dry. The office is in Farmington Hills.",
+    "servicesIntro": "You need the old shingles off, a leak stopped, a Detroit-area building kept dry, or a driveway or patio poured. The office is in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
@@ -386,7 +386,7 @@
         }
       ],
       "paragraphs": [
-        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing.",
+        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing. We also pour concrete: driveways, patios, and flatwork. Roofing is still most of the work.",
         "Roof work goes wrong in the same ways. The schedule slips. Materials show up late. The yard is a mess when the crew leaves. We stay small so we can still care about those things. Homeowners have said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time.",
         "We are not perfect. When we miss something, we own it and we make it right. Call (810) 360-7385."
       ]
@@ -429,7 +429,7 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit.",
+    "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit. Concrete driveways, patios, and flatwork.",
     "decision": {
       "label": "Repair or replace",
       "title": "Repair or replace?",
@@ -457,7 +457,8 @@
       "Roof replacement",
       "Roof repair",
       "Storm damage",
-      "Roof inspections"
+      "Roof inspections",
+      "Concrete driveways, patios, and flatwork"
     ],
     "faqs": [
       {
@@ -475,6 +476,10 @@
       {
         "q": "Do you work on attached homes and commercial buildings?",
         "a": "Yes. Houses, attached homes, and commercial roofs. A commercial customer said their job finished on budget and on time. Property managers get the same thing homeowners get: a look, then a written estimate."
+      },
+      {
+        "q": "Do you do concrete?",
+        "a": "Yes. Driveways, patios, and flatwork, including approaches, walkways, sidewalks, and slabs. Roofing is still most of the work. See /services/concrete, or call (810) 360-7385."
       },
       {
         "q": "Do you offer financing?",
@@ -514,7 +519,7 @@
     "title": "Get a roofing estimate",
     "subtitle": "Share a few details and Faber Roof can follow up.",
     "submitText": "Send my request",
-    "finalNote": "No obligation. We look at the roof before anyone starts.",
+    "finalNote": "No obligation. We look at the job before anyone starts.",
     "trustBullets": [
       "Commercial and residential",
       "Farmington Hills office",
@@ -540,6 +545,11 @@
         "value": "metal",
         "label": "Metal roofing",
         "phIcon": "building"
+      },
+      {
+        "value": "concrete",
+        "label": "Concrete",
+        "phIcon": "square"
       },
       {
         "value": "other",
@@ -655,6 +665,7 @@
     "residential-roofing",
     "commercial-roofing",
     "shingle-roofing",
-    "metal-roofing"
+    "metal-roofing",
+    "concrete"
   ]
 }

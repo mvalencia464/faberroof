@@ -62,7 +62,7 @@ const galleryImages = rawGallery.filter((item) => {
   return true;
 });
 
-const heroImage = r2img(service.image);
+const heroImage = service.image ? r2img(service.image) : '';
 
 const pageSchema = {
   '@context': 'https://schema.org',
@@ -89,7 +89,7 @@ const pageSchema = {
         telephone: SITE.phone,
         url: `${origin}/`,
       },
-      serviceType: SITE.serviceType,
+      serviceType: service.slug === 'concrete' ? 'Concrete' : SITE.serviceType,
     },
     {
       '@type': 'FAQPage',
@@ -103,20 +103,22 @@ const pageSchema = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} image={heroImage}>
+<BaseLayout title={pageTitle} description={pageDescription} image={heroImage || undefined}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
   <Header />
 
   <main>
     <section class="service-hero">
       <div class="service-hero__bg">
-        <img
-          src={heroImage}
-          alt={service.imageAlt}
-          class="service-hero__bg-img"
-          loading="eager"
-          decoding="async"
-        />
+        {service.image && (
+          <img
+            src={heroImage}
+            alt={service.imageAlt}
+            class="service-hero__bg-img"
+            loading="eager"
+            decoding="async"
+          />
+        )}
       </div>
       <div class="service-hero__overlay" aria-hidden="true"></div>
       <div class="container service-hero__content">
@@ -129,7 +131,11 @@ const pageSchema = {
     <section class="section">
       <div class="container service-detail">
         <div class="service-detail__main">
-          <h2>What this means for your roof</h2>
+          <h2>
+            {service.slug === 'concrete'
+              ? 'What this means for the job'
+              : 'What this means for your roof'}
+          </h2>
           <p class="service-detail__body">{service.fullDesc}</p>
 
           <h3>What's Included</h3>

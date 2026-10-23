@@ -272,5 +272,53 @@
     "iconStyle": "navy",
     "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
     "imageAlt": "Aerial view of a standing-seam metal roof with skylights on a brick building."
+  },
+  {
+    "slug": "concrete",
+    "title": "Concrete",
+    "shortDesc": "A driveway, a patio, or other flatwork. Someone looks at the site, then you get a written estimate. Call {{phone}}.",
+    "fullDesc": "The roof is still most of the work. When the ground needs concrete, you call the same office. Driveways, patios, and flatwork: approaches, walkways, sidewalks, and slabs. Someone looks at the site in {{city}} or elsewhere in Metro Detroit, then writes the price. Call {{phone}}.",
+    "highlights": [
+      "Driveways and approaches",
+      "Patios and walkways",
+      "Sidewalks and slabs",
+      "A look at the site before a price",
+      "Written estimate from the Farmington Hills office"
+    ],
+    "heading": "Driveways, patios, and flatwork",
+    "body": "You need a new driveway, a patio, or a slab that sits on the ground. You call {{phone}} and say the address. Someone looks at the site. You get the work and the price in writing.",
+    "sections": [
+      {
+        "heading": "Driveways, patios, and flatwork",
+        "body": "A driveway or an approach. A patio or a walkway. A sidewalk or a slab. Those are the concrete jobs this page is for. You tell us the address and what you want poured. If the job is something else, say so on the call. We will tell you whether we take it."
+      },
+      {
+        "heading": "The price comes after the look",
+        "body": "A number over the phone is a guess. Someone looks at the site first: the grade, what is already there, and how the crew gets in. Then you get a written estimate. Same office as the roofing work. {{phone}}."
+      },
+      {
+        "heading": "Farmington Hills, Detroit, and the towns between",
+        "body": "The office is on Haggerty Road in Farmington Hills. You can call from Farmington, Novi, Livonia, Northville, or Detroit. Roofing is still most of the work. Concrete uses the same phone and the same towns."
+      }
+    ],
+    "faq": {
+      "q": "Do you pour driveways and patios?",
+      "a": "Yes. Driveways, patios, and other flatwork: approaches, walkways, sidewalks, and slabs. Call {{phone}} with the address."
+    },
+    "moreFaqs": [
+      {
+        "q": "Is concrete a different company?",
+        "a": "No. It is Faber Roof, at the same Farmington Hills office. Roofing is still most of the work. You call {{phone}} either way."
+      },
+      {
+        "q": "What concrete work do you take?",
+        "a": "Driveways, patios, and flatwork. If you need something else, say what it is when you call. We will tell you if it is a job we take."
+      }
+    ],
+    "icon": "home",
+    "iconStyle": "navy",
+    "image": "",
+    "imageAlt": "",
+    "gallery": []
   }
 ]

@@ -29,6 +29,8 @@ export type Job = {
   };
   rows: JobFixRow[];
   reviewAuthor?: string;
+  /** Shown on the photos when lighting or composition was enhanced. */
+  imageNote?: string;
 };
 
 function photoJob(input: {
@@ -41,6 +43,7 @@ function photoJob(input: {
   story: string;
   rows: JobFixRow[];
   extra?: JobImage[];
+  imageNote?: string;
 }): Job {
   return {
     slug: input.slug,
@@ -60,6 +63,7 @@ function photoJob(input: {
       outcome: "Call (810) 360-7385 if you want this kind of roof on your property.",
     },
     rows: input.rows,
+    imageNote: input.imageNote,
   };
 }
 
@@ -81,6 +85,32 @@ export const JOBS: Job[] = [
       { pain: "Fasteners sitting in the weather on an old screw-down panel.", fix: "Raised seams, so the water sheds at the lock instead of at a screw." },
       { pain: "Skylights that leak every time the roof is patched around them.", fix: "Skylights flashed into the panels, or called out if one is already done." },
       { pain: "A building that should not take a third layer of shingles.", fix: "One metal roof on the estimate, not another shingle cycle." },
+    ],
+  }),
+  photoJob({
+    slug: "modern-farmhouse-shingle-roof",
+    title: "Modern farmhouse roof",
+    serviceLabel: "Shingle roofing",
+    serviceSlug: "shingle-roofing",
+    cover: "modern-farmhouse-drone-view.avif",
+    coverAlt: "Drone view of a white modern farmhouse with gray architectural shingles, side gables, and a center dormer.",
+    story: "A white farmhouse with gray architectural shingles across the main roof, the side gables, and the dormer. The lines stay straight where the wings meet. The roof work is the job.",
+    imageNote: "Lighting and composition enhanced with AI",
+    rows: [
+      { pain: "A long house whose gables have to read as one roof.", fix: "Architectural shingles across the main roof, the wings, and the dormer." },
+      { pain: "Valleys where the side wings meet the center.", fix: "Valleys cut with the new shingles, not cement over an old joint." },
+      { pain: "A metal porch roof dying into the shingle field.", fix: "The shingles stopped clean at the porch so the two roofs stay separate." },
+      { pain: "Ridges that wander on a house this long.", fix: "Finished ridges so the roof reads straight from the road." },
+    ],
+    extra: [
+      {
+        src: "modern-farmhouse-exterior-with-detailed-roofing.avif",
+        alt: "Front of a white farmhouse with gray architectural shingles, gables, and a metal porch roof.",
+      },
+      {
+        src: "modern-white-farmhouse-exterior.avif",
+        alt: "White farmhouse exterior with a dark architectural shingle roof and finished gables.",
+      },
     ],
   }),
   photoJob({

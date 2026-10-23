@@ -74,12 +74,18 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
     icon: service.icon,
     iconStyle: service.iconStyle ?? "navy",
     image,
-    imageAlt: service.imageAlt || `${service.title} by ${BRAND.name}`,
+    imageAlt: image
+      ? service.imageAlt || `${service.title} by ${BRAND.name}`
+      : "",
     galleryImages: [
-      {
-        image,
-        alt: service.imageAlt || `${service.title} by ${BRAND.name}`,
-      },
+      ...(image
+        ? [
+            {
+              image,
+              alt: service.imageAlt || `${service.title} by ${BRAND.name}`,
+            },
+          ]
+        : []),
       ...(service.gallery ?? []).map((item) =>
         typeof item === "string"
           ? { image: item, alt: `${service.title} by ${BRAND.name}` }
