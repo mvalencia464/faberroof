@@ -140,8 +140,8 @@ export const SITE = {
   ownerStory: {
     label: copy.ownerStory.label,
     quoteParts: [{ text: `“${copy.ownerStory.quote}”`, highlight: "accent" as const }],
-    familyImage: ownerImage,
-    familyAlt: `${BRAND.ownerName}, owner of ${BRAND.name}`,
+    familyImage: r2img("faber-roof-crew-commercial-shingle-replacement.avif"),
+    familyAlt: "Crew tearing off shingles on a retail building, with underlayment and roof vents.",
     caption: copy.ownerStory.caption,
     ctaText: copy.ownerStory.ctaText,
     ctaHref: copy.ownerStory.ctaHref,
