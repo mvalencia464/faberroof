@@ -112,6 +112,7 @@ const pageSchema = {
       <div class="container area-detail">
         <div>
           <h2>What {area.name} homeowners get with {SITE.name}</h2>
+          {area.note && <p class="area-detail__body">{area.note}</p>}
           {areaBody && <p class="area-detail__body">{areaBody}</p>}
           <ul class="area-detail__list">
             {area.highlights.map((item) => (
@@ -188,7 +189,7 @@ const pageSchema = {
   }
 
   .area-hero :global(.section-label) {
-    color: var(--accent);
+    color: var(--gold, #e0a100);
   }
 
   .area-hero h1 {

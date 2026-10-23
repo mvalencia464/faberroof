@@ -211,16 +211,13 @@ const outlineIcons: Record<string, string> = {
   }
 
   .hero-js__line1 {
-    white-space: nowrap;
+    white-space: normal;
   }
 
-  .hero-js__accent {
-    color: var(--accent);
-    font-weight: 600;
-  }
-
+  .hero-js__accent,
   .hero-js__dot {
-    color: var(--accent);
+    color: var(--gold, #e0a100);
+    font-weight: 600;
   }
 
   .hero-js__sub {
@@ -251,13 +248,13 @@ const outlineIcons: Record<string, string> = {
     flex-shrink: 0;
     width: 2.7rem;
     height: 2.7rem;
-    border: 1.5px solid var(--accent);
+    border: 1.5px solid var(--gold, #e0a100);
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    color: var(--gold, #e0a100);
+    background: color-mix(in srgb, var(--gold, #e0a100) 18%, transparent);
   }
 
   .hero-js__benefit-icon :global(svg) {

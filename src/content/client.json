@@ -53,7 +53,7 @@
     "lat": 42.4564467,
     "lng": -83.4345146,
     "zoom": 14,
-    "radiusMiles": 0,
+    "radiusMiles": 15,
     "listingUrl": "",
     "query": "Faber Roof, 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335"
   },
@@ -68,8 +68,8 @@
     "placeId": "ChIJHVmRna-vJIgRkxk-QyIeTRw"
   },
   "seo": {
-    "title": "Faber Roof | Commercial and residential roofing in Farmington Hills, MI",
-    "description": "Get the old shingles off your house or building in Farmington Hills. Call (810) 360-7385 for a written estimate.",
+    "title": "Roofing Contractor Farmington Hills | Faber Roof",
+    "description": "Roofing contractor in Farmington Hills and nearby Farmington, Novi, Livonia, and Northville. Call (810) 360-7385.",
     "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
   },
   "copy": {
@@ -82,7 +82,7 @@
     "formConsent": "and consent to be contacted about my roofing estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
-    "serviceAreasIntro": "TODO: faberroof.com does not publish a city list. The office address is in Farmington Hills.",
+    "serviceAreasIntro": "The office is on Haggerty Road in Farmington Hills. The towns below are a short drive from that office.",
     "contactTitle": "Get a roofing estimate | Faber Roof",
     "contactDescription": "Request an estimate from Faber Roof in Farmington Hills. Call (810) 360-7385.",
     "contactHeading": "Get a roofing estimate",
@@ -93,8 +93,8 @@
     "areaEyebrow": "Roofing contractor \u00b7 Service area",
     "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
     "areaHeadline": "Roofing contractor in {{areaName}}",
-    "areaIntro": "When your {{areaName}} property needs roofing work, you get a clear estimate and a crew that treats the place like it is yours.",
-    "areaBody": "Faber Roof serves {{areaName}} and nearby Farmington Hills from Farmington Hills. Tell us the address and we look at the job before work starts.",
+    "areaIntro": "Your {{areaName}} roof gets a look first, then a written estimate. Call (810) 360-7385.",
+    "areaBody": "You are calling the Farmington Hills office on Haggerty Road, not a national dispatch line. Tell us the {{areaName}} address and someone looks at the roof before a price.",
     "areaServicesNote": "roofing for {{areaName}} homes and buildings.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
@@ -106,7 +106,7 @@
     "areaFaqs": [
       {
         "q": "Do you work in {{areaName}}?",
-        "a": "Yes. {{areaName}} is in our Farmington Hills service area. Call (810) 360-7385."
+        "a": "Yes. {{areaName}} is within a short drive of the Farmington Hills office. Call (810) 360-7385 to confirm the address."
       },
       {
         "q": "How do I get an estimate in {{areaName}}?",
@@ -120,7 +120,7 @@
       "headingLine2": "before the snow",
       "headingAccent": "before the snow",
       "headline": "Get the old shingles off before the snow",
-      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385. Someone looks at your roof and writes the estimate. Homeowners say the crew was on time, and the cleanup looked like they were never there.",
+      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385 from Farmington Hills, Farmington, Novi, Livonia, Northville, or a town a short drive from the Haggerty Road office. Someone looks at your roof and writes the estimate.",
       "benefits": [
         {
           "icon": "home",
@@ -381,7 +381,7 @@
     ],
     "serviceArea": {
       "heading": "Areas We Serve",
-      "body": "Office: 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. TODO: a service-area list is not published on faberroof.com.",
+      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. These towns are within about 15 miles.",
       "country": "US"
     },
     "ctaBanner": {
@@ -402,7 +402,7 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Roofing contractor. Serving Farmington Hills from Farmington Hills.",
+    "footerBlurb": "Roofing contractor in Farmington Hills. Serving nearby towns within about 15 miles.",
     "schemaKnowsAbout": [
       "Roof replacement",
       "Roof repair",
@@ -413,7 +413,7 @@
     "faqs": [
       {
         "q": "What roofing work do you take on?",
-        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills and Farmington Hills. Call (810) 360-7385."
+        "a": "Replacement, repair, storm damage, and inspections in Farmington Hills and nearby towns. Call (810) 360-7385."
       },
       {
         "q": "Do you offer emergency 24/7 service?",
@@ -421,7 +421,7 @@
       },
       {
         "q": "Where do you work?",
-        "a": "Farmington Hills and Farmington Hills. Call (810) 360-7385 to confirm your address."
+        "a": "Farmington Hills and towns within about 15 miles, including Farmington, Novi, Livonia, and Northville. Call (810) 360-7385 to confirm your address."
       },
       {
         "q": "How do I get an estimate?",
@@ -494,7 +494,74 @@
     {
       "slug": "farmington-hills",
       "name": "Farmington Hills",
-      "county": "Oakland County"
+      "county": "Oakland",
+      "note": "The office is at 22710 Haggerty Rd. Suite 100B. Houses here run from older colonials to newer subdivisions."
+    },
+    {
+      "slug": "farmington",
+      "name": "Farmington",
+      "county": "Oakland",
+      "note": "Downtown Farmington is a few minutes from the Haggerty Road office. Lots are smaller and many roofs are on older blocks."
+    },
+    {
+      "slug": "novi",
+      "name": "Novi",
+      "county": "Oakland",
+      "note": "Novi is north of the office, along Haggerty and 12 Mile. You will see newer subdivisions and commercial roofs."
+    },
+    {
+      "slug": "livonia",
+      "name": "Livonia",
+      "county": "Wayne",
+      "note": "Livonia is south of Farmington Hills, in Wayne County. Streets are mostly ranches and colonials."
+    },
+    {
+      "slug": "northville",
+      "name": "Northville",
+      "county": "Wayne",
+      "note": "Northville is southwest of the office, with a walkable downtown and subdivisions around it."
+    },
+    {
+      "slug": "west-bloomfield",
+      "name": "West Bloomfield",
+      "county": "Oakland",
+      "note": "West Bloomfield is north and east of the office. Homes are larger, and many sit on lake lots."
+    },
+    {
+      "slug": "southfield",
+      "name": "Southfield",
+      "county": "Oakland",
+      "note": "Southfield is east along I-696. The work is houses plus commercial roofs on the main roads."
+    },
+    {
+      "slug": "walled-lake",
+      "name": "Walled Lake",
+      "county": "Oakland",
+      "note": "Walled Lake is northwest of the office, a smaller city on the lake."
+    },
+    {
+      "slug": "commerce-township",
+      "name": "Commerce Township",
+      "county": "Oakland",
+      "note": "Commerce Township is northwest of Haggerty Road, with lake neighborhoods and subdivisions."
+    },
+    {
+      "slug": "plymouth",
+      "name": "Plymouth",
+      "county": "Wayne",
+      "note": "Plymouth is south of the office, in Wayne County, with a downtown and surrounding subdivisions."
+    },
+    {
+      "slug": "redford",
+      "name": "Redford",
+      "county": "Wayne",
+      "note": "Redford is southeast of Farmington Hills. Lots are tighter and many of the houses are older."
+    },
+    {
+      "slug": "milford",
+      "name": "Milford",
+      "county": "Oakland",
+      "note": "Milford is northwest, the village and township toward the GM Proving Grounds."
     }
   ],
   "primaryServiceSlugs": [
