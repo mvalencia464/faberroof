@@ -27,6 +27,10 @@
         "body": "When the roof is done, the old shingles come off, the deck is checked, and new architectural shingles go on. Faber Roof has put gray and charcoal shingles on houses, lake homes, and attached homes across the west side of Metro Detroit. One homeowner had a tear-off and new shingles finished in a day. Another said the cleanup looked like the crew was never there. A one-day finish depends on the size of the roof."
       },
       {
+        "heading": "Shingle colors",
+        "body": "You pick the color when the new shingles go on. Landmark Pro colors include black, gray, brown, and tan. Ask which ones fit the house when you call."
+      },
+      {
         "heading": "Farmington Hills, Detroit, and the towns between",
         "body": "The office is on Haggerty Road in Farmington Hills. You can call from Farmington, Novi, Livonia, Northville, or Detroit. {{phone}} is the estimate line. Say the address and you get a time to look at the roof."
       }
@@ -49,6 +53,12 @@
         "a": "Yes. Lake lots take more wind. Those roofs are scoped as a full system, not a handful of replaced tabs. Call {{phone}} with the address."
       }
     ],
+    "colorBoard": {
+      "afterHeading": "Shingle colors",
+      "image": "imgi_57_rooftiles.avif",
+      "alt": "Shingle color board: Black Walnut, Burnt Sienna, Charcoal Black, Cinder Black, Cobblestone Gray, Colonial Slate, Driftwood, Georgetown Gray, Granite Gray, Heather Blend, Moire Black, and Mojave Tan.",
+      "caption": "Landmark Pro colors you can ask about on the estimate."
+    },
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-two-story-home-shingle-roof.avif",
@@ -187,6 +197,12 @@
         "a": "You do. The estimate names the product and the color before the shingles are ordered, so the roof is not a surprise when the crew arrives."
       }
     ],
+    "colorBoard": {
+      "afterHeading": "The shingle on your estimate",
+      "image": "imgi_57_rooftiles.avif",
+      "alt": "Shingle color board: Black Walnut, Burnt Sienna, Charcoal Black, Cinder Black, Cobblestone Gray, Colonial Slate, Driftwood, Georgetown Gray, Granite Gray, Heather Blend, Moire Black, and Mojave Tan.",
+      "caption": "Landmark Pro colors you can ask about on the estimate."
+    },
     "icon": "home",
     "iconStyle": "navy",
     "image": "faber-roof-dark-architectural-shingles-brick-home.avif",

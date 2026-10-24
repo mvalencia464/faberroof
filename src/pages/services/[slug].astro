@@ -149,6 +149,19 @@ const pageSchema = {
             <div class="service-section">
               <h3>{section.heading}</h3>
               <p>{section.body}</p>
+              {service.colorBoard && section.heading === service.colorBoard.afterHeading && (
+                <figure class="color-board">
+                  <img
+                    src={r2img(service.colorBoard.image)}
+                    alt={service.colorBoard.alt}
+                    width="1535"
+                    height="1031"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>{service.colorBoard.caption}</figcaption>
+                </figure>
+              )}
             </div>
           ))}
 
@@ -377,6 +390,25 @@ const pageSchema = {
     color: var(--muted);
     line-height: 1.7;
     max-width: none;
+  }
+
+  .color-board {
+    margin: 1.15rem 0 0;
+  }
+
+  .color-board img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.35rem;
+    border: 1px solid var(--border);
+  }
+
+  .color-board figcaption {
+    margin-top: 0.55rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   .service-areas-intro {

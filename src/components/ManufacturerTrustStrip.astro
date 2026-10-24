@@ -1,0 +1,102 @@
+---
+import { SITE } from '../config/site';
+import { r2img } from '../lib/r2';
+
+const logos = SITE.trustBar?.manufacturerLogos ?? [];
+if (!logos.length) {
+  return null;
+}
+
+const ariaLabel = logos.map((logo) => logo.alt).join('. ');
+---
+
+<section class="mfr-strip" aria-label={ariaLabel}>
+  <div class="container mfr-strip__inner">
+    <ul class="mfr-strip__logos">
+      {
+        logos.map((logo) => (
+          <li class="mfr-strip__item">
+            <img
+              src={r2img(logo.src)}
+              alt={logo.alt}
+              class:list={['mfr-strip__logo', logo.kind === 'seal' && 'mfr-strip__logo--seal']}
+              width={logo.kind === 'seal' ? 400 : 685}
+              height={logo.kind === 'seal' ? 400 : 195}
+              loading="lazy"
+              decoding="async"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .mfr-strip {
+    background: #fffdfb;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .mfr-strip__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mfr-strip__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .mfr-strip__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mfr-strip__logo {
+    display: block;
+    height: clamp(5.5rem, 16vw, 7.5rem);
+    width: auto;
+    max-width: min(32rem, 92vw);
+    margin-inline: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .mfr-strip__logo--seal {
+    height: clamp(6.5rem, 18vw, 9rem);
+    width: clamp(6.5rem, 18vw, 9rem);
+    max-width: none;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 768px) {
+    .mfr-strip {
+      padding: 1.15rem 0;
+    }
+
+    .mfr-strip__logos {
+      gap: 1rem 2rem;
+    }
+
+    .mfr-strip__logo {
+      height: 8.5rem;
+      max-width: 34rem;
+    }
+
+    .mfr-strip__logo--seal {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+</style>

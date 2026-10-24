@@ -20,6 +20,12 @@ export type SiteService = {
   highlights: string[];
   bodySections: { heading: string; body: string }[];
   faqs: { q: string; a: string }[];
+  colorBoard: {
+    afterHeading: string;
+    image: string;
+    alt: string;
+    caption: string;
+  } | null;
 };
 
 type PackService = {
@@ -38,6 +44,12 @@ type PackService = {
   image: string;
   imageAlt?: string;
   gallery?: Array<string | { image: string; alt: string }>;
+  colorBoard?: {
+    afterHeading: string;
+    image: string;
+    alt: string;
+    caption: string;
+  };
 };
 
 const PACKS: Record<string, PackService[]> = {
@@ -108,5 +120,6 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
       ...(service.moreFaqs ?? []),
       ...(where ? [where] : []),
     ],
+    colorBoard: service.colorBoard ?? null,
   };
 });

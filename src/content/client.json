@@ -73,8 +73,8 @@
     "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
   },
   "copy": {
-    "ctaPrimaryLabel": "Get a roofing estimate",
-    "phoneCtaLabel": "Call for a roofing estimate",
+    "ctaPrimaryLabel": "Get my written estimate",
+    "phoneCtaLabel": "Call for my roof estimate",
     "serviceType": "Roofing services",
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
@@ -124,23 +124,23 @@
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
       "trustBadge": "Farmington Hills · Metro Detroit",
-      "headingLine1": "Get the old shingles off",
-      "headingLine2": "before the snow",
-      "headingAccent": "before the snow",
-      "headline": "Get the old shingles off before the snow",
-      "subheading": "A stain in the ceiling does not stay a stain. You call (810) 360-7385 from Farmington Hills, the west suburbs, or Detroit. Someone looks at your roof and writes the estimate. Homeowners say the crew was on time, and the cleanup looked like they were never there.",
+      "headingLine1": "Roofing in the Detroit area",
+      "headingLine2": "repair and replacement",
+      "headingAccent": "repair and replacement",
+      "headline": "Roofing in the Detroit area — repair and replacement",
+      "subheading": "Put an end to leaky ceilings, unreliable contractors, and surprise repair bills.",
       "benefits": [
         {
           "icon": "home",
-          "label": "Tear-off and\nnew shingles"
+          "label": "You see scope\nbefore you sign"
         },
         {
           "icon": "building",
-          "label": "Homes and\nbuildings"
+          "label": "Your house or\nyour building"
         },
         {
           "icon": "clipboard-list",
-          "label": "0% financing\noptions"
+          "label": "Financing help\nwhen you qualify"
         }
       ],
       "ctaCall": "Call (810) 360-7385",
@@ -158,6 +158,18 @@
     },
     "trustBar": {
       "heading": "roofing for Farmington Hills homes and buildings",
+      "manufacturerLogos": [
+        {
+          "src": "imgi_95_certainteedcopy.avif",
+          "alt": "CertainTeed Landmark Pro seal: Proven. Protected. Professional.",
+          "kind": "seal"
+        },
+        {
+          "src": "imgi_91_landmarkpro.avif",
+          "alt": "CertainTeed Saint-Gobain Landmark Pro shingles",
+          "kind": "wordmark"
+        }
+      ],
       "badges": [
         {
           "type": "google",
@@ -193,7 +205,7 @@
     "process": {
       "label": "How it works",
       "title": "From inspection to a finished roof",
-      "subtitle": "You know the scope before anyone starts.",
+      "subtitle": "You know repair vs. replacement before anyone starts work.",
       "meetMessage": "Tell us the address. We follow up with next steps for an inspection and estimate.",
       "steps": [
         {
@@ -225,8 +237,8 @@
     },
     "offersSection": {
       "label": "Getting started",
-      "title": "Get an estimate you can act on.",
-      "subtitle": "Repair, replacement, or storm damage \u2014 pick the path that matches the roof."
+      "title": "This is not a vague patch quote. It is a roof plan you can approve.",
+      "subtitle": "Repair, replacement, or storm damage — pick the path that matches what we see on the roof."
     },
     "offers": [
       {
@@ -279,27 +291,27 @@
     ],
     "servicesHeading": "The roof work on your house or your building",
     "servicesLabel": "Services",
-    "servicesIntro": "You need the old shingles off, a leak stopped, a Detroit-area building kept dry, or a driveway or patio poured. The office is in Farmington Hills.",
+    "servicesIntro": "You need the leak stopped, the shingles replaced, or the building kept dry — with a scope you can read line by line. The office is on Haggerty Road in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
-        "title": "You see the price after the look",
-        "description": "The estimate comes from your roof, not a guess over the phone."
+        "title": "You stop guessing the price",
+        "description": "Because someone is on your roof before the estimate — not guessing from the street."
       },
       {
         "icon": "home",
-        "title": "Tear-off and new shingles",
-        "description": "One homeowner had the old roof torn off and reshingled in a day."
+        "title": "You get a roof that lasts",
+        "description": "Because tear-off, deck check, and new architectural shingles are scoped in writing — one homeowner had it done in a day."
       },
       {
         "icon": "building",
-        "title": "Your house or your building",
-        "description": "Houses, attached homes, and commercial roofs. A property manager said the job finished on budget."
+        "title": "You keep the building dry",
+        "description": "Because houses and commercial roofs get the same on-site look — a property manager said the job finished on budget."
       },
       {
         "icon": "map-marker-alt",
-        "title": "You call Farmington Hills",
-        "description": "The office is on Haggerty Road. You are not calling a national dispatch line."
+        "title": "You talk to a local crew",
+        "description": "Because Faber Roof answers from Farmington Hills — not a national dispatch line."
       }
     ],
     "whyChoose": {
@@ -412,13 +424,13 @@
       "country": "US"
     },
     "ctaBanner": {
-      "title": "Need the roof looked at?",
-      "subtitle": "Call (810) 360-7385 or send the form.",
-      "body": "Commercial and residential roofing. 0% financing options with 12\u201324 month terms, subject to credit approval.",
+      "title": "Ready to stop guessing about your roof?",
+      "subtitle": "Your look includes an on-roof inspection and a written scope — repair or replacement.",
+      "body": "Commercial and residential. Cleanup homeowners mention in reviews. 0% financing options with 12\u201324 month terms, subject to credit approval.",
       "scheduleHref": "/contact",
-      "scheduleLabel": "Get a roofing estimate",
-      "scheduleSub": "No obligation",
-      "callSub": "Call to schedule"
+      "scheduleLabel": "Get my written estimate",
+      "scheduleSub": "No obligation \u00b7 No sales pressure",
+      "callSub": "Call (810) 360-7385"
     },
     "beforeAfter": {
       "enabled": false,
@@ -433,7 +445,7 @@
     "decision": {
       "label": "Repair or replace",
       "title": "Repair or replace?",
-      "intro": "The honest answer depends on the roof. These are the signs we look for when we get up there.",
+      "intro": "A stain on the ceiling means water already beat the shingles. You should not have to chase roofers who never call back or approve a price with no scope. We get on the roof and tell you repair or replacement — in writing.",
       "repair": {
         "title": "A repair usually makes sense when",
         "items": [
@@ -451,7 +463,7 @@
           "There are already two layers of shingles"
         ]
       },
-      "note": "A winter stain along an outside wall can be an ice dam. We look at the eave before we tell you the whole roof is done."
+      "note": "If you only want the cheapest handyman patch on failing shingles, we are probably not your crew. Patches on worn roofs often cost twice when the next storm hits. A winter stain along an outside wall can also be an ice dam — we look at the eave before we tell you the whole roof is done."
     },
     "schemaKnowsAbout": [
       "Roof replacement",
@@ -516,13 +528,13 @@
     ]
   },
   "form": {
-    "title": "Get a roofing estimate",
-    "subtitle": "Share a few details and Faber Roof can follow up.",
+    "title": "Get my written estimate",
+    "subtitle": "Share your address. Faber Roof follows up with next steps for the on-roof look.",
     "submitText": "Send my request",
-    "finalNote": "No obligation. We look at the job before anyone starts.",
+    "finalNote": "No obligation. We inspect before anyone starts work.",
     "trustBullets": [
-      "Commercial and residential",
-      "Farmington Hills office",
+      "Written scope after the look",
+      "Farmington Hills office on Haggerty Road",
       "0% financing options, subject to credit approval"
     ],
     "projectTypes": [
