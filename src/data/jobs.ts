@@ -306,6 +306,40 @@ export const JOBS: Job[] = [
       { pain: "A builder or homeowner unsure the roofer will return.", fix: "Written scope and dates before the first sheet of plywood is covered." },
     ],
   }),
+  photoJob({
+    slug: "house-construction-framing-and-roof-trusses",
+    title: "Roof trusses going up",
+    serviceLabel: "Residential roofing",
+    serviceSlug: "residential-roofing",
+    cover: "house-construction-framing-and-roof-trusses.avif",
+    coverAlt:
+      "Large home under construction with Carter house wrap, open and sheathed roof trusses, workers on the roof, and a crane setting a truss section.",
+    story:
+      "A big residential roof with trusses still open on one side and plywood on the other. Workers are on the peaks while a crane sets the next truss bay. When the framing is this complex, you want the roofing scope written before sheathing turns into shingles.",
+    rows: [
+      { pain: "A cut-up roofline with trusses that do not match the plan.", fix: "Someone on the structure before sheathing hides bad layout." },
+      { pain: "Crane day scheduled but the valleys were never marked.", fix: "Valleys and ridges mapped while trusses are still visible." },
+      { pain: "Half the roof sheathed and half open when weather moves in.", fix: "A sequence that covers open framing before the crew leaves." },
+      { pain: "A builder waiting on a roofer who only quotes from photos.", fix: "A site look, then a written estimate for the full roof." },
+    ],
+  }),
+  photoJob({
+    slug: "house-under-construction-with-stone-veneer",
+    title: "Stone ranch with a dark shingle roof",
+    serviceLabel: "Shingle roofing",
+    serviceSlug: "shingle-roofing",
+    cover: "house-under-construction-with-stone-veneer.avif",
+    coverAlt:
+      "Single-story stone-veneer house under construction with a dark gray shingled roof, twin front gables, scaffolding at the entry, and plastic over the arched doorway.",
+    story:
+      "A single-story home with light stone veneer and a dark gray architectural shingle roof across two front gables. Scaffolding sits at the arched entry while windows are still wrapped. The roof is on early so the stone and trim can finish dry underneath.",
+    rows: [
+      { pain: "Stone and trim getting wet because the roof was left for last.", fix: "Shingles on before the long exterior punch list." },
+      { pain: "Two front gables that need to match from the street.", fix: "One shingle color across both peaks, named on the estimate." },
+      { pain: "A dark roof that fights the stone color.", fix: "Gray shingles chosen to sit with the light stone, not against it." },
+      { pain: "Scaffolding at the entry with no plan for wall flashing.", fix: "Step flashing at the stone tied into the shingle system." },
+    ],
+  }),
 ];
 
 export function jobsForArea(areaSlug: string): Job[] {
