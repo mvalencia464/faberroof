@@ -254,6 +254,58 @@ export const JOBS: Job[] = [
       { pain: "You do not know which product is on the truck.", fix: "The product and color were named on the estimate before the bundles arrived." },
     ],
   }),
+  photoJob({
+    slug: "house-construction-site-with-lift",
+    title: "Roof deck with a boom lift on site",
+    serviceLabel: "Residential roofing",
+    serviceSlug: "residential-roofing",
+    cover: "house-construction-site-with-lift.avif",
+    coverAlt:
+      "Two-story home under construction with Carter house wrap, plywood on the roof, and an orange telehandler reaching a second-floor balcony where a worker stands.",
+    story:
+      "A new two-story home with plywood on the roof and Carter wrap on the walls. An orange telehandler reaches the upper balcony so the crew can work the steep lines without guessing from the ground. This is the kind of access you want before shingles go on.",
+    rows: [
+      { pain: "A tall gable nobody can reach safely from a ladder.", fix: "Lift access planned so the deck and edges get looked at before shingles." },
+      { pain: "House wrap on but no one on the roof yet.", fix: "Deck sheathed first, then underlayment and shingles in order." },
+      { pain: "Materials piled in the mud with no plan.", fix: "Lumber staged while the lift is on site for the upper work." },
+      { pain: "You do not know when the roof will actually start.", fix: "A written schedule after someone has seen the slopes." },
+    ],
+  }),
+  photoJob({
+    slug: "modern-farmhouse-exterior-architecture",
+    title: "Modern farmhouse with charcoal shingles",
+    serviceLabel: "Shingle roofing",
+    serviceSlug: "shingle-roofing",
+    cover: "modern-farmhouse-exterior-architecture.avif",
+    coverAlt:
+      "Modern farmhouse at dusk with white siding, tan brick, black window trim, and a dark charcoal architectural shingle roof across multiple front gables.",
+    story:
+      "A modern farmhouse with white siding, tan brick at the base, and charcoal architectural shingles on every gable. The roof lines read clean from the street: matching ridges, black metal accents at the entries, and one shingle color across the wings.",
+    imageNote: "Lighting and composition enhanced with AI",
+    rows: [
+      { pain: "A farmhouse design that needs the roof to match the architecture.", fix: "Charcoal architectural shingles across the main roof and the gables." },
+      { pain: "Brick and siding that clash with a random shingle color.", fix: "A color picked to sit with the white siding and tan brick." },
+      { pain: "Small gables that look patched next to a new main roof.", fix: "One product and one color for the whole front elevation." },
+      { pain: "Metal porch roofs that do not line up with the shingle field.", fix: "Black metal accents planned where the roof meets the entries." },
+    ],
+  }),
+  photoJob({
+    slug: "residential-house-construction-site",
+    title: "Plywood deck before shingles go on",
+    serviceLabel: "Residential roofing",
+    serviceSlug: "residential-roofing",
+    cover: "residential-house-construction-site.avif",
+    coverAlt:
+      "Residential build with Carter-wrapped walls, plywood roof decking, and two orange telehandlers on a dirt lot while a worker stands at a front gable peak.",
+    story:
+      "A two-story house with plywood on the roof and Carter wrap on the walls. Two telehandlers sit on the lot while a worker is at the front gable peak. The deck is ready for underlayment and shingles — the step where you want a crew that shows up with a plan, not a patch later.",
+    rows: [
+      { pain: "Plywood sitting open after a rain because no one covered it.", fix: "Underlayment scheduled as soon as the deck is dry." },
+      { pain: "A complex roofline with no one on the peaks.", fix: "Crew on the ridges before shingles lock the valleys." },
+      { pain: "Equipment on site but the roof still waiting.", fix: "Materials and lifts lined up so tear-off and install stay on one schedule." },
+      { pain: "A builder or homeowner unsure the roofer will return.", fix: "Written scope and dates before the first sheet of plywood is covered." },
+    ],
+  }),
 ];
 
 export function jobsForArea(areaSlug: string): Job[] {
