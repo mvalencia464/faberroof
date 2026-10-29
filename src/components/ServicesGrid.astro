@@ -2,18 +2,20 @@
 import { SITE } from '../config/site';
 import { r2img } from '../lib/r2';
 
-const primarySlugs = SITE.servicesPrimary ?? SITE.services.map((s) => s.slug);
-
-const services = primarySlugs
-  .map((slug) => SITE.services.find((service) => service.slug === slug))
-  .filter((service): service is (typeof SITE.services)[number] => Boolean(service));
+const groups = (SITE.serviceGroups ?? []).map((group) => ({
+  ...group,
+  services: group.slugs
+    .map((slug) => SITE.services.find((service) => service.slug === slug))
+    .filter((service): service is (typeof SITE.services)[number] => Boolean(service)),
+}));
 
 const cardMarks: Record<string, string> = {
+  'commercial-flat-roofing': 'Flat roof',
+  'tpo-roofing': 'TPO roof',
+  'commercial-roofing': 'Commercial',
+  'metal-roofing': 'Metal',
   'residential-roofing': 'Houses',
-  'commercial-roofing': 'Retail',
-  'shingle-roofing': 'Tear-off',
-  'metal-roofing': 'Standing seam',
-  concrete: 'Flatwork',
+  'shingle-roofing': 'Shingles',
 };
 ---
 
@@ -25,41 +27,49 @@ const cardMarks: Record<string, string> = {
       <p class="subtext">{SITE.servicesIntro}</p>
     </div>
 
-    <div class="services-grid">
-      {
-        services.map((service) => (
-          <article class="service-card">
-            <div class="service-card__visual">
-              <a href={`/services/${service.slug}`} class="service-card__media">
-                {service.image && (
-                  <img
-                    src={r2img(service.image)}
-                    alt={service.imageAlt}
-                    loading="lazy"
-                    decoding="async"
-                    width="640"
-                    height="420"
-                  />
-                )}
-                {cardMarks[service.slug] && (
-                  <span class="service-card__mark">{cardMarks[service.slug]}</span>
-                )}
-              </a>
-            </div>
-            <div class="service-card__body">
-              <h3>
-                <a href={`/services/${service.slug}`}>{service.title}</a>
-              </h3>
-              <p>{service.shortDesc}</p>
-              <a href={`/services/${service.slug}`} class="service-card__link">
-                See {service.title.toLowerCase()}
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </article>
-        ))
-      }
-    </div>
+    {
+      groups.map((group) => (
+        <div class:list={['services-group', `services-group--${group.id}`]}>
+          <div class="services-group__head">
+            <h3>{group.label}</h3>
+            <p>{group.note}</p>
+          </div>
+          <div class="services-grid">
+            {group.services.map((service) => (
+              <article class="service-card">
+                <div class="service-card__visual">
+                  <a href={`/services/${service.slug}`} class="service-card__media">
+                    {service.image && (
+                      <img
+                        src={r2img(service.image)}
+                        alt={service.imageAlt}
+                        loading="lazy"
+                        decoding="async"
+                        width="640"
+                        height="420"
+                      />
+                    )}
+                    {cardMarks[service.slug] && (
+                      <span class="service-card__mark">{cardMarks[service.slug]}</span>
+                    )}
+                  </a>
+                </div>
+                <div class="service-card__body">
+                  <h3>
+                    <a href={`/services/${service.slug}`}>{service.title}</a>
+                  </h3>
+                  <p>{service.shortDesc}</p>
+                  <a href={`/services/${service.slug}`} class="service-card__link">
+                    See {service.title.toLowerCase()}
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>
 
@@ -80,6 +90,32 @@ const cardMarks: Record<string, string> = {
 
   .services-section__header .subtext {
     margin: 0 auto;
+  }
+
+  .services-group + .services-group {
+    margin-top: 2.75rem;
+  }
+
+  .services-group__head {
+    margin-bottom: 1.25rem;
+  }
+
+  .services-group__head h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .services-group--residential .services-group__head h3 {
+    color: var(--muted);
+  }
+
+  .services-group__head p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 40rem;
   }
 
   .services-grid {

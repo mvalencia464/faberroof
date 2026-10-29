@@ -18,6 +18,12 @@ const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
         <span class="cta-banner__btn-main">{cta.scheduleLabel}</span>
         <span class="cta-banner__btn-sub">{cta.scheduleSub}</span>
       </a>
+      {cta.residentialHref && cta.residentialLabel && (
+        <a href={cta.residentialHref} class="cta-banner__btn cta-banner__btn--residential">
+          <span class="cta-banner__btn-main">{cta.residentialLabel}</span>
+          <span class="cta-banner__btn-sub">Houses, separate from commercial</span>
+        </a>
+      )}
       <a href={telHref} class="cta-banner__btn cta-banner__btn--call">
         <span class="cta-banner__btn-main">
           <i class="fas fa-phone" aria-hidden="true"></i>
@@ -113,6 +119,17 @@ const telHref = `tel:${(SITE.phoneDisplay ?? SITE.phone).replace(/\D/g, '')}`;
   .cta-banner__btn--schedule:hover {
     background: color-mix(in srgb, var(--gold) 86%, #fff);
     color: var(--deep);
+  }
+
+  .cta-banner__btn--residential {
+    background: transparent;
+    color: #fffdfb;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .cta-banner__btn--residential:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
   }
 
   .cta-banner__btn--call {

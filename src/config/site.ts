@@ -116,6 +116,7 @@ export const SITE = {
   servicesHeading: copy.servicesHeading,
   servicesLabel: copy.servicesLabel,
   servicesIntro: copy.servicesIntro,
+  serviceGroups: client.serviceGroups,
   servicesPrimary: client.primaryServiceSlugs,
   services: SERVICES,
 
