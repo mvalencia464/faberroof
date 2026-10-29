@@ -3,8 +3,8 @@
     "name": "Faber Roof",
     "shortName": "Faber",
     "legalName": "Faber Roof, LLC",
-    "tagline": "Commercial / residential roofing.",
-    "catchphrase": "FABER ROOF \u2014 COMMERCIAL / RESIDENTIAL ROOFING",
+    "tagline": "Commercial flat roofing and TPO, then residential.",
+    "catchphrase": "FABER ROOF — COMMERCIAL FLAT ROOFING",
     "phone": "(810) 360-7385",
     "email": "TODO: email not published on faberroof.com",
     "address": "22710 Haggerty Rd. Suite 100B",
@@ -68,9 +68,9 @@
     "placeId": "ChIJHVmRna-vJIgRkxk-QyIeTRw"
   },
   "seo": {
-    "title": "Roofing Contractor Farmington Hills | Faber Roof",
-    "description": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit. Call (810) 360-7385.",
-    "keywords": "Faber Roof, Roofing contractor Farmington Hills MI, Farmington Hills"
+    "title": "Commercial Flat Roofing Metro Detroit | Faber Roof",
+    "description": "Commercial flat roofing and TPO roofs for property managers and building owners in Metro Detroit. Crews up to 20. Call (810) 360-7385 for a bid. Residential inquiries welcome.",
+    "keywords": "Faber Roof, commercial flat roofing, TPO roof, flat roof, Farmington Hills MI"
   },
   "copy": {
     "ctaPrimaryLabel": "Get my written estimate",
@@ -83,19 +83,19 @@
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
     "serviceAreasIntro": "The office is on Haggerty Road in Farmington Hills. The towns below are a short drive from that office.",
-    "contactTitle": "Get a roofing estimate | Faber Roof",
-    "contactDescription": "Request an estimate from Faber Roof in Farmington Hills. Call (810) 360-7385.",
-    "contactHeading": "Get a roofing estimate",
-    "contactIntro": "Tell us the property and what you need.",
+    "contactTitle": "Request a roofing bid | Faber Roof",
+    "contactDescription": "Property managers and commercial owners can request a bid for a flat roof or TPO roof. Residential inquiries are a separate path. Call (810) 360-7385.",
+    "contactHeading": "Request a bid or a residential estimate",
+    "contactIntro": "Say whether this is a commercial building or a house.",
     "aboutDescription": "Faber Roof, LLC \u2014 commercial and residential roofing at 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
     "policyDescription": "How Faber Roof collects, uses, and protects your information when you request an estimate in Farmington Hills and Metro Detroit.",
     "termsDescription": "Terms governing use of the Faber Roof website and estimate requests in Farmington Hills and Metro Detroit.",
     "areaEyebrow": "Roofing contractor \u00b7 Service area",
     "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
     "areaHeadline": "Roofing contractor in {{areaName}}",
-    "areaIntro": "Your {{areaName}} roof is leaking, missing shingles, or due before winter. You get a look and a written estimate. Call (810) 360-7385.",
-    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Someone gets on the roof and checks the shingles, flashing, and deck. You then get a written choice: repair the spot, or take the old shingles off and install a new roof. Architectural shingles are the usual house roof. Standing-seam metal is the conversation for a building that should not take another shingle roof. A commercial customer said their project finished on budget and on time. A homeowner said the cleanup looked like the crew was never there. Say the address when you call.",
-    "areaServicesNote": "Shingle replacement, repairs, commercial roofs, and concrete flatwork for {{areaName}} homes and buildings.",
+    "areaIntro": "Commercial flat roofing and TPO roofs in {{areaName}}, plus residential when the job is a house. You get a look and a written bid. Call (810) 360-7385.",
+    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Commercial work comes first: flat roofs, a TPO roof, apartment and condo communities, and property managers with buildings that have put off maintenance. We can put up to 20 workers on a roof. Residential shingles are still available, as a separate service. Standing-seam metal is the conversation when the building should not take another flat or shingle roof. A commercial customer said their project finished on budget and on time. Say the address when you call.",
+    "areaServicesNote": "Commercial flat roofing, TPO roofs, metal, and residential shingles for {{areaName}} buildings and homes.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
       "A look at the roof before a price",
@@ -124,25 +124,29 @@
     "jobAreaLink": "Roofing contractor in Farmington Hills",
     "hero": {
       "trustBadge": "Farmington Hills · Metro Detroit",
-      "headingLine1": "Roofing in the Detroit area",
-      "headingLine2": "repair and replacement",
-      "headingAccent": "repair and replacement",
-      "headline": "Roofing in the Detroit area — repair and replacement",
-      "subheading": "Put an end to leaky ceilings, unreliable contractors, and surprise repair bills.",
+      "headingLine1": "Commercial flat roofing",
+      "headingLine2": "for Metro Detroit",
+      "headingAccent": "for Metro Detroit",
+      "headline": "Commercial flat roofing for Metro Detroit",
+      "subheading": "TPO roofs and other flat roofs for property managers and commercial owners. Large complexes, not a 4-person crew. Residential inquiries are welcome on a separate path.",
       "benefits": [
         {
-          "icon": "home",
-          "label": "You see scope\nbefore you sign"
-        },
-        {
           "icon": "building",
-          "label": "Your house or\nyour building"
+          "label": "Up to 20 workers\non a roof"
         },
         {
           "icon": "clipboard-list",
-          "label": "Financing help\nwhen you qualify"
+          "label": "10-year labor and\nmaterial warranty"
+        },
+        {
+          "icon": "home",
+          "label": "Residential still\ntaken, second"
         }
       ],
+      "ctaCommercial": "Request a commercial bid",
+      "ctaCommercialHref": "/contact?intent=commercial",
+      "ctaResidential": "Residential inquiry",
+      "ctaResidentialHref": "/contact?intent=residential",
       "ctaCall": "Call (810) 360-7385",
       "scheduleHref": "/contact",
       "financingNote": "0% financing options. 12\u201324 month terms are available. Financing is subject to credit approval.",
@@ -157,7 +161,7 @@
       "ownerCta": "Call for an estimate"
     },
     "trustBar": {
-      "heading": "roofing for Farmington Hills homes and buildings",
+      "heading": "commercial flat roofing for Metro Detroit buildings",
       "manufacturerLogos": [
         {
           "src": "imgi_95_certainteedcopy.avif",
@@ -195,9 +199,9 @@
         },
         {
           "type": "cert",
-          "label": "Homes &\nbuildings",
-          "eyebrow": "Residential &",
-          "title": "Commercial",
+          "label": "Mulehide-certified\ninstaller",
+          "eyebrow": "Membrane",
+          "title": "Mulehide certified",
           "icon": "building"
         }
       ]
@@ -289,9 +293,9 @@
         "icon": "cloud-lightning"
       }
     ],
-    "servicesHeading": "The roof work on your house or your building",
+    "servicesHeading": "Commercial first. Residential is separate.",
     "servicesLabel": "Services",
-    "servicesIntro": "You need the leak stopped, the shingles replaced, or the building kept dry — with a scope you can read line by line. The office is on Haggerty Road in Farmington Hills.",
+    "servicesIntro": "Commercial flat roofing, TPO roofs, and large buildings are the main work. Houses stay on the site, in their own section, so the two are not mixed. The office is on Haggerty Road in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
@@ -300,13 +304,13 @@
       },
       {
         "icon": "home",
-        "title": "You get a roof that lasts",
-        "description": "Because tear-off, deck check, and new architectural shingles are scoped in writing — one homeowner had it done in a day."
+        "title": "You get a roof that is done right",
+        "description": "Because we do not cut corners. We do it the right way every time — and a 10-year labor and material warranty covers most roofs."
       },
       {
         "icon": "building",
-        "title": "You keep the building dry",
-        "description": "Because houses and commercial roofs get the same on-site look — a property manager said the job finished on budget."
+        "title": "You can send the big list",
+        "description": "Because we can put up to 20 workers on a roof and turn thousands of squares a week. A commercial customer said the job finished on budget."
       },
       {
         "icon": "map-marker-alt",
@@ -337,9 +341,9 @@
     },
     "reviewsSection": {
       "label": "Google reviews",
-      "title": "What neighbors are saying",
+      "title": "Commercial jobs, then residential",
       "titleLine2": "",
-      "subtitle": "Homeowners and a commercial customer, in their words.",
+      "subtitle": "The commercial review is first. Residential reviews follow, unchanged.",
       "bullets": [
         "Roofing contractor",
         "Based in Farmington Hills, MI",
@@ -353,7 +357,7 @@
     "reviewsPage": {
       "label": "Google Reviews",
       "title": "What customers are saying",
-      "subtitle": "Feedback from people who hired Faber Roof.",
+      "subtitle": "The commercial review is listed first. The other Google reviews follow, unchanged.",
       "description": "Read reviews for Faber Roof, a roofing contractor in Farmington Hills and Metro Detroit."
     },
     "shop": {
@@ -368,7 +372,7 @@
     "workGallery": {
       "label": "Recent work",
       "title": "Recent work in your area",
-      "intro": "New shingles on a modern farmhouse, active residential sites, attached homes, commercial tear-offs, and standing-seam metal."
+      "intro": "Commercial tear-offs and standing-seam metal, then residential shingle roofs."
     },
     "ownerStory": {
       "label": "Our Story",
@@ -398,9 +402,9 @@
         }
       ],
       "paragraphs": [
-        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. We are not a huge company, and that is how we want it. You call. Someone looks at the roof. You get the estimate in writing. We also pour concrete: driveways, patios, and flatwork. Roofing is still most of the work.",
-        "Roof work goes wrong in the same ways. The schedule slips. Materials show up late. The yard is a mess when the crew leaves. We stay small so we can still care about those things. Homeowners have said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time.",
-        "We are not perfect. When we miss something, we own it and we make it right. Call (810) 360-7385."
+        "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. I am chasing commercial roofs: flat roofs, TPO roofs, large complexes, and property managers who have a lot of buildings and have put the work off. You call. Someone looks at the roof. You get the bid in writing.",
+        "We can put up to 20 workers on a roof and do thousands of squares a week. A lot of crews are 4 or 5 people, and they cannot turn that kind of job. We are a Mulehide-certified installer. Mulehide is the Firestone membrane brand. On most roofs we service, the warranty is 10 years on labor and material. We do not cut corners. We do it the right way every time.",
+        "Residential is still here. It is not the campaign. A homeowner said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time. Call (810) 360-7385 and say which one you are."
       ]
     },
     "teamSection": {
@@ -424,11 +428,13 @@
       "country": "US"
     },
     "ctaBanner": {
-      "title": "Ready to stop guessing about your roof?",
-      "subtitle": "Your look includes an on-roof inspection and a written scope — repair or replacement.",
-      "body": "Commercial and residential. Cleanup homeowners mention in reviews. 0% financing options with 12\u201324 month terms, subject to credit approval.",
-      "scheduleHref": "/contact",
-      "scheduleLabel": "Get my written estimate",
+      "title": "Need a bid on a large roof?",
+      "subtitle": "Property managers and commercial owners: ask for an estimate on a flat roof, a TPO roof, or a multi-building list.",
+      "body": "We can put up to 20 workers on a roof. Residential inquiries use a separate form path. 0% financing options with 12–24 month terms, subject to credit approval.",
+      "scheduleHref": "/contact?intent=commercial",
+      "scheduleLabel": "Request a commercial bid",
+      "residentialHref": "/contact?intent=residential",
+      "residentialLabel": "Residential inquiry",
       "scheduleSub": "No obligation \u00b7 No sales pressure",
       "callSub": "Call (810) 360-7385"
     },
@@ -441,7 +447,7 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Roofing contractor in Farmington Hills and Metro Detroit, including Detroit. Concrete driveways, patios, and flatwork.",
+    "footerBlurb": "Commercial flat roofing and TPO roofs in Farmington Hills and Metro Detroit. Residential roofing is available as a separate service.",
     "decision": {
       "label": "Repair or replace",
       "title": "Repair or replace?",
@@ -470,7 +476,10 @@
       "Roof repair",
       "Storm damage",
       "Roof inspections",
-      "Concrete driveways, patios, and flatwork"
+      "Commercial flat roofing",
+      "TPO roof",
+      "Flat roof",
+      "Metal roofing"
     ],
     "faqs": [
       {
@@ -490,8 +499,20 @@
         "a": "Yes. Houses, attached homes, and commercial roofs. A commercial customer said their job finished on budget and on time. Property managers get the same thing homeowners get: a look, then a written estimate."
       },
       {
-        "q": "Do you do concrete?",
-        "a": "Yes. Driveways, patios, and flatwork, including approaches, walkways, sidewalks, and slabs. Roofing is still most of the work. See /services/concrete, or call (810) 360-7385."
+        "q": "Do you install TPO and flat roofs?",
+        "a": "Yes. Commercial flat roofing and TPO roofs are the main service, for property managers and commercial owners. Call (810) 360-7385 and ask for a bid."
+      },
+      {
+        "q": "How large a crew can you put on a roof?",
+        "a": "Up to 20 workers, and thousands of squares a week. A lot of crews in this market are 4 or 5 people. That is the difference on a complex or a 40- to 50-building list."
+      },
+      {
+        "q": "What warranty do you offer?",
+        "a": "A 10-year labor and material warranty on most roofs we service. We are a Mulehide-certified installer. Mulehide is the Firestone membrane brand."
+      },
+      {
+        "q": "Do you still roof houses?",
+        "a": "Yes. Residential is separate from commercial, and it is not the lead offer. Use the residential inquiry, or call (810) 360-7385 and say it is a house."
       },
       {
         "q": "Do you offer financing?",
@@ -528,8 +549,8 @@
     ]
   },
   "form": {
-    "title": "Get my written estimate",
-    "subtitle": "Share your address. Faber Roof follows up with next steps for the on-roof look.",
+    "title": "Request an estimate",
+    "subtitle": "Property managers and commercial owners: ask for a bid on a large flat roof or TPO roof. Homeowners: choose the residential path.",
     "submitText": "Send my request",
     "finalNote": "No obligation. We inspect before anyone starts work.",
     "trustBullets": [
@@ -539,19 +560,19 @@
     ],
     "projectTypes": [
       {
-        "value": "residential",
-        "label": "Residential roofing",
-        "phIcon": "home"
-      },
-      {
-        "value": "commercial",
-        "label": "Commercial roofing",
+        "value": "commercial-bid",
+        "label": "Commercial bid — large project",
         "phIcon": "building"
       },
       {
-        "value": "shingle",
-        "label": "Shingle roofing",
-        "phIcon": "home"
+        "value": "commercial-flat",
+        "label": "Commercial flat roofing",
+        "phIcon": "building"
+      },
+      {
+        "value": "tpo",
+        "label": "TPO roof",
+        "phIcon": "building"
       },
       {
         "value": "metal",
@@ -559,9 +580,14 @@
         "phIcon": "building"
       },
       {
-        "value": "concrete",
-        "label": "Concrete",
-        "phIcon": "square"
+        "value": "residential",
+        "label": "Residential inquiry",
+        "phIcon": "home"
+      },
+      {
+        "value": "shingle",
+        "label": "Residential shingle roofing",
+        "phIcon": "home"
       },
       {
         "value": "other",
@@ -673,11 +699,34 @@
       "note": "Detroit is east of the Farmington Hills office, about half an hour by I-696 and the Lodge. There is no second shop in the city. You call (810) 360-7385, someone drives to the address, and you get a written estimate after the roof is seen. That covers houses and commercial buildings, including work property managers send."
     }
   ],
+  "serviceGroups": [
+    {
+      "id": "commercial",
+      "label": "Commercial",
+      "note": "The main work: flat roofs, TPO, large buildings, property managers.",
+      "slugs": [
+        "commercial-flat-roofing",
+        "tpo-roofing",
+        "commercial-roofing",
+        "metal-roofing"
+      ]
+    },
+    {
+      "id": "residential",
+      "label": "Residential",
+      "note": "Still available. Separate from commercial.",
+      "slugs": [
+        "residential-roofing",
+        "shingle-roofing"
+      ]
+    }
+  ],
   "primaryServiceSlugs": [
-    "residential-roofing",
+    "commercial-flat-roofing",
+    "tpo-roofing",
     "commercial-roofing",
-    "shingle-roofing",
     "metal-roofing",
-    "concrete"
+    "residential-roofing",
+    "shingle-roofing"
   ]
 }

@@ -76,9 +76,14 @@ const rawList: RawReview[] = Array.isArray(googleReviewsJson.rawReviews)
   ? googleReviewsJson.rawReviews
   : [];
 
+function commercialFirst(review: MockReview): number {
+  return /\b(commercial|property manager|complex)\b/i.test(review.text) ? 0 : 1;
+}
+
 export const allGoogleReviews: MockReview[] = rawList
   .map(normalizeReview)
-  .filter((r): r is MockReview => r !== null);
+  .filter((r): r is MockReview => r !== null)
+  .sort((a, b) => commercialFirst(a) - commercialFirst(b));
 
 export const mockReviews: MockReview[] = allGoogleReviews;
 

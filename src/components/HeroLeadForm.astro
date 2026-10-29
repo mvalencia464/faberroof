@@ -9,6 +9,13 @@ interface Props {
 const { embedded = false } = Astro.props;
 const form = SITE.hero.leadForm;
 const owner = SITE.hero.ownerCard;
+const intent = Astro.url.searchParams.get('intent');
+const preset =
+  intent === 'residential'
+    ? 'residential'
+    : intent === 'commercial'
+      ? 'commercial-bid'
+      : '';
 ---
 
 <form
@@ -91,9 +98,9 @@ const owner = SITE.hero.ownerCard;
             name="project_type"
             required
           >
-            <option value="" disabled selected>Select a service</option>
+            <option value="" disabled selected={!preset}>Select a service</option>
             {form.projectTypes.map((option) => (
-              <option value={option.value}>{option.label}</option>
+              <option value={option.value} selected={option.value === preset}>{option.label}</option>
             ))}
           </select>
         </label>

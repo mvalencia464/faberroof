@@ -1,5 +1,18 @@
+import { writeFile } from 'node:fs/promises';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { cloudflareRedirects } from './src/config/photo-upload.mjs';
+
+function cloudflareRedirectsFile() {
+  return {
+    name: 'cloudflare-redirects',
+    hooks: {
+      'astro:build:done': async ({ dir }) => {
+        await writeFile(new URL('_redirects', dir), cloudflareRedirects());
+      },
+    },
+  };
+}
 
 export default defineConfig({
   site: process.env.SITE_URL || 'https://faberroof.com',
@@ -7,6 +20,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('/admin'),
     }),
+    cloudflareRedirectsFile(),
   ],
   // Google Drive FS often skips native file events — poll so HMR actually fires
   vite: {

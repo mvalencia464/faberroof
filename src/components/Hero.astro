@@ -92,6 +92,11 @@ const outlineIcons: Record<string, string> = {
       </div>
 
       <p class="hero-js__note">{hero.financingNote}</p>
+
+      <div class="hero-js__actions">
+        <a class="btn btn--primary" href={hero.ctaCommercialHref}>{hero.ctaCommercial}</a>
+        <a class="btn hero-js__residential" href={hero.ctaResidentialHref}>{hero.ctaResidential}</a>
+      </div>
     </div>
   </div>
 </section>
@@ -140,8 +145,26 @@ const outlineIcons: Record<string, string> = {
   }
 
   .hero-js__copy {
-    max-width: 38rem;
+    max-width: 40rem;
     text-align: left;
+  }
+
+  .hero-js__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.35rem;
+  }
+
+  .hero-js__residential {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.55);
+  }
+
+  .hero-js__residential:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
   }
 
   .hero-js__chip {

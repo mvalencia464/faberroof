@@ -89,7 +89,7 @@ const pageSchema = {
         telephone: SITE.phone,
         url: `${origin}/`,
       },
-      serviceType: service.slug === 'concrete' ? 'Concrete' : SITE.serviceType,
+      serviceType: SITE.serviceType,
     },
     {
       '@type': 'FAQPage',
@@ -132,9 +132,7 @@ const pageSchema = {
       <div class="container service-detail">
         <div class="service-detail__main">
           <h2>
-            {service.slug === 'concrete'
-              ? 'What this means for the job'
-              : 'What this means for your roof'}
+            What this means for your roof
           </h2>
           <p class="service-detail__body">{service.fullDesc}</p>
 
