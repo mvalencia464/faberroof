@@ -56,12 +56,24 @@
     "imageAlt": "AI-generated test photo of brick apartment buildings with white flat roofs.",
     "gallery": [
       {
-        "image": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
-        "alt": "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building."
+        "image": "/images/ai-flat-roofs/flat-roof-warehouse-tpo.jpg",
+        "alt": "AI-generated test photo of a warehouse with a gray TPO roof and loading docks."
       },
       {
-        "image": "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
-        "alt": "AI-generated test photo of two roofers heat-welding a white TPO seam."
+        "image": "/images/ai-flat-roofs/flat-roof-retail-strip.jpg",
+        "alt": "AI-generated test photo of a brick retail strip with rooftop HVAC units above a flat roof."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-office-worn-tpo.jpg",
+        "alt": "AI-generated test photo of a worn white TPO roof on a brick office building."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-onsite-membrane.jpg",
+        "alt": "AI-generated test photo of a TPO roof with ponding, rusted curbs, and HVAC units."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+        "alt": "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building."
       },
       {
         "image": "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
@@ -122,16 +134,20 @@
     ],
     "icon": "building",
     "iconStyle": "navy",
-    "image": "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
-    "imageAlt": "AI-generated test photo of two roofers heat-welding a white TPO seam.",
+    "image": "/images/ai-flat-roofs/flat-roof-onsite-membrane.jpg",
+    "imageAlt": "AI-generated test photo of a TPO roof with ponding, rusted curbs, and HVAC units.",
     "gallery": [
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-warehouse-tpo.jpg",
+        "alt": "AI-generated test photo of a warehouse with a gray TPO roof and loading docks."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-office-worn-tpo.jpg",
+        "alt": "AI-generated test photo of a worn white TPO roof on a brick office building."
+      },
       {
         "image": "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
         "alt": "AI-generated test photo of a TPO seam, vent boot, and HVAC curb flashing."
-      },
-      {
-        "image": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
-        "alt": "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building."
       }
     ]
   },
@@ -195,6 +211,14 @@
     "image": "faber-roof-crew-commercial-shingle-replacement.avif",
     "imageAlt": "Crew tearing off shingles on a retail building, with underlayment and roof vents.",
     "gallery": [
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-warehouse-tpo.jpg",
+        "alt": "AI-generated test photo of a warehouse with a gray TPO roof and loading docks."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-retail-strip.jpg",
+        "alt": "AI-generated test photo of a brick retail strip with rooftop HVAC units above a flat roof."
+      },
       {
         "image": "/images/ai-flat-roofs/flat-roof-apartment-complex.jpg",
         "alt": "AI-generated test photo of brick apartment buildings with white flat roofs."

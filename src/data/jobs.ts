@@ -92,30 +92,40 @@ export const JOBS: Job[] = [
     ],
     extra: [
       {
-        src: "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
-        alt: "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building.",
+        src: "/images/ai-flat-roofs/flat-roof-retail-strip.jpg",
+        alt: "AI-generated test photo of a brick retail strip with rooftop HVAC units above a flat roof.",
       },
       {
-        src: "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
-        alt: "AI-generated test photo of a TPO seam, vent boot, and HVAC curb flashing.",
+        src: "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+        alt: "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building.",
       },
     ],
   }),
   photoJob({
-    slug: "ai-test-tpo-seam-weld",
-    title: "TPO seam weld",
+    slug: "ai-test-warehouse-tpo-roof",
+    title: "Warehouse TPO roof",
     serviceLabel: "TPO roofing",
     serviceSlug: "tpo-roofing",
-    cover: "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
-    coverAlt: "AI-generated test photo of two roofers heat-welding a white TPO seam.",
+    cover: "/images/ai-flat-roofs/flat-roof-warehouse-tpo.jpg",
+    coverAlt: "AI-generated test photo of a warehouse with a gray TPO roof and loading docks.",
     story:
-      "Test image of a hot-air weld on a white TPO seam, with a roller following the nozzle. This is not a completed Faber Roof job.",
+      "Test image of a gray TPO roof on a warehouse, with rooftop units and loading docks along one side. This is not a completed Faber Roof job.",
     imageNote: AI_TEST_NOTE,
     rows: [
-      { pain: "A flat roof that needs a membrane, not another shingle layer.", fix: "A TPO roof scoped after someone is on the building." },
-      { pain: "Seams that were glued and opened up.", fix: "Heat-welded overlaps, then a roller on the seam." },
-      { pain: "Curbs and vents left out of the bid.", fix: "Flashing at HVAC curbs and pipes called out in the scope." },
-      { pain: "No crew photo that matches a TPO job.", fix: "This card is an AI test so the page can be judged before real job photos replace it." },
+      { pain: "A warehouse roof with units of different ages.", fix: "A TPO scope written after someone is on the roof." },
+      { pain: "Water sitting at the curbs.", fix: "The low spots and curb flashings called out in the bid." },
+      { pain: "The business cannot shut the docks for a week.", fix: "A schedule a property manager can post." },
+      { pain: "No warehouse photo on the site yet.", fix: "This card is an AI test so the page can be judged before real job photos replace it." },
+    ],
+    extra: [
+      {
+        src: "/images/ai-flat-roofs/flat-roof-office-worn-tpo.jpg",
+        alt: "AI-generated test photo of a worn white TPO roof on a brick office building.",
+      },
+      {
+        src: "/images/ai-flat-roofs/flat-roof-onsite-membrane.jpg",
+        alt: "AI-generated test photo of a TPO roof with ponding, rusted curbs, and HVAC units.",
+      },
     ],
   }),
   photoJob({
