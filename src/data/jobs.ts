@@ -71,7 +71,53 @@ function photoJob(input: {
  * Filenames that returned HTTP 200 on the Faber Roof media folder.
  * Paths stay relative so r2img() can prefix the public base. Addresses are not printed on the files.
  */
+const AI_TEST_NOTE = "AI-generated test photo";
+
 export const JOBS: Job[] = [
+  photoJob({
+    slug: "ai-test-apartment-flat-roofs",
+    title: "Apartment flat roofs",
+    serviceLabel: "Commercial flat roofing",
+    serviceSlug: "commercial-flat-roofing",
+    cover: "/images/ai-flat-roofs/flat-roof-apartment-complex.jpg",
+    coverAlt: "AI-generated test photo of brick apartment buildings with white flat roofs.",
+    story:
+      "Test image of white flat roofs across a brick apartment community, with HVAC units on the roofs. This is not a completed Faber Roof job.",
+    imageNote: AI_TEST_NOTE,
+    rows: [
+      { pain: "A property manager with a lot of low-slope roofs.", fix: "One look at the list, then a written bid for the buildings that cannot wait." },
+      { pain: "Patching the same flat roofs year after year.", fix: "A membrane system named after someone has been on the roof." },
+      { pain: "A 4-person crew that walks away from a complex.", fix: "A crew sized for the volume, up to 20 workers when the job needs it." },
+      { pain: "No photo on the site that shows a flat roof.", fix: "This card is an AI test so the page can be judged before real job photos replace it." },
+    ],
+    extra: [
+      {
+        src: "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+        alt: "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building.",
+      },
+      {
+        src: "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
+        alt: "AI-generated test photo of a TPO seam, vent boot, and HVAC curb flashing.",
+      },
+    ],
+  }),
+  photoJob({
+    slug: "ai-test-tpo-seam-weld",
+    title: "TPO seam weld",
+    serviceLabel: "TPO roofing",
+    serviceSlug: "tpo-roofing",
+    cover: "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
+    coverAlt: "AI-generated test photo of two roofers heat-welding a white TPO seam.",
+    story:
+      "Test image of a hot-air weld on a white TPO seam, with a roller following the nozzle. This is not a completed Faber Roof job.",
+    imageNote: AI_TEST_NOTE,
+    rows: [
+      { pain: "A flat roof that needs a membrane, not another shingle layer.", fix: "A TPO roof scoped after someone is on the building." },
+      { pain: "Seams that were glued and opened up.", fix: "Heat-welded overlaps, then a roller on the seam." },
+      { pain: "Curbs and vents left out of the bid.", fix: "Flashing at HVAC curbs and pipes called out in the scope." },
+      { pain: "No crew photo that matches a TPO job.", fix: "This card is an AI test so the page can be judged before real job photos replace it." },
+    ],
+  }),
   photoJob({
     slug: "standing-seam-metal-roof",
     title: "Standing-seam metal roof",
