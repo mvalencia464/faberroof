@@ -52,12 +52,20 @@
     ],
     "icon": "building",
     "iconStyle": "navy",
-    "image": "faber-roof-crew-commercial-shingle-replacement.avif",
-    "imageAlt": "Crew tearing off a worn roof on a retail building, with underlayment and roof vents.",
+    "image": "/images/ai-flat-roofs/flat-roof-apartment-complex.jpg",
+    "imageAlt": "AI-generated test photo of brick apartment buildings with white flat roofs.",
     "gallery": [
       {
-        "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
-        "alt": "Aerial view of a standing-seam metal roof with skylights on a brick building."
+        "image": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+        "alt": "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
+        "alt": "AI-generated test photo of two roofers heat-welding a white TPO seam."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
+        "alt": "AI-generated test photo of a TPO seam, vent boot, and HVAC curb flashing."
       }
     ]
   },
@@ -114,9 +122,18 @@
     ],
     "icon": "building",
     "iconStyle": "navy",
-    "image": "faber-roof-crew-commercial-shingle-replacement.avif",
-    "imageAlt": "Crew on a commercial building during a tear-off, with underlayment exposed.",
-    "gallery": []
+    "image": "/images/ai-flat-roofs/flat-roof-tpo-crew.jpg",
+    "imageAlt": "AI-generated test photo of two roofers heat-welding a white TPO seam.",
+    "gallery": [
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-tpo-seams.jpg",
+        "alt": "AI-generated test photo of a TPO seam, vent boot, and HVAC curb flashing."
+      },
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+        "alt": "AI-generated test photo of a white TPO roof with HVAC units on a brick commercial building."
+      }
+    ]
   },
   {
     "slug": "commercial-roofing",
@@ -178,6 +195,10 @@
     "image": "faber-roof-crew-commercial-shingle-replacement.avif",
     "imageAlt": "Crew tearing off shingles on a retail building, with underlayment and roof vents.",
     "gallery": [
+      {
+        "image": "/images/ai-flat-roofs/flat-roof-apartment-complex.jpg",
+        "alt": "AI-generated test photo of brick apartment buildings with white flat roofs."
+      },
       {
         "image": "faber-roof-standing-seam-metal-roof-aerial.avif",
         "alt": "Aerial view of a standing-seam metal roof with skylights on a brick building."

@@ -44,8 +44,8 @@
     "images": {
       "logo": "faber_logo.avif",
       "favicon": "/favicon.avif",
-      "hero": "faber-roof-standing-seam-metal-roof-aerial.avif",
-      "heroSm": "faber-roof-standing-seam-metal-roof-aerial.avif",
+      "hero": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+      "heroSm": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
       "owner": "/logo.png"
     }
   },
@@ -78,7 +78,7 @@
     "serviceType": "Roofing services",
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
-    "heroImageAlt": "Standing-seam metal roof with skylights on a brick building",
+    "heroImageAlt": "AI-generated test photo of a white TPO flat roof on a brick commercial building",
     "formConsent": "and consent to be contacted about my estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
@@ -372,7 +372,7 @@
     "workGallery": {
       "label": "Recent work",
       "title": "Recent work in your area",
-      "intro": "Commercial tear-offs and standing-seam metal, then residential shingle roofs."
+      "intro": "A few AI test photos of flat and TPO roofs, then the existing commercial and residential work."
     },
     "ownerStory": {
       "label": "Our Story",
