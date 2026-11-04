@@ -6,7 +6,7 @@
     "fullDesc": "A flat roof over a complex, a retail building, or a row of apartment buildings is a different job than a house. Faber Roof\u2019s commercial flat roofing work is aimed at property managers and building owners who need a crew that can stay on a large roof. Call {{phone}} with the address. Someone looks at the flat roof, then you get a written scope and a bid.",
     "highlights": [
       "Commercial flat roofing for complexes and multi-building sites",
-      "Apartment and condo communities, including deferred maintenance",
+      "TPO with polyiso insulation, a vapor barrier, and flashed edges",
       "Up to 20 workers on a roof when the job needs it",
       "Thousands of squares a week, not a 4- or 5-person crew",
       "10-year labor and material warranty on most roofs",
@@ -25,11 +25,11 @@
       },
       {
         "heading": "How the roof goes on",
-        "body": "We do not cut corners. We do it the right way every time. Faber Roof is a Mulehide-certified installer. Mulehide is the Firestone membrane brand. That certification is what lets us offer a 10-year labor and material warranty on most roofs we service, not a material-only warranty."
+        "body": "On a TPO flat roof the system is built up, after someone has been on the roof and written the scope. The deck is checked first. On these buildings that deck is steel, and soft or rusted steel is called out before it is covered. A self-adhered vapor barrier goes on the deck. Polyiso insulation goes over the barrier, at the thickness the building needs, named on the estimate. A 60 mil white TPO membrane goes over the insulation. The seams are heat-welded. Pipes get flashing. The edge gets a metal edge bar. The drawing under this section is that stack. Faber Roof is a Mulehide-certified installer. Mulehide is the Firestone membrane brand. That certification is what lets us offer a 10-year labor and material warranty on most roofs we service, not a material-only warranty. We do not cut corners. We do it the right way every time."
       },
       {
         "heading": "Ask for a bid",
-        "body": "Property managers and commercial owners: call {{phone}} or request an estimate and say it is a large project. Houses are still taken, on a separate residential path. The office is on Haggerty Road in Farmington Hills, and the crew drives across Metro Detroit, including Detroit."
+        "body": "Property managers and commercial owners: call {{phone}} or request an estimate and say it is a large project. Houses in the towns we list are still taken, on a separate residential path. We do not take house leads in the city of Detroit. Commercial buildings in the city are welcome. The office is on Haggerty Road in Farmington Hills, and the crew drives Washtenaw, Wayne, Oakland, Livingston, and Macomb counties."
       }
     ],
     "faq": {
@@ -93,12 +93,12 @@
     "shortDesc": "A TPO roof for commercial buildings and flat roofs. Written scope after the look, for property managers and owners.",
     "fullDesc": "There are not many crews chasing TPO roof work. Faber Roof installs a TPO roof as part of commercial flat roofing: membrane on a low-slope or flat roof, scoped for the building, not guessed from the street. Call {{phone}}. You get a bid a property manager can take to ownership.",
     "highlights": [
-      "TPO roof systems on commercial flat roofs",
-      "Commercial flat roofing for large complexes",
+      "60 mil white TPO with heat-welded seams",
+      "Polyiso insulation and a self-adhered vapor barrier",
+      "Pipe flashing and a metal edge bar",
       "Mulehide-certified installer",
       "10-year labor and material warranty on most roofs",
-      "Crews large enough to stay on a big TPO roof",
-      "Written bid before work starts"
+      "Crews large enough to stay on a big TPO roof"
     ],
     "heading": "When the building needs a TPO roof",
     "body": "A TPO roof is a single-ply membrane used on flat and low-slope commercial roofs. If that is the system the building should have, say so when you call. We will confirm it on the roof.",
@@ -106,6 +106,10 @@
       {
         "heading": "When the building needs a TPO roof",
         "body": "Owners and property managers ask for a TPO roof when the building is flat and a shingle roof is the wrong product. We treat TPO as its own service, next to the broader commercial flat roofing page, so the scope matches the system. The words are the same job seen two ways: a flat roof, and a TPO roof when TPO is what goes down."
+      },
+      {
+        "heading": "How the roof goes on",
+        "body": "A TPO roof goes on in layers, after someone has been up there and written the scope. The deck is checked first. On the buildings this page is for, that deck is steel. Soft or rusted deck is called out before it is covered. A self-adhered vapor barrier goes on the deck. Polyiso insulation goes over the barrier. The thickness is what the building needs, and it is named on the estimate. A 60 mil white TPO membrane goes over the insulation. The seams are heat-welded. Pipes get flashing. The edge gets a metal edge bar. That is the assembly on the drawing: membrane, insulation, vapor barrier, and deck, with flashing at the pipes and the edge."
       },
       {
         "heading": "Crew size on a large TPO roof",
@@ -117,7 +121,7 @@
       },
       {
         "heading": "Request the bid",
-        "body": "Call {{phone}} and say you need a TPO roof or commercial flat roofing bid. Residential shingle work is still available. It is not the lead offer on this page. Metal roofing is another lower-competition option when the building calls for standing seam instead of a TPO roof."
+        "body": "Call {{phone}} and say you need a TPO roof or commercial flat roofing bid. Residential shingle work is still available in the towns we list. It is not the lead offer on this page, and we do not take house leads in the city of Detroit. Metal roofing is another lower-competition option when the building calls for standing seam instead of a TPO roof."
       }
     ],
     "faq": {
@@ -135,11 +139,11 @@
       },
       {
         "q": "Do you still roof houses?",
-        "a": "Yes. Residential is a separate service. This page is for commercial TPO roof and flat roof bids. Call {{phone}} and say which one you need."
+        "a": "Yes, in the towns we list. Residential is a separate service, and we do not take house leads in the city of Detroit. This page is for commercial TPO roof and flat roof bids. Call {{phone}} and say which one you need."
       }
     ],
     "diagram": {
-      "afterHeading": "Certified install, full warranty",
+      "afterHeading": "How the roof goes on",
       "image": "flat-roofing.avif",
       "alt": "Infographic of a commercial TPO flat roof: 60 mil white membrane with heat-welded seams, polyiso insulation, a self-adhered vapor barrier, and a steel deck, plus pipe flashing and a metal edge bar.",
       "caption": "The TPO assembly: membrane, insulation, vapor barrier, and deck, with flashing at pipes and the edge."
@@ -196,8 +200,8 @@
         "body": "A commercial customer wrote that the project was completed on budget, the team was professional, the work finished on time, and the quality was outstanding. That is the standard to ask about when you call. {{phone}}."
       },
       {
-        "heading": "Detroit-area buildings",
-        "body": "The office is in Farmington Hills. Commercial calls come from the west suburbs and from property managers farther into Metro Detroit, including Detroit. You send the address. You get a time for the look."
+        "heading": "Five counties, including commercial Detroit",
+        "body": "The office is in Farmington Hills. Commercial calls come from Washtenaw, Wayne, Oakland, Livingston, and Macomb counties, including commercial buildings in Detroit. House leads in the city are not the work. You send the address. You get a time for the look."
       }
     ],
     "faq": {
@@ -270,7 +274,7 @@
       },
       {
         "heading": "Metro Detroit",
-        "body": "The crew works from Farmington Hills into Detroit and the suburbs between them. Metal is not limited to one township. It is limited to buildings where the system belongs."
+        "body": "The crew works from Farmington Hills across Washtenaw, Wayne, Oakland, Livingston, and Macomb, including commercial buildings in Detroit. Metal is not limited to one township. It is limited to buildings where the system belongs."
       }
     ],
     "faq": {
@@ -300,7 +304,7 @@
     "slug": "residential-roofing",
     "title": "Residential roofing",
     "shortDesc": "Your shingles are tired, or the ceiling already has a stain. You get a look at the house and a written estimate before anyone names a price.",
-    "fullDesc": "Residential roofing stays on the site. It is the secondary path. Commercial flat roofing and TPO roofs are the main work. When the job is a house, water in the ceiling does not stay in the ceiling. It finds the insulation, the drywall, and the next rain. You call {{phone}}. Someone gets on the roof in {{city}} or elsewhere in Metro Detroit, then writes what the house actually needs: a repair, or the old shingles off and a new roof on.",
+    "fullDesc": "Residential roofing stays on the site. It is the secondary path. Commercial flat roofing and TPO roofs are the main work. When the job is a house in one of the towns we list, water in the ceiling does not stay in the ceiling. It finds the insulation, the drywall, and the next rain. You call {{phone}}. Someone gets on the roof, then writes what the house actually needs: a repair, or the old shingles off and a new roof on. We do not take house leads in the city of Detroit.",
     "highlights": [
       "On-roof look before a price",
       "Repair when the rest of the roof still has life",
@@ -328,8 +332,8 @@
         "body": "You pick the color when the new shingles go on. Landmark Pro colors include black, gray, brown, and tan. Ask which ones fit the house when you call."
       },
       {
-        "heading": "Farmington Hills, Detroit, and the towns between",
-        "body": "The office is on Haggerty Road in Farmington Hills. You can call from Farmington, Novi, Livonia, Northville, or Detroit. {{phone}} is the estimate line. Say the address and you get a time to look at the roof."
+        "heading": "The towns we will drive to",
+        "body": "The office is on Haggerty Road in Farmington Hills. Residential estimates are for the towns on the Areas We Serve list, across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. We do not take house leads in the city of Detroit. Commercial buildings in the city are a different call. {{phone}} is the estimate line. Say the address and you get a time to look at the roof."
       }
     ],
     "faq": {
@@ -412,7 +416,7 @@
       },
       {
         "heading": "Where the shingle roofs are",
-        "body": "The work is on houses, two-garage homes, lake houses, and attached homes from the Farmington Hills office out toward Detroit. You do not need to live next door to the office. You need an address someone can drive to and look at."
+        "body": "The work is on houses in the towns we list, from the Farmington Hills office across Washtenaw, Wayne, Oakland, Livingston, and Macomb. City-of-Detroit house leads are not the work. You need an address someone can drive to and look at."
       }
     ],
     "faq": {

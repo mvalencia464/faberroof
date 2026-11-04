@@ -52,8 +52,8 @@
   "map": {
     "lat": 42.4564467,
     "lng": -83.4345146,
-    "zoom": 14,
-    "radiusMiles": 25,
+    "zoom": 9,
+    "radiusMiles": 0,
     "listingUrl": "",
     "query": "Faber Roof, 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335"
   },
@@ -69,7 +69,7 @@
   },
   "seo": {
     "title": "Commercial Flat Roofing Metro Detroit | Faber Roof",
-    "description": "Commercial flat roofing and TPO roofs for property managers and building owners in Metro Detroit. Crews up to 20. Call (810) 360-7385 for a bid. Residential inquiries welcome.",
+    "description": "Commercial flat roofing and TPO roofs for property managers and building owners across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. Crews up to 20. Call (810) 360-7385 for a bid.",
     "keywords": "Faber Roof, commercial flat roofing, TPO roof, flat roof, Farmington Hills MI"
   },
   "copy": {
@@ -82,9 +82,9 @@
     "formConsent": "and consent to be contacted about my estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
-    "serviceAreasIntro": "The office is on Haggerty Road in Farmington Hills. The towns below are a short drive from that office.",
+    "serviceAreasIntro": "Commercial roofs across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. The towns below are also where we write residential estimates. We do not take house leads in the city of Detroit.",
     "contactTitle": "Request a roofing bid | Faber Roof",
-    "contactDescription": "Property managers and commercial owners can request a bid for a flat roof or TPO roof. Residential inquiries are a separate path. Call (810) 360-7385.",
+    "contactDescription": "Property managers and commercial owners can request a bid for a flat roof or TPO roof across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. Residential inquiries are a separate path, not for city-of-Detroit houses. Call (810) 360-7385.",
     "contactHeading": "Request a bid or a residential estimate",
     "contactIntro": "Say whether this is a commercial building or a house.",
     "aboutDescription": "Faber Roof, LLC \u2014 commercial and residential roofing at 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335.",
@@ -93,15 +93,15 @@
     "areaEyebrow": "Roofing contractor \u00b7 Service area",
     "areaPageTitle": "Roofing contractor in {{areaName}} | Faber Roof",
     "areaHeadline": "Roofing contractor in {{areaName}}",
-    "areaIntro": "Commercial flat roofing and TPO roofs in {{areaName}}, plus residential when the job is a house. You get a look and a written bid. Call (810) 360-7385.",
-    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}}. Commercial work comes first: flat roofs, a TPO roof, apartment and condo communities, and property managers with buildings that have put off maintenance. We can put up to 20 workers on a roof. Residential shingles are still available, as a separate service. Standing-seam metal is the conversation when the building should not take another flat or shingle roof. A commercial customer said their project finished on budget and on time. Say the address when you call.",
-    "areaServicesNote": "Commercial flat roofing, TPO roofs, metal, and residential shingles for {{areaName}} buildings and homes.",
+    "areaIntro": "Commercial flat roofing and TPO roofs in {{areaName}}. The system is membrane, insulation, a vapor barrier, and flashing. You get a look and a written bid. Call (810) 360-7385.",
+    "areaBody": "You are calling the Farmington Hills office on Haggerty Road. The crew drives to {{areaName}} for commercial roofs: flat roofs, a TPO roof, apartment and condo communities, and property managers with buildings that have put off maintenance. On a TPO roof that means a 60 mil membrane, polyiso insulation, a self-adhered vapor barrier, and flashing at pipes and the edge. We can put up to 20 workers on a roof. Houses in {{areaName}} are still taken, as a separate service. We do not pursue residential leads in the city of Detroit. Standing-seam metal is the conversation when the building should not take another flat roof. Say the address when you call.",
+    "areaServicesNote": "Commercial flat roofing, TPO, insulation, vapor barrier, flashing, and metal for {{areaName}}. Houses there are a separate service.",
     "areaServicesHeading": "Services in {{areaName}}",
     "areaHighlights": [
       "A look at the roof before a price",
-      "Repair or full replacement, in writing",
-      "Architectural shingles, and metal when it fits",
-      "Cleanup when the job is done"
+      "TPO, insulation, vapor barrier, and flashing",
+      "Crews sized for a large flat roof",
+      "A written bid a property manager can take upstairs"
     ],
     "areaFaqs": [
       {
@@ -118,7 +118,7 @@
       },
       {
         "q": "Do you only replace roofs in {{areaName}}?",
-        "a": "No. A leak in one spot, with the rest of the roof still flat, is often a repair. Curling shingles, moving leaks, or a soft deck usually means replacement. We say which one after the look."
+        "a": "No. A leak at one seam, pipe, or flashing, with the rest of the membrane still sound, is often a repair. Open seams, wet insulation, or a failed vapor barrier usually means a new system. We say which one after the look."
       }
     ],
     "jobAreaLink": "Roofing contractor in Farmington Hills",
@@ -128,7 +128,7 @@
       "headingLine2": "for Metro Detroit",
       "headingAccent": "for Metro Detroit",
       "headline": "Commercial flat roofing for Metro Detroit",
-      "subheading": "TPO roofs and other flat roofs for property managers and commercial owners. Large complexes, not a 4-person crew. Residential inquiries are welcome on a separate path.",
+      "subheading": "TPO roofs for property managers and commercial owners. Membrane, insulation, vapor barrier, and flashing. Large complexes, not a 4-person crew.",
       "benefits": [
         {
           "icon": "building",
@@ -139,8 +139,8 @@
           "label": "10-year labor and\nmaterial warranty"
         },
         {
-          "icon": "home",
-          "label": "Residential still\ntaken, second"
+          "icon": "building",
+          "label": "Flashing at pipes\nand the edge"
         }
       ],
       "ctaCommercial": "Request a commercial bid",
@@ -220,7 +220,7 @@
         {
           "title": "Inspect the roof",
           "meta": "See the work",
-          "description": "Someone gets on the roof and checks the shingles or panels, the flashing, and how the deck feels."
+          "description": "Someone gets on the roof and checks the membrane, the insulation, the flashing, and how the deck feels."
         },
         {
           "title": "Written estimate",
@@ -230,7 +230,7 @@
         {
           "title": "Do the work",
           "meta": "The job",
-          "description": "The crew follows that scope. Homeowners have said the cleanup looked like the crew was never there."
+          "description": "The crew follows that scope. A commercial customer said the job finished on budget and on time."
         },
         {
           "title": "Walk-through",
@@ -295,7 +295,7 @@
     ],
     "servicesHeading": "Commercial first. Residential is separate.",
     "servicesLabel": "Services",
-    "servicesIntro": "Commercial flat roofing, TPO roofs, and large buildings are the main work. Houses stay on the site, in their own section, so the two are not mixed. The office is on Haggerty Road in Farmington Hills.",
+    "servicesIntro": "Commercial flat roofing and TPO are the main work: membrane, insulation, vapor barrier, and flashing, on complexes and other large buildings. Houses stay in their own section, for the towns we list. The office is on Haggerty Road in Farmington Hills.",
     "valueProps": [
       {
         "icon": "clipboard-list",
@@ -322,8 +322,8 @@
       "title": "Why choose Faber Roof?",
       "items": [
         {
-          "title": "You want them gone when it is done",
-          "body": "A homeowner said the cleanup looked like the crew was never there."
+          "title": "You want the big roof finished",
+          "body": "We can put up to 20 workers on a roof. A commercial customer said the job finished on budget and on time."
         },
         {
           "title": "You want it on time",
@@ -341,9 +341,9 @@
     },
     "reviewsSection": {
       "label": "Google reviews",
-      "title": "Commercial jobs, then residential",
+      "title": "Commercial work, on the record",
       "titleLine2": "",
-      "subtitle": "The commercial review is first. Residential reviews follow, unchanged.",
+      "subtitle": "A commercial customer said the job finished on budget and on time.",
       "bullets": [
         "Roofing contractor",
         "Based in Farmington Hills, MI",
@@ -372,7 +372,7 @@
     "workGallery": {
       "label": "Recent work",
       "title": "Recent work in your area",
-      "intro": "AI test photos of commercial flat roofs, warehouses, and retail, then the existing work."
+      "intro": "Commercial flat roofs, TPO, and metal from the work we are showing. One house roof is at the end."
     },
     "ownerStory": {
       "label": "Our Story",
@@ -404,7 +404,7 @@
       "paragraphs": [
         "Hi, I'm Matt Atrard. I own Faber Roof in Farmington Hills. I am chasing commercial roofs: flat roofs, TPO roofs, large complexes, and property managers who have a lot of buildings and have put the work off. You call. Someone looks at the roof. You get the bid in writing.",
         "We can put up to 20 workers on a roof and do thousands of squares a week. A lot of crews are 4 or 5 people, and they cannot turn that kind of job. We are a Mulehide-certified installer. Mulehide is the Firestone membrane brand. On most roofs we service, the warranty is 10 years on labor and material. We do not cut corners. We do it the right way every time.",
-        "Residential is still here. It is not the campaign. A homeowner said the cleanup looked like the crew was never there. A commercial customer said the job finished on budget and on time. Call (810) 360-7385 and say which one you are."
+        "Residential is still here, in the towns we list. It is not the campaign, and we do not take house leads in the city of Detroit. A commercial customer said the job finished on budget and on time. Call (810) 360-7385 and say which one you are."
       ]
     },
     "teamSection": {
@@ -424,7 +424,7 @@
     ],
     "serviceArea": {
       "heading": "Areas We Serve",
-      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335, on the west side of Metro Detroit. Detroit is about half an hour east. These are the towns we write estimates for.",
+      "body": "The office is 22710 Haggerty Rd. Suite 100B, Farmington Hills, MI 48335. We bid commercial roofs across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties, including commercial buildings in Detroit. The towns below are where we also write residential estimates. We do not take house leads in the city of Detroit.",
       "country": "US"
     },
     "ctaBanner": {
@@ -447,29 +447,29 @@
       "beforeLabel": "Before",
       "afterLabel": "After"
     },
-    "footerBlurb": "Commercial flat roofing and TPO roofs in Farmington Hills and Metro Detroit. Residential roofing is available as a separate service.",
+    "footerBlurb": "Commercial flat roofing and TPO roofs across Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. Residential roofing is a separate service in the towns we list.",
     "decision": {
       "label": "Repair or replace",
       "title": "Repair or replace?",
-      "intro": "A stain on the ceiling means water already beat the shingles. You should not have to chase roofers who never call back or approve a price with no scope. We get on the roof and tell you repair or replacement — in writing.",
+      "intro": "A leak over tenants, a store, or inventory means the flat roof already let water through. We get on the roof and tell you repair or replacement in writing.",
       "repair": {
         "title": "A repair usually makes sense when",
         "items": [
-          "The leak is in one spot, like a pipe boot, a chimney, or a skylight",
-          "Wind took off a handful of shingles and the rest still lie flat",
-          "Flashing has pulled loose and the deck under it still feels solid"
+          "The leak is at one pipe, curb, or seam and the rest of the membrane still lies flat",
+          "Flashing has pulled loose and the deck under it still feels solid",
+          "A small low spot can be fixed without a new system"
         ]
       },
       "replace": {
         "title": "Replacement usually makes sense when",
         "items": [
-          "Shingles are curling, cracking, or shedding granules into the gutters",
-          "Leaks keep showing up in new places",
-          "The deck feels soft underfoot",
-          "There are already two layers of shingles"
+          "Seams are opening in more than one place",
+          "The insulation is wet or the vapor barrier has failed",
+          "The membrane is brittle, shrunk, or past patching",
+          "Ponding keeps coming back after the last repair"
         ]
       },
-      "note": "If you only want the cheapest handyman patch on failing shingles, we are probably not your crew. Patches on worn roofs often cost twice when the next storm hits. A winter stain along an outside wall can also be an ice dam — we look at the eave before we tell you the whole roof is done."
+      "note": "Houses are a separate path, and only in the towns we list. We do not take residential leads in the city of Detroit. A cheap patch on a failing membrane usually costs twice when the next storm hits."
     },
     "schemaKnowsAbout": [
       "Roof replacement",
@@ -478,13 +478,16 @@
       "Roof inspections",
       "Commercial flat roofing",
       "TPO roof",
+      "Roof insulation",
+      "Vapor barrier",
+      "Roof flashing",
       "Flat roof",
       "Metal roofing"
     ],
     "faqs": [
       {
         "q": "Should I repair my roof or replace it?",
-        "a": "If the problem is in one spot and the rest of the roof still lies flat, a repair usually makes sense. If shingles are curling or shedding granules, leaks keep moving, or the deck feels soft, replacement is usually the better spend. We say which one we would choose after we look. Call (810) 360-7385."
+        "a": "If the leak is at one seam, pipe, or flashing and the rest of the membrane is sound, a repair usually makes sense. If seams are opening, the insulation is wet, or the vapor barrier has failed, a new TPO system is usually the better spend. We say which one after we look. Call (810) 360-7385."
       },
       {
         "q": "How do I get an estimate?",
@@ -492,11 +495,11 @@
       },
       {
         "q": "How long does a roof replacement take?",
-        "a": "One homeowner said their tear-off and new shingles were done in a day. Steeper roofs, attached homes, and commercial jobs take longer. The estimate includes the schedule."
+        "a": "A large flat roof is scheduled after the look, with a crew that can stay on it. The estimate includes the schedule a property manager can post. A house in the towns we list is a shorter job. Call (810) 360-7385."
       },
       {
-        "q": "Do you work on attached homes and commercial buildings?",
-        "a": "Yes. Houses, attached homes, and commercial roofs. A commercial customer said their job finished on budget and on time. Property managers get the same thing homeowners get: a look, then a written estimate."
+        "q": "What goes into a TPO roof?",
+        "a": "Deck, a self-adhered vapor barrier, polyiso insulation, and a 60 mil white TPO membrane with heat-welded seams. Pipes are flashed. The edge gets a metal edge bar. The estimate names the thickness and the scope after someone is on the roof."
       },
       {
         "q": "Do you install TPO and flat roofs?",
@@ -512,7 +515,7 @@
       },
       {
         "q": "Do you still roof houses?",
-        "a": "Yes. Residential is separate from commercial, and it is not the lead offer. Use the residential inquiry, or call (810) 360-7385 and say it is a house."
+        "a": "Yes, in the towns listed under Areas We Serve. Residential is separate from commercial, and it is not the lead offer. We do not take house leads in the city of Detroit. Commercial buildings in the city are welcome. Call (810) 360-7385 and say which one it is."
       },
       {
         "q": "Do you offer financing?",
@@ -544,7 +547,7 @@
       },
       {
         "q": "Where do you work?",
-        "a": "Farmington Hills, Detroit, and nearby towns including Farmington, Novi, Livonia, Northville, Southfield, and Plymouth. Call (810) 360-7385 to confirm your address."
+        "a": "Washtenaw, Wayne, Oakland, Livingston, and Macomb counties. Towns include Farmington Hills, Birmingham, Bloomfield Hills, Troy, Novi, Northville, Plymouth, Canton, the Grosse Pointes, Ann Arbor, Brighton, and Shelby Township. Commercial buildings in Detroit are welcome. Residential leads in the city of Detroit are not. Call (810) 360-7385 to confirm your address."
       }
     ]
   },
@@ -696,14 +699,76 @@
       "slug": "detroit",
       "name": "Detroit",
       "county": "Wayne",
-      "note": "Detroit is east of the Farmington Hills office, about half an hour by I-696 and the Lodge. There is no second shop in the city. You call (810) 360-7385, someone drives to the address, and you get a written estimate after the roof is seen. That covers houses and commercial buildings, including work property managers send."
+      "note": "Detroit is east of the Farmington Hills office, about half an hour by I-696 and the Lodge. There is no second shop in the city. Commercial buildings in the city are part of the work. City house calls are not.",
+      "intro": "Commercial flat roofing and TPO roofs in Detroit. Houses in the city are not the work. You get a look and a written bid. Call (810) 360-7385.",
+      "body": "You are calling the Farmington Hills office on Haggerty Road. Someone drives to the Detroit address for a commercial roof: a flat roof, a TPO roof, or a building a property manager sends. On a TPO roof that means a 60 mil membrane, polyiso insulation, a self-adhered vapor barrier, and flashing at pipes and the edge. We can put up to 20 workers on a roof. We do not take residential leads in the city of Detroit. House estimates are for the other towns on this list, including the Grosse Pointes and the west suburbs. Say the address when you call."
+    },
+    {
+      "slug": "birmingham",
+      "name": "Birmingham",
+      "county": "Oakland",
+      "note": "Birmingham is east of the office, past Southfield. Downtown and the office streets are commercial work. The houses around them are the residential leads that fit."
+    },
+    {
+      "slug": "bloomfield-hills",
+      "name": "Bloomfield Hills",
+      "county": "Oakland",
+      "note": "Bloomfield Hills is northeast of Farmington Hills. The lots are larger. These are the house leads worth the drive, next to whatever commercial roofs are on the main roads."
+    },
+    {
+      "slug": "troy",
+      "name": "Troy",
+      "county": "Oakland",
+      "note": "Troy is east along Big Beaver. Flat roofs on offices and retail sit next to subdivisions. Both are in range from the Haggerty Road office."
+    },
+    {
+      "slug": "canton",
+      "name": "Canton",
+      "county": "Wayne",
+      "note": "Canton is south of the office, in Wayne County, along Ford Road. Commercial buildings and newer subdivisions are both worth the drive."
+    },
+    {
+      "slug": "grosse-pointe",
+      "name": "Grosse Pointe",
+      "county": "Wayne",
+      "note": "The Grosse Pointes sit on the lake, on the advantageous side of Wayne County. Houses and smaller commercial buildings there are in range. The city of Detroit next door is commercial only."
+    },
+    {
+      "slug": "ann-arbor",
+      "name": "Ann Arbor",
+      "county": "Washtenaw",
+      "note": "Ann Arbor is west on M-14, in Washtenaw County. Apartment roofs, other commercial buildings, and houses in town are the work. It is a longer drive than Novi, and we still bid it."
+    },
+    {
+      "slug": "saline",
+      "name": "Saline",
+      "county": "Washtenaw",
+      "note": "Saline is south of Ann Arbor, still in Washtenaw County. Smaller commercial buildings and houses. Not a Detroit house call."
+    },
+    {
+      "slug": "brighton",
+      "name": "Brighton",
+      "county": "Livingston",
+      "note": "Brighton is north on US-23, in Livingston County. Commercial roofs near the freeway and houses in town are both in the area we want."
+    },
+    {
+      "slug": "shelby-township",
+      "name": "Shelby Township",
+      "county": "Macomb",
+      "note": "Shelby Township is in northern Macomb County. Newer commercial roofs and subdivisions are the fit. It is a longer drive east from Haggerty Road."
+    },
+    {
+      "slug": "macomb-township",
+      "name": "Macomb Township",
+      "county": "Macomb",
+      "note": "Macomb Township is east of the office, in Macomb County. Commercial buildings and newer houses are the work we will drive for."
     }
   ],
   "serviceGroups": [
     {
       "id": "commercial",
       "label": "Commercial",
-      "note": "The main work: flat roofs, TPO, large buildings, property managers.",
+      "note": "The main work: TPO, insulation, vapor barrier, flashing, and large buildings.",
       "slugs": [
         "commercial-flat-roofing",
         "tpo-roofing",
@@ -714,7 +779,7 @@
     {
       "id": "residential",
       "label": "Residential",
-      "note": "Still available. Separate from commercial.",
+      "note": "Still available in the towns we list. Not city-of-Detroit house leads.",
       "slugs": [
         "residential-roofing",
         "shingle-roofing"
