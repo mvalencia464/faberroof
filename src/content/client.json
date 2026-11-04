@@ -44,8 +44,8 @@
     "images": {
       "logo": "faber_logo.avif",
       "favicon": "/favicon.avif",
-      "hero": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
-      "heroSm": "/images/ai-flat-roofs/flat-roof-hero-tpo-aerial.jpg",
+      "hero": "faber-roof-flat-roof-detroit.avif",
+      "heroSm": "faber-roof-flat-roof-detroit.avif",
       "owner": "/logo.png"
     }
   },
@@ -78,7 +78,7 @@
     "serviceType": "Roofing services",
     "serviceNoun": "roofing",
     "ogImageAlt": "Faber Roof \u2014 Roofing contractor in Farmington Hills, MI",
-    "heroImageAlt": "AI-generated test photo of a white TPO flat roof on a brick commercial building",
+    "heroImageAlt": "White commercial flat roof in Detroit, with vents and the skyline beyond the parapet",
     "formConsent": "and consent to be contacted about my estimate. Msg & data rates may apply.",
     "sidebarTitle": "Request an estimate",
     "sidebarBody": "Call for the next step and a written price after we see the job.",
