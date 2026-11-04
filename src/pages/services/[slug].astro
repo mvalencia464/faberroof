@@ -160,6 +160,19 @@ const pageSchema = {
                   <figcaption>{service.colorBoard.caption}</figcaption>
                 </figure>
               )}
+              {service.diagram && section.heading === service.diagram.afterHeading && (
+                <figure class="color-board method-diagram">
+                  <img
+                    src={r2img(service.diagram.image)}
+                    alt={service.diagram.alt}
+                    width="1920"
+                    height="1280"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>{service.diagram.caption}</figcaption>
+                </figure>
+              )}
             </div>
           ))}
 

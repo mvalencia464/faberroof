@@ -26,6 +26,12 @@ export type SiteService = {
     alt: string;
     caption: string;
   } | null;
+  diagram: {
+    afterHeading: string;
+    image: string;
+    alt: string;
+    caption: string;
+  } | null;
 };
 
 type PackService = {
@@ -45,6 +51,12 @@ type PackService = {
   imageAlt?: string;
   gallery?: Array<string | { image: string; alt: string }>;
   colorBoard?: {
+    afterHeading: string;
+    image: string;
+    alt: string;
+    caption: string;
+  };
+  diagram?: {
     afterHeading: string;
     image: string;
     alt: string;
@@ -121,5 +133,6 @@ export const SERVICES: SiteService[] = pack.map((raw) => {
       ...(where ? [where] : []),
     ],
     colorBoard: service.colorBoard ?? null,
+    diagram: service.diagram ?? null,
   };
 });

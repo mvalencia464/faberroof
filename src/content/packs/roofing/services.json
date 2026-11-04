@@ -50,6 +50,12 @@
         "a": "A 10-year labor and material warranty on most roofs we service. We are a Mulehide-certified installer. Mulehide is the Firestone membrane brand."
       }
     ],
+    "diagram": {
+      "afterHeading": "How the roof goes on",
+      "image": "flat-roofing.avif",
+      "alt": "Infographic of a commercial TPO flat roof: 60 mil white membrane with heat-welded seams, polyiso insulation, a self-adhered vapor barrier, and a steel deck, plus pipe flashing and a metal edge bar.",
+      "caption": "The TPO assembly: membrane, insulation, vapor barrier, and deck, with flashing at pipes and the edge."
+    },
     "icon": "building",
     "iconStyle": "navy",
     "image": "/images/ai-flat-roofs/flat-roof-apartment-complex.jpg",
@@ -132,6 +138,12 @@
         "a": "Yes. Residential is a separate service. This page is for commercial TPO roof and flat roof bids. Call {{phone}} and say which one you need."
       }
     ],
+    "diagram": {
+      "afterHeading": "Certified install, full warranty",
+      "image": "flat-roofing.avif",
+      "alt": "Infographic of a commercial TPO flat roof: 60 mil white membrane with heat-welded seams, polyiso insulation, a self-adhered vapor barrier, and a steel deck, plus pipe flashing and a metal edge bar.",
+      "caption": "The TPO assembly: membrane, insulation, vapor barrier, and deck, with flashing at pipes and the edge."
+    },
     "icon": "building",
     "iconStyle": "navy",
     "image": "/images/ai-flat-roofs/flat-roof-onsite-membrane.jpg",
