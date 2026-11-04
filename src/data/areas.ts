@@ -27,8 +27,14 @@ export const AREA_PAGES: AreaPage[] = client.serviceAreas.map((area) => {
     county: area.county,
     note: area.note,
     headline: fillTemplate(copy.areaHeadline, vars),
-    intro: fillTemplate(copy.areaIntro, vars),
-    body: fillTemplate(copy.areaBody, vars),
+    intro: fillTemplate(
+      "intro" in area && area.intro ? area.intro : copy.areaIntro,
+      vars,
+    ),
+    body: fillTemplate(
+      "body" in area && area.body ? area.body : copy.areaBody,
+      vars,
+    ),
     servicesNote: fillTemplate(copy.areaServicesNote, vars),
     servicesHeading: fillTemplate(copy.areaServicesHeading, vars),
     pageTitle: fillTemplate(copy.areaPageTitle, vars),

@@ -4,7 +4,15 @@ import { JOBS } from '../data/jobs';
 import { r2img } from '../lib/r2';
 
 const gallery = SITE.workGallery;
-const jobs = JOBS;
+const commercialSlugs = new Set([
+  'commercial-flat-roofing',
+  'tpo-roofing',
+  'commercial-roofing',
+  'metal-roofing',
+]);
+const commercialJobs = JOBS.filter((job) => commercialSlugs.has(job.serviceSlug));
+const residentialSample = JOBS.filter((job) => !commercialSlugs.has(job.serviceSlug)).slice(0, 1);
+const jobs = [...commercialJobs, ...residentialSample];
 
 const pad = (n: number) => String(n + 1).padStart(2, '0');
 ---
